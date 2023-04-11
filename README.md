@@ -4,7 +4,7 @@
 
 ## Descripción del proyecto
 
-BootcampAr es una plataforma de aprendizaje en línea que ofrece cursos sobre tecnología y desarrollo de software. Los estudiantes pueden registrarse, acceder a una variedad de cursos, comprar cursos con una pasarela de pago integrada y realizar un seguimiento de su progreso en los cursos. La aplicación incluye características como autenticación de usuarios, búsqueda y filtrado de cursos, carrito de compras, pagos en línea y un panel de administración para gestionar los cursos y los usuarios.
+BootcampAr es una plataforma de aprendizaje en línea que ofrece cursos sobre tecnología y desarrollo de software. Los estudiantes pueden registrarse, acceder a una variedad de cursos, comprarlos con una pasarela de pago integrada y realizar un seguimiento de su progreso en los mismos. La aplicación incluye características como autenticación de usuarios, búsqueda y filtrado de cursos, carrito de compras, pagos en línea y un panel de administración para gestionar las capacitaciones y los usuarios.
 
 ## Requisitos previos
 
