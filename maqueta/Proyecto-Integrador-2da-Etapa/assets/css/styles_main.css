@@ -1,0 +1,101 @@
+/* selectores principales - generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: #7C8A9D;
+}
+
+.mainPer{
+    background: url(../img/fondodepagina.png) no-repeat center center; 
+    background-size: cover;
+     overflow: hidden;
+}
+
+/* ********************* */
+/* PAGINA INDEX */
+/* Header */
+
+
+
+.imglogo{
+    height: 50px;
+    width: 340px;
+    padding-left: 20px;
+}
+/* nav */
+.serachBar{
+    width: 100%;
+    max-width: 400px;
+    display: inline-flex;
+}
+.serachBar_input{
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #fff;
+    border-right: 0px;
+    border-radius: 20px 0 0 20px;
+    background: #9eadc0;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+.serachBar_input:focus{
+    background: #c9def7;
+    box-shadow: 0 0 2px #478ce0 ;
+}
+.serachBar_input::placeholder{
+    color: #08172a;
+    padding-left: 6px;
+    font-size: 12pt;
+}
+.serachBar_button{
+    width: 40px;
+    background: #9eadc0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-left: 0px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+.serachBar_button svg{
+    color: #fff;
+} 
+.imgPer{
+    height: 35px;
+    width: 35px;
+}
+
+.arfigcaption  figure figcaption{
+    font-weight: 300;
+}
+
+ .arfigcaption figure figcaption { 
+    transition: all 0.25s;
+  }
+
+
+ .icoNosotros:hover{
+    display:block;
+    transition: all 0.25s;
+  }
+
+.row-fondo {
+    background-color: rgba(89, 157, 217,0.7);
+    border-radius: 20px;
+    height: 250px;
+}
+
+.text-boot{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 700;
+}
+
+.row-fondo-pre {
+    background-color: rgba(89, 157, 217,0.7);
+    border-radius: 20px;
+    background-size: auto;
+     overflow: hidden;
+}

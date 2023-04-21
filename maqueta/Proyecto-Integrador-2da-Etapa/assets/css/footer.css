@@ -1,0 +1,54 @@
+.boton_footer{
+    background-color: #599dd9;
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.bg_footer{
+    background-color: #1445a6;
+    border-radius: 20px 20px 20px 20px;
+}
+.icon_facebook{
+    height: 35px;
+    max-height: 50px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.icon_instagram{
+    height: 35px;
+    max-height: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+.icon_twitter{
+    height: 35px;
+    max-height: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+.icon_youtube{
+    height: 35px;
+    max-height: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+.txt_footer{
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+}
+
+.txt_footer_msj{
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+    font-size: small;
+    margin-top: 10px;
+}
+
+.txt_footer_menu{
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+}

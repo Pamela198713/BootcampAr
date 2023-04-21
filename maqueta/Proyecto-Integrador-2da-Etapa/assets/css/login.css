@@ -1,0 +1,95 @@
+body{
+    color: aliceblue;
+
+}
+
+.txt_banner{
+    font-family: 'Poppins', sans-serif;
+}
+
+.txt_parrafo{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.txt_subtitulo{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cuerpo{
+    margin-top: 5%;
+}
+
+.bg-txt h1{
+    margin-top: 15px;
+    padding-top: 5%;
+}
+
+.bg-banner{
+    background-color: #599DD9;
+    border-radius: 25px;
+}
+
+.bg-imagen{
+    background-image: url(../../assets/img/pag-login/img-barradelogin/fondo-debarradetitulologin.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-ingreso img{
+    margin-top: 20%;
+    max-width: 20%;
+    height: 40%;
+}
+
+.cuerpo_izq{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.icon_usuario{
+    margin-top: 5%;
+    max-width: 50%;
+    height: 200px;
+    border-radius: 35px;
+    margin-left: 24%;
+}
+
+
+.boton_login{
+    color: aliceblue;
+    border-radius: 15px;
+    padding: 3% 2%;
+}
+
+.boton_login img{
+    max-height: 30px;
+}
+
+
+.check{
+    background-color: #599DD9;
+    border-radius: 15px;
+    padding: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.icon_input{
+    width: 30%;
+    height: 40%;
+    max-width: 70px;
+    max-height: 70px;
+    margin: auto;
+}
+
+.btn-profe{
+    margin-left: 60%;
+}
+
+.c_completo{
+    width: 50%;
+    margin: auto;
+    margin-top: 25%;
+    margin-bottom: 25%;
+}

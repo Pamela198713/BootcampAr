@@ -1,0 +1,126 @@
+.titlerow {
+    
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    background: url(../img/pag-usuarioperfil/img-banneradministracionperfil/fondo-banneradministraciondeperfil.png) no-repeat  bottom center/100%;
+}
+.bgrow{
+    height: 125px;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    background-color:  rgba(85, 157, 217, 0.8);
+}
+.tp{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+}
+.tp2{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size:  25px;
+    font-weight: 400; 
+}
+.imgajustes{
+    width: 15%;
+}
+
+.fondo {
+    background-color: rgb(89, 157, 217);
+    border-radius: 20px;
+}
+.imgperfil{
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+.icovertical{
+    width: 30px;
+    height: 36px;
+}
+
+
+
+
+
+body {
+    background-image: url(img/PaginadeUsuarioPerfil/Fondo_de_pagina.png) no-repeat  bottom center/100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.titulo{
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg_color{
+    background-color: #599DD9;
+    border-radius: 2px;
+}
+
+.bg_img{
+    background-image: url(img/PaginadeUsuarioPerfil/imagenesbannerdeadministraciondeperfil/Fondobanneradinstraciondeperfil.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.img_usuario{
+    margin-top: 100%;
+    margin-left: 10%;
+    border-radius: 25%;
+    height: 5%;
+    width: 80%;
+}
+
+.Us_name{
+    text-align: center;
+    
+}
+
+
+.icon_bootcampArg{
+    margin-top: 200%;
+}
+
+.icon_info_guia{
+    padding: 0%;
+    margin: 0% 5% 0% 3%;
+    max-height: 40%;
+    max-width: 40%;
+    height: 50px;
+    width: 20px;
+}
+.info_guia{
+    text-decoration: none;
+}
+.info_guia:hover{
+    color: blue;
+}
+
+.accordion-button{
+    background-color: #599dd9;
+    border-radius: 10px;
+
+}
+
+.accordion{
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.col_derecha_posicion{
+    margin-top: 30%;
+}
+
+.boton{
+    margin: auto;
+}

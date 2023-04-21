@@ -1,0 +1,55 @@
+.txt_parrafo {
+  position: absolute;
+  top: 25%;
+  font-family: 'Montserrat', sans-serif;
+  left: 17%;
+}
+
+.card-exp-usuario {
+    background-color: rgba(89, 157, 217,0.7);
+    border-radius: 20px;
+    background-size:cover;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+.parrafo_xp_card{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: aliceblue;
+    
+}
+.titulo_xp_card {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    color: aliceblue;
+    
+}
+.txt_carta{
+  border-radius: 20px;
+  position: relative;
+  top: 40px;
+
+}
+
+.txt_titulo_exp_us {
+  font-family: 'Poppins', sans-serif;
+  font-size:x-large;
+  text-align: center;
+  position: relative;
+  top: 30px;
+  color: aliceblue;
+}
+.button_xp_us {
+  background: none;
+  border: none;
+  color: azure;
+  margin-top: 120px;
+}
+
+.video{
+position: relative;
+top: 2px;
+
+}

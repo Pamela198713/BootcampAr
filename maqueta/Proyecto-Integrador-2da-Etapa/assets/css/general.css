@@ -1,0 +1,51 @@
+/* selectores principales - generales */
+body {
+    font-size: 0.875rem;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/paginadetienda/fondo.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.txt_banner{
+    font-family: 'Poppins', sans-serif;
+}
+
+.txt_parrafo{
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+
+}
+
+.txt_subtitulo{
+    font-family: 'Poppins', sans-serif;
+}
+.boton_compra_cursos{
+    text-align: center;
+    height: 50px;
+    color: aliceblue;
+    background-color: #455973;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.boton_compra_cursos:hover{
+    background-color: #455973a8;
+}
+.boton_tienda{
+    text-align: center;
+    height: 35px;
+    color: aliceblue;
+    background-color: #455973;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.boton_tienda:hover{
+    background-color: #455973a8;
+}
+

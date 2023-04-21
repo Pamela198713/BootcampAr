@@ -1,0 +1,192 @@
+body {
+
+    background-color: #7C8A9D;
+    background: url(/assets/img/fondodepagina.png) no-repeat center center; 
+    background-size: auto;
+    overflow: hidden;
+}
+.containerCuadrado{
+    background: rgba(90, 159, 219, 0.734);
+    color: white;
+    border-radius: 45px;
+    height:60%;
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding:5%;
+}
+
+.containerCuadrado2{
+    background: rgba(90, 159, 219, 0.734);
+    color: white;
+    border-radius: 45px;
+    height:50%;
+    width: 90%;
+    margin-top: 15px;
+    padding:5%;
+}
+
+.imagenvideo{
+    width: 150%;
+    height:95%;
+    border-radius: 30px;
+
+}
+
+.tiger{
+    width: 150px;
+    height: 250px;
+    margin-left: 200px;
+    margin-bottom:20px ;
+
+}
+
+
+ 
+.cardCaps {
+
+    justify-content: end;
+    align-content:start;
+
+   
+}
+  
+.card {
+    align-items: flex-end;
+    align-items: center;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #455973;
+    border-radius: 15px;
+   
+}
+
+
+.titulosCaps{
+    font-size: 15px;
+    text-align: center;
+   
+}
+.capitulos{
+    background-color: #455973;
+    margin: 3px;
+    width: 25%;
+    margin-left: 5%;
+    border-radius: 25px;
+   
+
+
+}
+
+.profesores{
+    font-size:22px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: 600;
+    background:linear-gradient(180deg, #8dc8e6 0%, #f2f8fa 100%);
+    margin-left: 190px;
+    
+
+}
+
+.tituloPractica{
+    font-size: 20px;
+    text-align:center;
+    font-weight:600;
+}
+
+
+.linea{
+    display: inline-block;
+    color: #FFFFFF;
+    border-radius: 10px;
+    height: 25px;
+    margin-bottom: 5px;
+    margin-left: 19px;
+    font-size: 11px;
+    font-style: oblique;
+    font-weight: bold;
+
+}
+
+.linea2{
+    display: inline-block;
+    color: #FFFFFF;
+    border-radius: 9px;
+    height: 25px;
+    font-size: 14px;
+    font-style: oblique;
+    font-weight: 500;
+    margin-left: 25%;
+
+}
+
+.fondocartas{
+    border-radius: 30px;
+    margin-top:-680px;
+}
+
+.cuerpodevideo{
+    background: #599dd9;
+    border-radius: 30px;
+    align-items: center;
+    margin: auto;
+    }
+
+
+
+.bannerfront{
+    background-image: url(/assets/img/pag-curso/img-bannerdetitulo/fondodearbolesparabannerdetitulo.png);
+    max-height: 125px;
+    
+}
+.bannercolorfondo{
+    background-color: rgba(89, 157, 217, 50%); 
+    height: 10%;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    color: #FFFFFF;
+}
+
+.imgmapa{
+    max-width: 500px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
+}
+
+.textfront{
+    margin: 7%;
+}
+
+.botonderecho{
+    font-size:15px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-weight: 500;
+    background: none;
+    margin-top: 15px;
+    margin-left: 15px;
+
+
+    
+}
+
+.botonderecho:hover{
+    background-color: #455973;
+}
+
+hr{
+    color: #ffffff;
+
+}
+.ultimorow{
+    margin-bottom: 400px;
+}
+
+.separador{
+    margin-top: 150px;
+}

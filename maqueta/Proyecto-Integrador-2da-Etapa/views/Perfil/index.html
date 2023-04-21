@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos | BootcampAr</title>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&family=Poppins:wght@100;200;400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="../../assets/css/styles_main.css">
+    <link rel="stylesheet"
+          href="../../assets/css/footer.css">
+    <link rel="stylesheet"
+          href="../../assets/css/perfill.css">
+</head>
+
+<body>
+    <div class="container mainPer">
+
+
+        <!-- header -->
+        <header class="container">
+            <div class="row align-items-center mt-md-5">
+                <div class="col-md-4 mt-4 mb-4 mt-md-0 mb-md-0"><a href="../../"><img class="imglogo img-fluid"
+                             src="../../assets/img/pag-Inicio/img-barradenavegacion/logo.png"
+                             alt="Logo"></a></div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <form action="/."
+                          method="get">
+                        <div class="serachBar">
+                            <input type="text"
+                                   class="p-1 serachBar_input"
+                                   name="search"
+                                   id="search"
+                                   placeholder="Buscar">
+                            <button type="submit"
+                                    class="serachBar_button">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="18"
+                                     height="18"
+                                     fill="currentColor"
+                                     class="bi bi-search"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5">
+                    <!-- nav -->
+                    <nav>
+                        <div class="row justify-content-between justify-content-md-start arfigcaption">
+                            <div class="col-2">
+                                <figure onmouseover="changeClass('nosotros')"
+                                        onmouseout="restClass('nosotros')"
+                                        class="text-center  mt-1"
+                                        title="Nosotros"><a href="https://mountaincode.com.ar/integrantes/"
+                                       target="_blank"><img class="img-fluid imgPer"
+                                             src="../../assets/img/pag-Inicio/img-barradenavegacion/nosotros.png"
+                                             alt="Nosotros"></a>
+                                    <figcaption id="nosotros"
+                                                class="ms-md-2 d-none fw-lighter text-light">
+                                        Nosotros
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-2">
+                                <figure onmouseover="changeClass('curso')"
+                                        onmouseout="restClass('curso')"
+                                        class="text-center mt-1"
+                                        title="Cursos"><a href="../../views/Cursos/"
+                                       target="_self"><img class="img-fluid imgPer "
+                                             src="../../assets/img/pag-Inicio/img-barradenavegacion/cursos.png"
+                                             alt="Cursos"></a>
+                                    <figcaption id="curso"
+                                                class="ms-md-3 d-none fw-lighter text-light">
+                                        Cursos
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-2">
+                                <figure onmouseover="changeClass('compras')"
+                                        onmouseout="restClass('compras')"
+                                        class="text-center mt-1 fig"
+                                        title="Compras"><a href="../../views/Store/"
+                                       target="_self"><img class="img-fluid imgPer"
+                                             src="../../assets/img/pag-Inicio/img-barradenavegacion/cart.png"
+                                             alt="Compras"></a>
+                                    <figcaption id="compras"
+                                                class="ms-md-3 d-none fw-lighter text-light">
+                                        Tienda
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-2">
+                                <figure onmouseover="changeClass('noti')"
+                                        onmouseout="restClass('noti')"
+                                        class="text-center mt-1"
+                                        title=""><a href="#"
+                                       target="_self"><img class="img-fluid imgPer"
+                                             src="../../assets/img/pag-Inicio/img-barradenavegacion/noti.png"
+                                             alt=""></a>
+                                    <figcaption id="noti"
+                                                class="ms-md-3 d-none fw-lighter text-light">
+                                        Avisos
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-2">
+                                <figure onmouseover="changeClass('perfil')"
+                                        onmouseout="restClass('perfil')"
+                                        class="text-center mt-1"
+                                        title="Perfil"><a href="../../views/Perfil/"
+                                       target="_self"><img class="img-fluid imgPer"
+                                             src="../../assets/img/pag-Inicio/img-barradenavegacion/perfil.png"
+                                             alt="Perfil"></a>
+                                    <figcaption id="perfil"
+                                                class="ms-md-3 d-none fw-lighter text-light">
+                                        Perfil
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- fin-aav  -->
+                </div>
+            </div>
+        </header>
+        <!-- fin-header -->
+
+        <!-- main -->
+        <main class="container mt-5">
+            <!-- section -->
+            <section>
+                <div class="row">
+                    <div class="titlerow">
+                        <div class="bgrow ">
+                            <div class="col  mb-5 h-100">
+                                <div class="row align-items-center  h-100">
+                                    <div class="col">
+                                        <span class="tp text-center align-middle ps-4">
+                                            Administración de Perfil
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <p class="text-end m-auto pe-4">
+                                            <img class="imgajustes img-fluid"
+                                                 src="../../assets/img/pag-usuarioperfil/img-banneradministracionperfil/icon-engranajesajustes.png"
+                                                 alt="Ajustes de Perfil">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --- -->
+                <div class="row mt-5">
+                    <div class="col mb-2">
+                        <div class="row m-0 ms-md-3">
+                            <div class="col-md-5 p-0 mb-5 ms-md-4">
+                                <div class="row fondo m-0 w-100">
+                                    <div class="col p-0 w-100">
+                                        <div class="row justify-content-center pt-5 w-100">
+                                            <img class="imgperfil"
+                                                 src="../../assets/img/OIP_1.jpeg  "
+                                                 alt="">
+                                            <span class="tp text-center align-middle">Juan Perez</span>
+                                            <span class="tp2 text-center align-middle">juan_pere85</span>
+                                        </div>
+                                        <div class="row justify-content-center pt-5 w-100 pb-5 ">
+                                            <span class="tp2 align-middle ms-5  mb-2">
+                                                <img class="icovertical img-fluid"
+                                                     src="../../assets/img/pag-usuarioperfil/img-panelverticalconinfodeusuario/Icon-ubicacion.png"
+                                                     alt="">
+                                                Córdoba, Argentina</span>
+                                            <span class="tp2  align-middle ms-5 mb-2">
+                                                <img class="icovertical img-fluid"
+                                                     src="../../assets/img/pag-usuarioperfil/img-panelverticalconinfodeusuario/icon-email.png"
+                                                     alt="">
+                                                juanperez@gmail.com</span>
+                                            <span class="tp2  align-middle ms-5 mb-2">
+                                                <img class="icovertical img-fluid"
+                                                     src="../../assets/img/pag-usuarioperfil/img-panelverticalconinfodeusuario/icon-portafolio.png"
+                                                     alt="">
+                                                Ver Portafolio</span>
+                                            <span class="tp2  align-middle ms-5 mb-2">
+                                                <img class="icovertical img-fluid"
+                                                     src="../../assets/img/pag-usuarioperfil/img-panelverticalconinfodeusuario/icon-currilum.png"
+                                                     alt="">
+                                                Descargar CV</span>
+
+                                            <span class="text-center align-middle mt-5 mb-2">
+                                                <img class="w-75 img-fluid"
+                                                     src="../../assets/img/pag-Inicio/img-barradenavegacion/logo.png"
+                                                     alt=""></span>
+
+                                        </div>
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ms-md-4">
+                                <div class="row  w-100">
+                                    <div class="col w-100">
+                                        <!-- Uno -->
+                                        <div class="row">
+
+                                            <div class="accordion accordion-flush"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingOne">
+                                                        <button class="accordion-button"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseOne"
+                                                                aria-expanded="true"
+                                                                aria-controls="collapseOne">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h5>Mi informacion</h5>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne"
+                                                         class="accordion-collapse collapse show"
+                                                         aria-labelledby="headingOne"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="row">
+                                                                        <p style="text-align: center;"><b>Nombre</b></p>
+                                                                        <p style="text-align: center;">hola</p>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <p style="text-align: center;"><b>Apellido</b>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="row">
+                                                                        <p style="text-align: center;"><b>Nombre de
+                                                                                Usuario</b></p>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <p style="text-align: center;"><b>Email</b></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="accordion"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingTwo">
+                                                        <button class="accordion-button collapsed"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseTwo"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseTwo">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h5>Mis cursos</h5>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo"
+                                                         class="accordion-collapse collapse"
+                                                         aria-labelledby="headingTwo"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h6>FrontEnd</h6>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>BackEnd</h6>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col">
+
+                                                                </div>
+                                                                <div class="col">
+
+                                                                </div>
+                                                                <div class="col">
+
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <h6>Framework</h6>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="row">
+                                            <div class="accordion"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingThree">
+                                                        <button class="accordion-button collapsed"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseThree"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseThree">
+                                                            <div class="row">
+                                                                <div class="col-2">
+                                                                    <h5>Portafolio</h5>
+                                                                </div>
+                                                                <div class="col"></div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree"
+                                                         class="accordion-collapse collapse"
+                                                         aria-labelledby="collapseThree"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h6>Conoce mi portafolio</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="accordion"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingFour">
+                                                        <button class="accordion-button collapsed"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFour"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseFour">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h5>Bitacora</h5>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFour"
+                                                         class="accordion-collapse collapse"
+                                                         aria-labelledby="headingFour"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <!--Cuerpo-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="accordion"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingFive">
+                                                        <button class="accordion-button collapsed"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFive"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseFive">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h5>Mis puntos</h5>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFive"
+                                                         class="accordion-collapse collapse"
+                                                         aria-labelledby="headingFive"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <!--Cuerpo-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="accordion"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingSix">
+                                                        <button class="accordion-button collapsed"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseSix"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseSix">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h5>Notificaciones</h5>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseSix"
+                                                         class="accordion-collapse collapse"
+                                                         aria-labelledby="headingSix"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <!--Cuerpo-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="accordion"
+                                                 id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header"
+                                                        id="headingSeven">
+                                                        <button class="accordion-button collapsed"
+                                                                type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseSeven"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseSeven">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h5>Ajustes Generales</h5>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseSeven"
+                                                         class="accordion-collapse collapse"
+                                                         aria-labelledby="headingSeven"
+                                                         data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <!--Cuerpo-->
+                                                            <div class="row">
+                                                                <div class="d-grid gap-2 col-6 mx-auto">
+                                                                    <button class="btn btn-danger mt-2"
+                                                                            type="button"
+                                                                            onclick="eliminar()">Eliminar cuenta
+                                                                    </button>
+                                                                </div>
+                                                                <div class="d-grid gap-2 col-6 mx-auto">
+                                                                    <button class="btn btn-info mt-2"
+                                                                            type="button"
+                                                                            onclick="actualizacion()">Actualizar datos
+                                                                    </button>
+                                                                </div>
+                                                                <div class="d-grid gap-2 col-6  mx-auto">
+                                                                    <button class="btn btn-warning mt-2"
+                                                                            type="button"
+                                                                            onclick="actualizacion()">Actualizar
+                                                                        contraseña
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- fin-section -->
+
+        </main>
+        <!-- fin-main -->
+
+        <footer class="container mb-2 bg_footer mt-5">
+            <!--footer parte superior -->
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col mt-3">
+                            <button class="boton_footer txt_footer">Más info</button>
+                        </div>
+                        <div class="col mt-3">
+                            <div class="form-floating">
+                                <input class="form-control"
+                                       placeholder="Leave a comment here"
+                                       id="floatingTextarea"></input>
+                                <label for="floatingTextarea">Mail</label>
+                            </div>
+                        </div>
+
+                        <div class="col mt-2">
+                            <p class="txt_footer_msj">Déjanos tu mail y te enviaremos más información sobre nuestros
+                                cursos </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <div class="col mt-4 text-center">
+                            <a class="txt_footer"
+                               style="text-decoration: none;"
+                               href="../../"> Home </a>
+                        </div>
+                        <div class="col mt-4 text-center ">
+                            <a class="txt_footer"
+                               style="text-decoration: none;"
+                               href="../../views/Cursos/"> Cursos </a>
+                        </div>
+                        <div class="col mt-4 text-center ">
+                            <a class="txt_footer"
+                               style="text-decoration: none;"
+                               href="../../views/Store/"> Tienda </a>
+                        </div>
+                        <div class="col mt-4 text-center ">
+                            <a class="txt_footer"
+                               style="text-decoration: none;"
+                               href="../../views/Perfil/"> Perfil </a>
+                        </div>
+                        <div class="col mt-4 text-center ">
+                            <a class="txt_footer"
+                               style="text-decoration: none;"
+                               href="../../views/Login/login.html"> Login </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer parte inferior-->
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col mt-3">
+                            <p class="txt_footer"
+                               style="text-decoration: none; text-align: center;"> © Copyright 2022 - Argentina</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <div class="col mb-4">
+                            <a href="https://www.facebook.com/">
+                                <img class="icon_facebook rounded mx-auto d-block"
+                                     src="../../assets/img/pag-Inicio/img-footer/facebook-logo.png"
+                                     alt="">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/">
+                                <img class="icon_instagram rounded mx-auto d-block"
+                                     src="../../assets/img/pag-Inicio/img-footer/instagram-logo.png"
+                                     alt="">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https:/twitter.com/">
+
+                                <img class="icon_twitter rounded mx-auto d-block"
+                                     src="../../assets/img/pag-Inicio/img-footer/twitter-logo.png"
+                                     alt="">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.youtube.com/">
+                                <img class="icon_youtube rounded mx-auto d-block"
+                                     src="../../assets/img/pag-Inicio/img-footer/youtube-logo.png"
+                                     alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- fin-footer -->
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/boton-eliminar.js"> </script>
+    <script src="../../assets/js/entidades.js"></script>
+</body>
+
+</html>

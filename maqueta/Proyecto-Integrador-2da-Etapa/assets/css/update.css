@@ -1,0 +1,18 @@
+body {
+    background-image: url(/assets/img/fondodepagina.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #599DD9;
+}
+
+.titulo{
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg_color{
+    background-color: #599DD9;
+}
+
+

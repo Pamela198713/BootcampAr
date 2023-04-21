@@ -1,0 +1,50 @@
+.background-image{
+    background-image: url("./Imagenes/Fondo-pagina.png");
+    background-color: #cccccc;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.bg-initial {
+    background-color: #9e95e9!important;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("./Imagenes/Fondo-pagina.png"); 
+    background-color: #cccccc;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    font-size: 1em;
+}
+.card-image {
+    width: 195px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    padding: 0.5em;
+}
+.card2-image {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    padding: 0.5em;
+}
+
+.card-color {
+ font-family: 'Poppins', sans-serif;
+background-color: #599dd9; 
+border-radius: 25px;
+color: #fff;
+
+
+}
+
+.card-text {
+    color: #fff;
+}
+
+.button-border {
+    border-radius: 20px;
+}
