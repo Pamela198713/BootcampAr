@@ -1,6 +1,6 @@
 # BootcampAr
 
-¡Bienvenido al repositorio del proyecto BootcampAr del "Instituto Superior Politécnico de Córdoba" Este proyecto es una aplicación de una sola página (SPA) desarrollada con Angular, que incluye un sistema de comercio electrónico (ecommerce).
+¡Bienvenido al repositorio del proyecto BootcampAr del "Instituto Superior Politécnico de Córdoba" Este proyecto es una aplicación de una sola página (SPA) desarrollada con Angular, que incluye un sistema de comercio electrónico (e-commerce).
 
 ## Descripción del proyecto
 
@@ -25,6 +25,12 @@ Siga estos pasos para configurar y ejecutar el proyecto en su entorno local:
 4. Ejecutar la aplicación: Una vez que se hayan instalado las dependencias y configurado las variables de entorno, puede ejecutar la aplicación utilizando el comando `ng serve`. Esto iniciará la aplicación en un servidor de desarrollo y podrá acceder a ella en su navegador web en la dirección `http://localhost:4200/`.
 
 ## Contribución
-
+Lidio
+Laura
+Leonardo
+Lucia
+Yuliana
+Matias
+Pamela
 
 ## Problemas (Issues)
