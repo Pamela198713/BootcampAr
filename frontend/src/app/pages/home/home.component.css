@@ -1,0 +1,50 @@
+.container-main-top{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 3% auto;
+    text-align: center;
+    color: white;
+}
+
+.title-main{
+    margin-bottom: 5%;
+    word-wrap: break-word;
+    font-size: 4rem;
+    font-style: italic;
+    text-shadow: 2px 2px black;
+}
+
+.text-main{
+    font-size: 1.5rem;
+    text-shadow: 2px 2px black;
+}
+
+.container-main-bot{
+    margin: 10% 0%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-main{
+    background-color: rgba(68, 68, 68, 0.685);
+    border: 2px solid black;
+    border-radius: 0px 30px;
+    width: 30%;
+    color: white;
+    box-shadow: 0px 15px 33px #c5c5c5, -0px -15px 33px #c5c5c5;
+}
+
+.card-main-title{
+    font-size: 1.7rem;
+    font-style: italic;
+    margin: 5% 0%;
+    text-align: center;
+}
+
+.card-main-text{
+    margin: 3% 0%;
+    padding: 2% 10%;
+    font-size: 1.2rem;
+}
