@@ -1,0 +1,23 @@
+
+.footer{ 
+
+    padding: 2% 0%; 
+
+    margin-top: 1%; 
+
+    background-color: black; 
+
+} 
+
+ 
+ 
+
+.container-icon-footer{ 
+
+    margin: auto; 
+
+    display: flex; 
+
+    gap: 1%; 
+
+} 
