@@ -1,23 +1,16 @@
-
 .footer{ 
-
-    padding: 2% 0%; 
-
+    padding: 1% 0%; 
     margin-top: 1%; 
-
     background-color: black; 
-
 } 
-
- 
- 
 
 .container-icon-footer{ 
-
     margin: auto; 
-
     display: flex; 
-
     gap: 1%; 
-
 } 
+
+.icon{
+    margin-left: 1%;
+    width: 2%;
+}

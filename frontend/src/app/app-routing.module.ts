@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 import { CreateCoursesComponent } from './pages/create-courses/create-courses.component';
 
-const routes: Routes = [ 
-  { path: 'login', component: LoginComponent }, 
-  { path: 'footer', component: FooterComponent },
-  { path: 'createCourse', component: CreateCoursesComponent}
-
+const routes: Routes = [
+  { path: '', pathMatch:'full', redirectTo:'home'}, 
+  { path: 'home', component: HomeComponent },
+  { path: 'createCourse', component: CreateCoursesComponent},
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo:'home' }, 
+   
 ];  
 
 
