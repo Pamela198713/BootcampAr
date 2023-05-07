@@ -5,5 +5,5 @@ class Curso:
       self.descripcion = descripcion
       self.duracion = duracion 
       self.nivel = nivel
-      self.imagenes = imágenes
+      self.imagenes = imagenes
       self.lengujae = lenguaje 
