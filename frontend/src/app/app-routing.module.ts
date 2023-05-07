@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CreateCoursesComponent } from './pages/create-courses/create-courses.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo:'home'}, 
@@ -13,7 +14,9 @@ const routes: Routes = [
    
 ];  
 
+  { path: 'login', component: LoginComponent }, 
 
+  { path: 'footer', component: FooterComponent },
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
