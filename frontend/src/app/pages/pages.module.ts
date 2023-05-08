@@ -7,6 +7,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { SharedModule } from '../shared/shared.module';
 import { CreateCoursesComponent } from './create-courses/create-courses.component';
 import { LayoutModule } from '../layout/layout.module';
+import { CursosComponent } from './cursos/cursos.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LayoutModule } from '../layout/layout.module';
     LoginComponent,
     ProductDetailsComponent,
     PerfilComponent,
-    CreateCoursesComponent
+    CreateCoursesComponent,
+    CursosComponent
   ],
   imports: [
     CommonModule,
