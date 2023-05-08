@@ -12,5 +12,12 @@
 
 .icon{
     margin-left: 1%;
-    width: 2%;
+    height: 2rem;
+    width: 2rem;
+}
+
+@media screen and (min-width: 180px) and (max-width: 540px){
+    .icon{
+        margin: auto;
+    }
 }
