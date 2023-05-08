@@ -10,13 +10,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'createCourse', component: CreateCoursesComponent},
   { path: 'login', component: LoginComponent },
+  { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: '**', redirectTo:'home' }, 
    
 ];  
-
-  { path: 'login', component: LoginComponent }, 
-
-  { path: 'footer', component: FooterComponent },
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
