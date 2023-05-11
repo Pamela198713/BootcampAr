@@ -261,7 +261,7 @@
           "Direccion_Factura": "Calle Falsa 123",
           "Moneda": "ARS",
           "Numero_Factura": "0001-00000002",
-          "Precio": 200.00,
+          "Precio": 100.00,
           "ID_Orden": 2
       },{
           "ID": 3,
