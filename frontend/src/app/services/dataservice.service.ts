@@ -17,7 +17,16 @@ export class DataserviceService {
     return this.http.get<any>(`${this.apiUrl}/${entity}/${id}`);
   }
 
+  insert(entity: string, data: any) {
+    return this.http.post<any>(`${this.apiUrl}/${entity}`, data);
+  }
 
+  update(entity: string, id: number, data: any) {
+    return this.http.put<any>(`${this.apiUrl}/${entity}/${id}`, data);
+  }
 
+  delete(entity: string, id: number) {
+    return this.http.delete<any>(`${this.apiUrl}/${entity}/${id}`);
+  }
 
 }
