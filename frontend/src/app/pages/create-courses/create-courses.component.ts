@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-create-courses',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-courses.component.css']
 })
 export class CreateCoursesComponent {
+  constructor (private data: DataService
+
+    ) {}
 
 }
