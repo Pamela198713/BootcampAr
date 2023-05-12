@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-product-details',
@@ -10,6 +11,7 @@ export class ProductDetailsComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
+    private dataService: DataService
   ) {}
 
   ngOnInit(): void {
