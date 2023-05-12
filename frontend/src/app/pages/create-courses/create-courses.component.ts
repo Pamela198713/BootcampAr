@@ -7,8 +7,7 @@ import {DataService} from '../../services/data.service';
   styleUrls: ['./create-courses.component.css']
 })
 export class CreateCoursesComponent {
-  constructor (private data: DataService
 
-    ) {}
+  constructor (private dataService: DataService) {}
 
 }

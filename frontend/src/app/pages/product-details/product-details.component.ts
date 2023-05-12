@@ -11,8 +11,7 @@ export class ProductDetailsComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private data: DataService
-
+    private dataService: DataService
   ) {}
 
   ngOnInit(): void {

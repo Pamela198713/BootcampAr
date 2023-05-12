@@ -8,8 +8,6 @@ import {DataService} from '../../services/data.service';
 })
 export class HomeComponent {
 
-  constructor (private data: DataService
-
-    ) {}
+  constructor (private dataService: DataService) {}
 
 }
