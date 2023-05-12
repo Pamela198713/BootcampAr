@@ -17,7 +17,7 @@ class UsuarioManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
 
         return self.create_user(email, password, **extra_fields)
-
+    
 
 class Usuario(AbstractBaseUser):
     nombre = models.CharField(max_length=50)
@@ -38,6 +38,8 @@ class Usuario(AbstractBaseUser):
 
     def __str__(self):
         return self.email
+    class Meta:
+        db_table = 'usuarios'
 
 
 class Categoria(models.Model):
@@ -49,6 +51,9 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+    class Meta:
+        db_table = 'categorias'
 
 
 class Curso(models.Model):
@@ -69,6 +74,8 @@ class Curso(models.Model):
 
     def __str__(self):
         return self.titulo
+    class Meta:
+        db_table = 'cursos'
 
 
 class CursoCategoria(models.Model):
@@ -79,6 +86,9 @@ class CursoCategoria(models.Model):
 class Inscripcion(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'inscripciones'
 
 
 class Leccion(models.Model):
@@ -95,6 +105,9 @@ class Leccion(models.Model):
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     tipo = models.CharField(max_length=10, choices=TIPOS_CHOICES)
 
+    class Meta:
+        db_table = 'lecciones'
+
 
 class Orden(models.Model):
     METODOS_PAGO_CHOICES = (
@@ -109,6 +122,9 @@ class Orden(models.Model):
     metodos_pago = models.CharField(max_length=50, choices=METODOS_PAGO_CHOICES)
     def __str__(self):
         return self.estado
+    
+    class Meta:
+        db_table = 'ordenes'
 
 
 class OrdenDetalle(models.Model):
@@ -134,4 +150,7 @@ class Factura(models.Model):
 
     def __str__(self):
         return self.numero_factura
+    
+    class Meta:
+        db_table = 'facturas'
 
