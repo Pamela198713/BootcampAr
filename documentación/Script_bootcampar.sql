@@ -57,7 +57,7 @@ CREATE TABLE Leccion (
     Contenido TEXT,
     Duracion INT,
     ID_Curso INT,
-    Tipo INT,
+    Tipo VARCHAR(10),
     FOREIGN KEY (ID_Curso) REFERENCES Curso(ID)
 );
 
