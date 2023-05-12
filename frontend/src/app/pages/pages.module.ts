@@ -8,7 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CreateCoursesComponent } from './create-courses/create-courses.component';
 import { LayoutModule } from '../layout/layout.module';
 import { CursosComponent } from './cursos/cursos.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { CursosComponent } from './cursos/cursos.component';
   imports: [
     CommonModule,
     SharedModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }

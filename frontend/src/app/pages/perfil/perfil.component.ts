@@ -10,10 +10,10 @@ import {DataService} from '../../services/data.service';
 
 export class PerfilComponent implements OnInit {
  
-  constructor(private dataApi: DataService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-     this.dataApi.getAll('perfil').subscribe(data => {
+     this.dataService.getAll('perfil').subscribe(data => {
       console.log(data);
      });
   }

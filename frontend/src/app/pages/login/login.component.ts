@@ -9,8 +9,6 @@ import {DataService} from '../../services/data.service';
 
 export class LoginComponent {
 
-  constructor (private data: DataService
-
-  ) {}
+  constructor (private dataService: DataService) {}
 
 }
