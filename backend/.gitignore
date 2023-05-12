@@ -1,0 +1,28 @@
+# Archivos y directorios generados por Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyz
+*.pyi
+*.pyproj
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+*.sqlite3
+media/
+staticfiles/
+
+# Entorno virtual de Python (puede variar según el nombre que hayas dado a tu entorno virtual)
+myenv/
+
+# Archivos de configuración local (puedes agregar más si es necesario)
+.env
+config.ini
+
+# Archivos de dependencias de desarrollo
+dev_requirements.txt
