@@ -69,7 +69,7 @@ class Curso(models.Model):
     duracion = models.IntegerField()
     nivel = models.CharField(max_length=50, choices=NIVELES_CHOICES)
     lenguajes = models.CharField(max_length=100)
-    imagenes = models.ImageField(upload_to='cursos')
+    imagenes = models.CharField(max_length=200)
     categorias = models.ManyToManyField(Categoria, through='CursoCategoria')
 
     def __str__(self):
