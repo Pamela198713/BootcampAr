@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs'; 
+import { Curso } from "../shared/interfaces/Curso";
 
 @Injectable({
   providedIn: 'root'
@@ -10,24 +11,24 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/Curso`)
+  getAll(): Observable<Curso[]> {
+    return this.http.get<Curso[]>(`${this.apiUrl}/Curso`)
   }
 
-  getById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/Curso/${id}`);
+  getById(id: number): Observable<Curso> {
+    return this.http.get<Curso>(`${this.apiUrl}/Curso/${id}`);
   }
 
-  insert(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/Curso`, data);
+  insert(data: Curso): Observable<Curso> {
+    return this.http.post<Curso>(`${this.apiUrl}/Curso`, data);
   }
 
-  update(id: number, data: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/Curso/${id}`, data);
+  update(id: number, data: Curso): Observable<Curso> {
+    return this.http.put<Curso>(`${this.apiUrl}/Curso/${id}`, data);
   }
 
-  delete(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/Curso/${id}`);
+  delete(id: number): Observable<{}> {
+    return this.http.delete<{}>(`${this.apiUrl}/Curso/${id}`);
   }
 
 }
