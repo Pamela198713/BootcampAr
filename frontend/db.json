@@ -1,0 +1,271 @@
+{
+    "Usuario": [{
+        "id": 1,
+        "Nombre": "Leonardo Damian",
+        "Apellido": "Perez",
+        "Pais": "Argentina",
+        "Email": "loe.damian.perez@gmail.com",
+        "Contraseña": "ContraseñaSegura123",
+        "Rol": "Estudiante",
+        "Telefono": "1234567890",
+        "Direccion": "Calle Falsa 123",
+        "Foto": "https://img.freepik.com/foto-gratis/joven-confiado_1098-20868.jpg?w=1380&t=st=1683817978~exp=1683818578~hmac=86f1d8c97aa08bd822adfc9b3134cca751121f3ba2aece4ea5b2cd7a4db1d19e",
+        "Perfil": "/perfil/leodamianperez"
+    }, {
+        "id": 2,
+        "Nombre": "Rodolfo Ramírez",
+        "Apellido": "Boix",
+        "Pais": "Argentina",
+        "Email": "Rodolfo.RB@gmail.com",
+        "Contraseña": "ContraseñaSegura123",
+        "Rol": "Estudiante",
+        "Telefono": "1443590854",
+        "Direccion": "Calle Inventada 123",
+        "Foto": "https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=360",
+        "Perfil": "/perfil/rodolfo.rb"
+    }, {
+        "id": 3,
+        "Nombre": "Adelia Arnaiz",
+        "Apellido": "Juan",
+        "Pais": "Chile",
+        "Email": "Adelia.AJ@gmail.com",
+        "Contraseña": "ContraseñaSegura123",
+        "Rol": "Estudiante",
+        "Telefono": "1446690854",
+        "Direccion": "Calle Perdida 123",
+        "Foto": "https://img.freepik.com/foto-gratis/mujer-blanca-inspirada-gafas-sol-mirando-otro-lado-risa_197531-9315.jpg?w=740&t=st=1683818708~exp=1683819308~hmac=f804ae2f87edf4092c935b5c576bc580dd093063aee7144fc7a20387a89f8846",
+        "Perfil": "/perfil/adelia.aj"
+    }, {
+        "id": 4,
+        "Nombre": "Emigdio Ródenas",
+        "Apellido": "Arnaiz",
+        "Pais": "Uruguay",
+        "Email": "Emigdio.RA@gmail.com",
+        "Contraseña": "ContraseñaSegura123",
+        "Rol": "Estudiante",
+        "Telefono": "1448890854",
+        "Direccion": "Calle Perdida 123",
+        "Foto": "https://img.freepik.com/foto-gratis/joven-empresario-exitoso-posando-sobre-pared-oscura_176420-52.jpg?w=740&t=st=1683818660~exp=1683819260~hmac=29cd0e046c803cb88d525bf77a432a62e08d943dd569c2b8bdbf6d68f4dd5fe5",
+        "Perfil": "/perfil/emigdio.ra"
+    }, {
+        "id": 5,
+        "Nombre": "Sofía Parejo",
+        "Apellido": "Dominguez",
+        "Pais": "Uruguay",
+        "Email": "Sofía.PD@gmail.com",
+        "Contraseña": "ContraseñaSegura123",
+        "Rol": "Estudiante",
+        "Telefono": "1449990854",
+        "Direccion": "Calle Perdida 123",
+        "Foto": "https://img.freepik.com/foto-gratis/elegante-empresaria-segura-sonriendo_176420-19466.jpg?w=740&t=st=1683819000~exp=1683819600~hmac=f3c795ecf23c68381d8d8e4cceeb5f608e95e490f2e94e9750bfcf89cbb8d425",
+        "Perfil": "/perfil/sofía.pd"
+    }],
+    "Categoria": [{
+        "id": 1,
+        "Nombre": "Programación",
+        "Descripcion": "Cursos de programación",
+        "Imagen": "url_imagen",
+        "CreateDate": "2023-05-11T00:00:00",
+        "UpdateDate": "2023-05-11T00:00:00"
+    }],
+    "Curso": [{
+        "id": 1,
+        "Titulo": "Curso de Python",
+        "Precio": 200.00,
+        "Descripcion": "Conoce uno de los lenguajes de programación más sencillos de aprender, más versátil y más solicitados en el sector IT. En este curso aprenderás los fundamentos básicos de la programación, las buenas prácticas, a aplicar la lógica para la resolución de problemas, en diferentes niveles a lo largo de la cursada, pasando por pequeños proyectos como una calculadora, manejos de archivos del pack offices hasta simular un CRUD básico usando únicamente Python y MySQL",
+        "Duracion": 10,
+        "Nivel": "Principiante",
+        "Lenguajes": "Python",
+        "Imagenes": "https://img.icons8.com/fluency/48/python.png"
+    }, {
+        "id": 2,
+        "Titulo": "Curso de Frontend(HTML/CSS)",
+        "Precio": 100.00,
+        "Descripcion": "Con nuestro curso de frontend, conocerás las herramientas básicas del desarrollo web estático con desafíos diarios que te servirán para dominarlas y llegar a realizar diseños profesionales los cuales podrás mostrar con orgullo en tu portafolio. Ven a conocer el fascinante mundo del frontend en donde los sencillos se va a complejizando poco a poco mientras ves tu progreso día a día diseñando tus propias páginas web temáticas.",
+        "Duracion": 5,
+        "Nivel": "Principiante",
+        "Lenguajes": "HTML/CSS",
+        "Imagenes": "url_imagenes"
+    }, {
+        "id": 3,
+        "Titulo": "Curso de JavaScript",
+        "Precio": 150.00,
+        "Descripcion": "En nuestro curso de JavaScript conocerás no solo este maravilloso lenguaje de programación, el cual abordaremos de lo más básico de la programación, pasando a realizar animaciones, la creación de un minijuego, ven a crear tus primeros proyectos para tu portafolio con la guía de nuestros mentores. Para tomar este curso no es requisito excluyente haber tomado el curso de frontend, pero es recomendable además de tener conocimientos aunque sea básico de HTML y CSS.",
+        "Duracion": 10,
+        "Nivel": "Intermedio",
+        "Lenguajes": "JavaScript",
+        "Imagenes": "https://img.icons8.com/fluency/48/javascript.png"
+    }, {
+        "id": 4,
+        "Titulo": "Curso de Angular",
+        "Precio": 300.00,
+        "Descripcion": "Angular es uno de los frameworks más complejos debido a su curva de aprendizaje, pero con nuestra metodología de enseñanza haremos que tu transcurso por este framework sea un agradable paseo en el cual podremos a prueba tus conocimientos de programación guiada por nuestro equipo de profesionales y nuestro material teórico te garantizamos finalizar nuestro curso con conocimientos avanzados el cual podras aplicar en tecnologías similares",
+        "Duracion": 10,
+        "Nivel": "Avanzado",
+        "Lenguajes": "Angular",
+        "Imagenes": "https://img.icons8.com/fluency/48/angularjs.png"
+    }, {
+        "id": 5,
+        "Titulo": "Curso de Django",
+        "Precio": 250.00,
+        "Descripcion": "Si ya posees conocimientos en Python, entonces sin duda tu siguiente paso debe ser conocer Django, un framework con un nivel intermedio que te llevara a través de los conocimientos básicos de backend realizando proyecto o mejorando los ya realizados en cursos anteriores. Para tomar este curso es indispensable que poseas conocimientos básicos a intermedio de Python o que hayas realizado nuestro curso de Python",
+        "Duracion": 10,
+        "Nivel": "Intermedio",
+        "Lenguajes": "Python",
+        "Imagenes": "https://img.icons8.com/color/48/django.png"
+    }, {
+        "id": 6,
+        "Titulo": "Curso de Base de datos(SQL)",
+        "Precio": 150.00,
+        "Descripcion": "Las bases de datos es uno de los pilares fundamentales de la programación, en este curso te enseñamos sobre las bases de datos relacionales con MySQL. En este curso aprenderás a modelar entidades, a relacionarlos y mucho más.",
+        "Duracion": 10,
+        "Nivel": "Principiante",
+        "Lenguajes": "SQL",
+        "Imagenes": "https://img.icons8.com/fluency/48/mysql-logo.png"
+    }],
+    "CursoCategoria": [{
+        "id_Curso": 1,
+        "id_Categoria": 1
+    }],
+    "Inscripcion": [{
+        "id": 1,
+        "id_Usuario": 1,
+        "id_Curso": 1
+    }],
+    "Leccion": [{
+        "id": 1,
+        "Titulo": "Introducción a Python",
+        "Contenido": "Contenido de la lección",
+        "Duracion": 1,
+        "id_Curso": 1,
+        "Tipo": "video"
+    }, {
+        "id": 2,
+        "Titulo": "Tipos de datos",
+        "Contenido": "Contenido de la lección",
+        "Duracion": 2,
+        "id_Curso": 1,
+        "Tipo": "video"
+    }, {
+        "id": 3,
+        "Titulo": "Variables y Constantes",
+        "Contenido": "Contenido de la lección",
+        "Duracion": 1,
+        "id_Curso": 1,
+        "Tipo": "video"
+    }, {
+        "id": 4,
+        "Titulo": "Funciones",
+        "Contenido": "Contenido de la lección",
+        "Duracion": 2,
+        "id_Curso": 1,
+        "Tipo": "video"
+    }],
+    "Orden": [{
+        "id": 1,
+        "id_Usuario": 1,
+        "Datos": "Datos de la orden",
+        "Estado": "En progreso",
+        "MetodosPago": "Tarjeta de crédito"
+    }, {
+        "id": 2,
+        "id_Usuario": 2,
+        "Datos": "Datos de la orden",
+        "Estado": "En progreso",
+        "MetodosPago": "Tarjeta de crédito"
+    }, {
+        "id": 3,
+        "id_Usuario": 3,
+        "Datos": "Datos de la orden",
+        "Estado": "En progreso",
+        "MetodosPago": "Tarjeta de crédito"
+    }, {
+        "id": 4,
+        "id_Usuario": 2,
+        "Datos": "Datos de la orden",
+        "Estado": "En progreso",
+        "MetodosPago": "Tarjeta de crédito"
+    }],
+    "OrdenDetalle": [{
+        "id": 1,
+        "Precio": 200.00,
+        "Cantidad": 1,
+        "Impuestos": 0.21,
+        "Subtotal": 200.00,
+        "Descuento": 0,
+        "id_Orden": 1,
+        "id_Curso": 1
+    }, {
+        "id": 2,
+        "Precio": 100.00,
+        "Cantidad": 1,
+        "Impuestos": 0.21,
+        "Subtotal": 100.00,
+        "Descuento": 0,
+        "id_Orden": 2,
+        "id_Curso": 2
+    }, {
+        "id": 3,
+        "Precio": 150.00,
+        "Cantidad": 1,
+        "Impuestos": 0.21,
+        "Subtotal": 150.00,
+        "Descuento": 0,
+        "id_Orden": 3,
+        "id_Curso": 6
+    }, {
+        "id": 4,
+        "Precio": 100.00,
+        "Cantidad": 1,
+        "Impuestos": 0.21,
+        "Subtotal": 150.00,
+        "Descuento": 0,
+        "id_Orden": 4,
+        "id_Curso": 2
+    }],
+    "Factura": [{
+        "id": 1,
+        "Fecha": "2023-05-11T00:00:00",
+        "Importe_Total": 200.00,
+        "Impuestos": 0.21,
+        "Descuentos": 0.00,
+        "Direccion_Factura": "Calle Falsa 123",
+        "Moneda": "ARS",
+        "Numero_Factura": "0001-00000001",
+        "Precio": 200.00,
+        "id_Orden": 1
+    }, {
+        "id": 2,
+        "Fecha": "2023-05-11T00:00:00",
+        "Importe_Total": 100.00,
+        "Impuestos": 0.21,
+        "Descuentos": 0.00,
+        "Direccion_Factura": "Calle Falsa 123",
+        "Moneda": "ARS",
+        "Numero_Factura": "0001-00000002",
+        "Precio": 100.00,
+        "id_Orden": 2
+    }, {
+        "id": 3,
+        "Fecha": "2023-05-11T00:00:00",
+        "Importe_Total": 150.00,
+        "Impuestos": 0.21,
+        "Descuentos": 0.00,
+        "Direccion_Factura": "Calle Falsa 123",
+        "Moneda": "ARS",
+        "Numero_Factura": "0001-00000003",
+        "Precio": 150.00,
+        "id_Orden": 3
+    }, {
+        "id": 4,
+        "Fecha": "2023-05-11T00:00:00",
+        "Importe_Total": 150.00,
+        "Impuestos": 0.21,
+        "Descuentos": 0.00,
+        "Direccion_Factura": "Calle Falsa 123",
+        "Moneda": "ARS",
+        "Numero_Factura": "0001-00000004",
+        "Precio": 150.00,
+        "id_Orden": 4
+    }]
+}
