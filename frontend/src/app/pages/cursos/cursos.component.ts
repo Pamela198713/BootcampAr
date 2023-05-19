@@ -10,5 +10,7 @@ export class CursosComponent {
   
   constructor (private dataService: DataService) {}
   
-}
-
+  CreateCouse(){
+    
+          
+  }}
