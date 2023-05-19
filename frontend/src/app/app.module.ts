@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
-import { DataService } from './services/data.service';
 
 
 @NgModule({
@@ -19,7 +18,7 @@ import { DataService } from './services/data.service';
     LayoutModule,
     PagesModule
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
