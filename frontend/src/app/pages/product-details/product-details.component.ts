@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {DataService} from '../../services/data.service';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-product-details',
@@ -43,8 +43,6 @@ export class ProductDetailsComponent implements OnInit {
      
   
   
-      }
-  
-  
+    }
         
-      }
+    }
