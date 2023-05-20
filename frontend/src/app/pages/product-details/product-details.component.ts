@@ -27,22 +27,10 @@ export class ProductDetailsComponent implements OnInit {
             this.dato = data;
             console.log(data)
           }});
-          
-          
-        };
-  
-  
+        }
         this.dataService.getAll('curso').subscribe({
           next: (data2) => {
           this.dato2 = data2;
         }});
-  
-  
-  
-  
-     
-  
-  
-    }
-        
+    }   
     }
