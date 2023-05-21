@@ -1,6 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* 
+#316fb0
+#3c6aad
+#4766a9
+#5161a5
+#5c5ca2
+#67589e
+#72539b
+#7d4e97
+#884a94
+#924591
+#9d408d
+#a83c8a
+#b33786 
+*/
+
+/*
+#F1F6F9
+#394867
+#212A3E
+#9BA4B5
+*/
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(49,111,176);
+    background: linear-gradient(170deg, rgba(49,111,176,1) 0%, rgba(114,83,155,1) 50%, rgba(179,55,134,1) 100%); 
 }
