@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,12 +11,14 @@ import {DataService} from '../../services/data.service';
 
 export class PerfilComponent implements OnInit {
  
-  constructor(private dataService: DataService) {}
+ 
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {
-     this.dataService.getAll('perfil').subscribe(data => {
-      console.log(data);
-     });
+    
   }
 
 
