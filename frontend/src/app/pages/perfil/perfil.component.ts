@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../../services/data.service';
 import { ActivatedRoute } from '@angular/router';
+import { Usuario } from 'src/app/shared/interfaces/Usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
+
 
 
 @Component({
@@ -10,16 +12,28 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class PerfilComponent implements OnInit {
+  usuario?: Usuario;
  
  
   constructor(
     private route: ActivatedRoute,
-    private dataService: DataService
+    private usuarioService: UsuarioService
   ) {}
 
   ngOnInit(): void {
-    
+    const idParam = this.route.snapshot.paramMap.get('id');
+    if (idParam){
+    const id = parseInt(idParam, 10);
+    this.usuarioService.getById(id).subscribe({
+      next:(data) => {
+      this.usuario = data
+      console.log(this.usuario);
+     }
+    });
+    };
+
   }
-
-
 }
+
+
+

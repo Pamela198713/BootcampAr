@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {DataService} from '../../services/data.service';
+
 
 @Component({
   selector: 'app-create-courses',
@@ -8,6 +8,5 @@ import {DataService} from '../../services/data.service';
 })
 export class CreateCoursesComponent {
 
-  constructor (private dataService: DataService) {}
 
 }
