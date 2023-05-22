@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,4 +11,10 @@ import { Component } from '@angular/core';
 
 export class LoginComponent {
 
-}
+  constructor (private dataService:DataService ) {}
+  
+  }
+  
+  
+
+
