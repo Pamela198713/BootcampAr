@@ -1,14 +1,42 @@
 <app-layout>
-    <div class="user-profile">
-        <div class="user-photo">
-            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" width="493" height="300" alt="Foto de perfil">
+    
+    <div class= "container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mt-4">
+            <img src="/frontend/src/assets/img/fotodeperfil.jpg   " class="card-img-top" alt="Foto de perfil">
+            <div class="card-body">
+              <h5 class="card-title">Juan Pérez</h5>
+              <p class="card-text">Estudiante universitario</p></body> 
+            </div>
+          </div>
         </div>
-        <div class="user-info">
-            <h1>Datos Personales</h1>
-            <p><strong>Nombre:</strong> Juan Pérez</p>
-            <p><strong>Edad:</strong> 28 años</p>
-            <p><strong>Correo electrónico:</strong> juan.perez@gmail.com</p>
-            <p><strong>Dirección:</strong> Av. Siempreviva 1234</p>
+        <div class="col-md-8">
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Información Personal</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Celular: Celular del usuario</li>
+                <li class="list-group-item">Edad: XX años</li>
+                <li class="list-group-item">Email: correo@ejemplo.com</li>
+                <li class="list-group-item">Ubicación: Ciudad, País</li>
+                <li class="list-group-item">Ocupación: Ocupación del usuario</li>
+                <li class="list-group-item">Redes Sociales</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Intereses</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Interés 1</li>
+                <li class="list-group-item">Interés 2</li>
+                <li class="list-group-item">Interés 3</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  
 </app-layout>
