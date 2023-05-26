@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Curso, Categoria, CursoCategoria
+from .models import Curso, Categoria, CursoCategoria, Usuario
 
 class CursoSerializer(serializers.ModelSerializer):
     #, write_only=True
@@ -15,3 +15,8 @@ class CursoSerializer(serializers.ModelSerializer):
         for categoria in categorias:
             CursoCategoria.objects.create(curso=curso, categoria=categoria)
         return curso
+    
+class UsuarioSerializer(serializers.ModelSerializer):
+    class Meta: 
+        model = Usuario 
+        fields = ['id', 'nombre', 'apellido', 'pais', 'rol', 'username', 'telefono', 'direccion', 'foto', 'perfil']
