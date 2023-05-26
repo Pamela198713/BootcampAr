@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootapp',
     'rest_framework',
+    'rest_framework_simplejwt',
     'dj_rest_auth',
     'allauth',
     'allauth.account',
@@ -133,11 +134,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
     ),
 }
+
+# 'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+APPEND_SLASH=False
