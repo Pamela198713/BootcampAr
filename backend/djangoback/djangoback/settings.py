@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootapp',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'dj_rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -125,3 +130,18 @@ LOGIN_REDIRECT_URL = 'feed'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
+# 'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+APPEND_SLASH=False

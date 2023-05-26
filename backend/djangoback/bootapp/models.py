@@ -1,51 +1,58 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractUser, Group, Permission
+from django.utils.translation import gettext_lazy as _
+from django.utils.crypto import get_random_string
 
-class UsuarioManager(BaseUserManager):
-    def create_user(self, email, password=None, **extra_fields):
-        if not email:
-            raise ValueError('El email debe ser proporcionado')
+def get_random_string_default():
+    return get_random_string(25)
 
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
-
-    def create_superuser(self, email, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
-
-        return self.create_user(email, password, **extra_fields)
-    
-
-class Usuario(AbstractBaseUser):
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
-    pais = models.CharField(max_length=50)
-    email = models.EmailField(unique=True)
-    contraseña = models.CharField(max_length=100)
+class Usuario(AbstractUser):
+    nombre = models.CharField(max_length=50, blank=True)
+    apellido = models.CharField(max_length=50, blank=True)
+    pais = models.CharField(max_length=50, blank=True)
     rol = models.CharField(max_length=20)
+    username = models.CharField(max_length=60, unique=True, default=get_random_string_default)
     telefono = models.CharField(max_length=15)
     direccion = models.CharField(max_length=100)
-    foto = models.ImageField(upload_to='usuarios')
-    perfil = models.ImageField(upload_to='perfiles')
+    foto = models.CharField(max_length=200)
+    perfil = models.OneToOneField('self', on_delete=models.CASCADE, null=True, blank=True, related_name='usuario_perfil')
+    
+    # Agrega el argumento related_name a los campos groups y user_permissions
+    groups = models.ManyToManyField(
+        Group,
+        verbose_name=_('groups'),
+        blank=True,
+        help_text=_(
+            'The groups this user belongs to. A user will get all permissions '
+            'granted to each of their groups.'
+        ),
+        related_name='usuarios'
+    )
+    user_permissions = models.ManyToManyField(
+        Permission,
+        verbose_name=_('user permissions'),
+        blank=True,
+        help_text=_('Specific permissions for this user.'),
+        related_name='usuarios'
+    )
 
-    objects = UsuarioManager()
-
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['nombre', 'apellido']
-
-    def __str__(self):
-        return self.email
     class Meta:
         db_table = 'usuarios'
 
+class Perfil(models.Model):
+    bio = models.TextField(blank=True)
+    fecha_nacimiento = models.DateField(null=True, blank=True)
+    genero = models.CharField(max_length=20, blank=True)
+    ciudad = models.CharField(max_length=50, blank=True)
+    pais = models.CharField(max_length=50, blank=True)
+
+    class Meta:
+        db_table = 'perfiles'
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=255)
-    imagen = models.ImageField(upload_to='categorias')
+    imagen =  models.CharField(max_length=200)
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
 
