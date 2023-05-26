@@ -1,0 +1,52 @@
+<app-layout>
+    <div class="container-fluid">
+        <div class="row">
+            <h1>DASHBOARD</h1>
+
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+
+                <figure>
+                    <img src="..." class="rounded-circle" alt="...">
+                </figure>
+
+                <h2 class="text-light">Usuarios</h2>
+            </div>
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Contraseña</th>
+                            <th scope="col" colspan="2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of dato">
+                            <td scope="row">{{i.id}}</td>
+                            <td>{{i.Nombre}}</td>
+                            <td>{{i.Apellido}}</td>
+                            <td>{{i.Email}}</td>
+                            <td>{{i.Rol}}</td>
+                            <td>Contraseña</td>
+                            <div>
+                                <td>
+                                    <button type="button" class="btn btn-warning">Editar</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger">Eliminar</button>
+                                </td>
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</app-layout>
