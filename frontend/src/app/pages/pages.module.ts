@@ -9,6 +9,7 @@ import { CreateCoursesComponent } from './create-courses/create-courses.componen
 import { LayoutModule } from '../layout/layout.module';
 import { CursosComponent } from './cursos/cursos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductDetailsComponent,
     PerfilComponent,
     CreateCoursesComponent,
-    CursosComponent
+    CursosComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

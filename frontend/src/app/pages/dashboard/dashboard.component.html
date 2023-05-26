@@ -1,0 +1,117 @@
+<app-layout>
+    <!-- Main Content -->
+    <main class="container-fluid mt-3 px-3">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar sidebar-back mb-3">
+                <div class="position-sticky pt-3 pb-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active nav-but" href="dashboard">
+                                <i class="bi bi-speedometer2 me-2 active"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link btn btn-link text-white nav-but" type="button" data-bs-toggle="collapse" data-bs-target="#cursoCollapse" aria-expanded="false" aria-controls="cursoCollapse">
+                                <i class="bi bi bi-book me-2 text-white"></i> Cursos <i class="bi bi-caret-down-fill ms-2"></i>
+                            </button>
+                            <div class="collapse" id="cursoCollapse">
+                                <ul class="nav flex-column ms-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi bi-list me-2 text-white"></i> Listar Todos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi bi-plus me-2 text-white"></i> Agregar Curso</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi-journal-text me-2 text-white"></i> Crear Leccion</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link btn btn-link text-white nav-but" type="button" data-bs-toggle="collapse" data-bs-target="#categCollapse" aria-expanded="false" aria-controls="categCollapse">
+                                <i class="bi bi bi-tags me-2 text-white"></i> Categorias <i class="bi bi-caret-down-fill ms-2"></i>
+                            </button>
+                            <div class="collapse" id="categCollapse">
+                                <ul class="nav flex-column ms-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi bi-list me-2 text-white"></i> Listar Todas</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi bi-plus me-2 text-white"></i>  Agregar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-but" href="#">
+                                <i class="bi bi-graph-up me-2 text-white"></i> Reportes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link btn btn-link text-white nav-but" type="button" data-bs-toggle="collapse" data-bs-target="#usersCollapse" aria-expanded="false" aria-controls="usersCollapse">
+                            <i class="bi bi-people me-2 text-white"></i> Usuarios <i class="bi bi-caret-down-fill ms-2"></i>
+                            </button>
+                            <div class="collapse" id="usersCollapse">
+                                <ul class="nav flex-column ms-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi bi-list me-2 text-white"></i> Listar Todos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white nav-but" href="#"><i class="bi bi bi-plus me-2 text-white"></i>  Agregar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-but" href="#">
+                                <i class="bi bi-cart me-2 text-white"></i> Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-but" href="#">
+                                <i class="bi bi-file-earmark-text me-2 text-white"></i> Facturación
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-but" href="#">
+                                <i class="bi bi-gear me-2 text-white"></i> Configuración
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Total de Estudiantes</h5>
+                                <p class="card-text">100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-success text-white mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Estudiantes Graduados</h5>
+                                <p class="card-text">50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-white mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Estudiantes Activos</h5>
+                                <p class="card-text">50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</app-layout>

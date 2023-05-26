@@ -5,6 +5,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CreateCoursesComponent } from './pages/create-courses/create-courses.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo:'home'}, 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'perfil/:id', component: PerfilComponent },
   { path: 'product-details/:id', component: ProductDetailsComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '**', redirectTo:'home' }, 
    
 ];  
