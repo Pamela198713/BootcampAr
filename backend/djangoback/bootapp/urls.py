@@ -15,7 +15,8 @@ urlpatterns = [
     path('auth/logout', LogoutView.as_view(), name='account_logout'),
     path('auth/', include('dj_rest_auth.urls')),
     path('auth/registration', include('dj_rest_auth.registration.urls')),
-    path('usuario', UsuarioViewSet.as_view({'get': 'list', 'post': 'create'}), name='usuario'),
+    path('api/usuario', UsuarioViewSet.as_view({'get': 'list', 'post': 'create'}), name='usuario'),
+    path('api/usuario/<int:pk>', CursoViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='usuario-detail'),
     path('api/product', CursoViewSet.as_view({'get': 'list', 'post': 'create'}), name='product-list'),
     path('api/product/<int:pk>', CursoViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='product-detail'),
 ]
