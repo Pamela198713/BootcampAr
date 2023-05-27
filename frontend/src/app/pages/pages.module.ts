@@ -10,6 +10,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { CursosComponent } from './cursos/cursos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PerfilComponent,
     CreateCoursesComponent,
     CursosComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegistroComponent
   ],
   imports: [
     CommonModule,
