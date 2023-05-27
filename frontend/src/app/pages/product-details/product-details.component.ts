@@ -27,14 +27,7 @@ export class ProductDetailsComponent implements OnInit {
           this.curso = data
           console.log(data);
         }
-  });
-};
-
-    this.autService.login({username:"leoV",password:"leonardo123"}).subscribe({
-      next:(repuesta) => {
-        console.log(repuesta);
-      }
-    })
-  
+    });
+  };
 }
 }

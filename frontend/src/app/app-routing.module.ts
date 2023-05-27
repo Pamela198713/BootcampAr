@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '**', redirectTo:'home' }, 
-   
 ];  
 
 @NgModule({
