@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {DataService} from '../../services/data.service';
+import { DataService } from '../../services/data.service';
+import { AuthServiceService } from 'src/app/auth/auth-service.service';
 
 
 @Component({
@@ -7,13 +8,12 @@ import {DataService} from '../../services/data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  {
-  
+export class HomeComponent {
 
-  constructor (private dataService: DataService) {}
 
-  
+  constructor(
+    private dataService: DataService,
+    private autService: AuthServiceService) { }
 
-        }
-     
+}
 

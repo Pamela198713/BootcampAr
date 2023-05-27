@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {DataService} from '../../services/data.service';
 import { Curso } from 'src/app/shared/interfaces/Curso';
+import { AuthServiceService } from 'src/app/auth/auth-service.service';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class ProductDetailsComponent implements OnInit {
   curso: Curso = {} as Curso;
   constructor(
     private route: ActivatedRoute,
-    private dataService: DataService
+    private dataService: DataService,
+    private autService: AuthServiceService
   ) {}
   
   ngOnInit(): void {
@@ -27,5 +29,12 @@ export class ProductDetailsComponent implements OnInit {
         }
   });
 };
+
+    this.autService.login({username:"leoV",password:"leonardo123"}).subscribe({
+      next:(repuesta) => {
+        console.log(repuesta);
+      }
+    })
+  
 }
 }
