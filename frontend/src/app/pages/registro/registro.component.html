@@ -11,33 +11,33 @@
     <main class="cont-main">
       <section class="cont-register">
         <h2 class="title-register">Registro</h2>
-        <form class="form" action="">
+        <form [formGroup]="registroForm" class="form" action="">
           <fieldset class="first-row">
             <label for="">Nombre:</label>
-            <input type="text" />
+            <input type="text" formControlName="nombre"/>
             <label for="">Apellido:</label>
-            <input type="text" />
+            <input type="text" formControlName="apellido" />
           </fieldset>
           <fieldset>
             <label for="">Email:</label>
-            <input type="text" />
+            <input type="text" formControlName="email" />
           </fieldset>
           <fieldset>
             <label for="">Contraseña:</label>
-            <input type="" />
+            <input type="password" formControlName="contraseña" />
             <label for="">Confirmar contraseña:</label>
-            <input type="" />
+            <input type="" formControlName="confirmarContraseña"/>
           </fieldset>
           <fieldset>
             <label for=""
               >Telefono:
-              <input type="text" />
+              <input type="text" formControlName="telefono"/>
             </label>
           </fieldset>
           <fieldset>
             <label for=""
               >Pais:
-              <select name="" id="">
+              <select formControlName="pais" name="" id="">
                 <option value="">Argentina</option>
                 <option value="">Chile</option>
               </select>
@@ -46,7 +46,7 @@
           <fieldset>
             <label for=""
               >Foto:
-              <input type="file" />
+              <input type="file" formControlName="foto" />
             </label>
           </fieldset>
           <button class="btn-register">Registrase</button>
