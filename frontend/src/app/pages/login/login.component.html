@@ -3,22 +3,34 @@
         <section class="container-card-login">
             <h1 class="login-title">Login</h1>
 
+
             <form class="login-form" action="">
                 <label for="">User</label>
 
-                <input class="inp-login" type="email" required />
 
+                <input class="form-control" type="email"id="" aria-describedby="emailHelp" placeholder="Enter email" required />
+
+
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+               
                 <label for="">Password</label>
 
-                <input class="inp-login" type="password" required />
+
+                <input class="form-control" type="password" id="" placeholder="Password" required />
+
 
                 <a class="a-login" href="">Olvidaste tu contraseña ?</a>
 
+
                 <button class="btn-login">Login</button>
 
-                <button class="btn-login">Registrate</button>
+
+                <button class="btn-login">
+                   <a href="../registro">Registrate</a>
+                 </button>
             </form>
         </section>
+
     </main>
 
     <head>
@@ -26,6 +38,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="login.component.css">
-        <title>Document</title>
+        <title>Login</title>
     </head>
 </app-layout>

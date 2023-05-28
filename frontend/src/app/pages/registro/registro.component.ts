@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { FormBuilder,FormGroup} from '@angular/forms';
+import { AuthServiceService } from 'src/app/auth/auth-service.service';
 
 
 
@@ -10,22 +11,36 @@ import { FormBuilder,FormGroup} from '@angular/forms';
 })
 export class RegistroComponent {
   registroForm:FormGroup;
+  
+  
+  
 
   constructor(
-    private formBuilder:FormBuilder
+    private formBuilder:FormBuilder,
+    private authService:AuthServiceService
     ){
       this.registroForm=this.formBuilder.group({
         nombre:['',[]],
         apellido:['',[]],
         email:['',[]],
-        contraseña:['',[]],
-        confirmarContraseña:['',[]],
-        telefono:['',[]],
+        password:['',[]],
+        celular:['',[]],
+        direccion:['',[]],
         pais:['',[]],
-        foto:['',[]]
+        rol:['',[]]
       });
     }
+    
+
+    llamarRegistro(){
+      this.authService.register()
+      
+      
+    }
+
+
  
     
-  }
+  } 
+
  
