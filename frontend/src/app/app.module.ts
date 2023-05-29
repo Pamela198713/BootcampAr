@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { LayoutModule } from './layout/layout.module';
     AppRoutingModule,
     SharedModule, 
     LayoutModule,
-    PagesModule
+    PagesModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

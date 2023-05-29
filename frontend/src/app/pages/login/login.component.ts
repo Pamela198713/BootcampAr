@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 
 @Component({
@@ -9,10 +9,15 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./login.component.css']
 })
 
+
 export class LoginComponent {
 
-  constructor (private dataService:DataService ) {}
+  constructor (private dataService:DataService, private formBuilder: FormBuilder) {}
   
+  loginForm= this.formBuilder.group({
+    email: [''],
+    password: ['']
+  });
   }
   
   

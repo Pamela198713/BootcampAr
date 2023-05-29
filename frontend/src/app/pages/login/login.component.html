@@ -1,31 +1,41 @@
 <app-layout>
-    <main>
-        <section class="container-card-login">
-            <h1 class="login-title">Login</h1>
+  <main>
+    <section class="container-card-login">
+      <h1 class="login-title">Login</h1>
 
-            <form class="login-form" action="">
-                <label for="">User</label>
+      <form [formGroup]="loginForm">
+        <label for="">Email</label>
 
-                <input class="inp-login" type="email" required />
+        <input
+          class="inp-login"
+          type="email"
+          formControlName="email"
+          required
+        />
 
-                <label for="">Password</label>
+        <label for="">Password</label>
 
-                <input class="inp-login" type="password" required />
+        <input
+          class="inp-login"
+          type="password"
+          formControlName="password"
+          required
+        />
 
-                <a class="a-login" href="">Olvidaste tu contraseña ?</a>
+        <a class="a-login" href="">Olvidaste tu contraseña ?</a>
 
-                <button class="btn-login">Login</button>
+        <button class="btn-login">Login</button>
 
-                <button class="btn-login">Registrate</button>
-            </form>
-        </section>
-    </main>
+        <button class="btn-login">Registrate</button>
+      </form>
+    </section>
+  </main>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="login.component.css">
-        <title>Document</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.component.css" />
+    <title>Document</title>
+  </head>
 </app-layout>
