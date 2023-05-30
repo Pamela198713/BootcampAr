@@ -3,39 +3,47 @@
     <section class="container-card-login">
       <h1 class="login-title">Login</h1>
 
-      <form [formGroup]="loginForm">
-        <label for="">Email</label>
+      <form
+        class="login-form"
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit(loginForm)"
+        action=""
+      >
+        <label for="">User</label>
 
         <input
-          class="inp-login"
+          class="form-control"
           type="email"
           formControlName="email"
+          id=""
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
           required
         />
+
+        <small id="emailHelp" class="form-text text-muted"
+          >We'll never share your email with anyone else.</small
+        >
 
         <label for="">Password</label>
 
         <input
-          class="inp-login"
+          class="form-control"
           type="password"
           formControlName="password"
+          id=""
+          placeholder="Password"
           required
         />
 
         <a class="a-login" href="">Olvidaste tu contraseña ?</a>
 
-        <button class="btn-login">Login</button>
+        <button type="submit">Login</button>
 
-        <button class="btn-login">Registrate</button>
+        <button class="btn-login">
+          <a href="../registro">Registrate</a>
+        </button>
       </form>
     </section>
   </main>
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.component.css" />
-    <title>Document</title>
-  </head>
 </app-layout>

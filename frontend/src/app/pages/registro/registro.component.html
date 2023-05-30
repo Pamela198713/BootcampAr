@@ -5,49 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./registro.component.css" />
-    <title>Document</title>
+    <title>Registro</title>
   </head>
   <body>
     <main class="cont-main">
       <section class="cont-register">
         <h2 class="title-register">Registro</h2>
-        <form class="form" action="">
+        <form [formGroup]="registroForm" class="form" action="">
           <fieldset class="first-row">
-            <label for="">Nombre:</label>
-            <input type="text" />
-            <label for="">Apellido:</label>
-            <input type="text" />
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" formControlName="nombre">
           </fieldset>
           <fieldset>
-            <label for="">Email:</label>
-            <input type="text" />
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido" formControlName="apellido">
           </fieldset>
           <fieldset>
-            <label for="">Contraseña:</label>
-            <input type="" />
-            <label for="">Confirmar contraseña:</label>
-            <input type="" />
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" formControlName="email">
           </fieldset>
           <fieldset>
-            <label for=""
-              >Telefono:
-              <input type="text" />
-            </label>
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" formControlName="password">
           </fieldset>
           <fieldset>
-            <label for=""
-              >Pais:
-              <select name="" id="">
-                <option value="">Argentina</option>
-                <option value="">Chile</option>
-              </select>
-            </label>
+            <label for="celular" class="form-label">Celular</label>
+            <input type="tel" class="form-control" id="celular" placeholder="Ingresa tu número de celular" formControlName="celular">
           </fieldset>
           <fieldset>
-            <label for=""
-              >Foto:
-              <input type="file" />
-            </label>
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección" formControlName="direccion">
+          </fieldset>
+          <fieldset>
+            <label for="pais" class="form-label">País</label>
+            <input type="text" class="form-control" id="pais" placeholder="Ingresa tu país" formControlName="pais">
+          </fieldset>
+          <fieldset>
+            <label for="rol" class="form-label">Rol</label>
+                <select class="form-select" id="rol" formControlName="rol">
+                  <option value="">Selecciona un rol</option>
+                  <option value="estudiante">Estudiante</option>
+                  <option value="profesor">Profesor</option>
+                </select>
           </fieldset>
           <button class="btn-register">Registrase</button>
         </form>
@@ -55,3 +54,8 @@
     </main>
   </body>
 </html>
+
+
+
+
+

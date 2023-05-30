@@ -27,17 +27,3 @@
     margin-top: 2%;
 }
 
-fieldset{
-    border: none;
-}
-
-
-.form input{
-    outline: none;
-    border: none;
-    border-bottom: 1px solid grey;
-}
-
-.btn-register{
-    width: 50%;
-}
