@@ -9,6 +9,7 @@ import { LayoutModule } from './layout/layout.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent, 
@@ -19,8 +20,8 @@ import { LayoutModule } from './layout/layout.module';
     AppRoutingModule,
     SharedModule, 
     LayoutModule,
-    PagesModule
-  ],
+    PagesModule,
+      ],
   providers: [],
   bootstrap: [AppComponent]
 })
