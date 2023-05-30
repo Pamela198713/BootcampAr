@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { FormBuilder,FormGroup} from '@angular/forms';
 import { AuthServiceService } from 'src/app/auth/auth-service.service';
-
+import { Usuario } from 'src/app/shared/interfaces/Usuario';
 
 
 @Component({
@@ -10,16 +10,15 @@ import { AuthServiceService } from 'src/app/auth/auth-service.service';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
-  registroForm:FormGroup;
-  
-  
-  
 
+
+  
   constructor(
     private formBuilder:FormBuilder,
     private authService:AuthServiceService
-    ){
-      this.registroForm=this.formBuilder.group({
+    ){}
+   
+      registroForm=this.formBuilder.group({
         nombre:['',[]],
         apellido:['',[]],
         email:['',[]],
@@ -29,18 +28,57 @@ export class RegistroComponent {
         pais:['',[]],
         rol:['',[]]
       });
-    }
-    
 
-    llamarRegistro(){
-      this.authService.register()
-      
-      
+      onSubmit(registroForm: FormGroup){
+        const nombre = registroForm.value.nombre;
+        const apellido = registroForm.value.apellido;
+        const email = registroForm.value.email;
+        const password = registroForm.value.password;
+        const telefono = registroForm.value.telefono;
+        const direccion = registroForm.value.direccion;
+        const pais = registroForm.value.pais;
+        const id = registroForm.value.id;
+        const rol = registroForm.value.rol;
+        const foto = registroForm.value.foto;
+        const perfil = registroForm.value.perfil;
+        console.log(nombre, password);
+
+        
+  const usuario: Usuario = {
+    Nombre: nombre,
+    Apellido: apellido,
+    Email: email,
+    Password: password,
+    Telefono: telefono,
+    Direccion: direccion,
+    Pais: pais,
+    //atributos a debatir
+    id: id,
+    Rol: rol,
+    Foto: foto,
+    Perfil: perfil
+
+
+  };
+  
+        this.authService.register(usuario).subscribe({
+          next:(respuesta) => {
+      }
+
+        
+    })
     }
+  
+    
+  }
+
+      
+      
+    
 
 
  
     
-  } 
+  
 
  
