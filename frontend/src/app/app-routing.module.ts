@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'perfil/:id', component: PerfilComponent },
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'dashboard', component: DashboardComponent },
+  {path:'registro', component: RegistroComponent},
   { path: '**', redirectTo:'home' }, 
 ];  
 
