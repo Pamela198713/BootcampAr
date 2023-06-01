@@ -4,7 +4,7 @@ from .models import Curso, Categoria, CursoCategoria, Usuario
 class CursoSerializer(serializers.ModelSerializer):
     #, write_only=True
     categorias = serializers.PrimaryKeyRelatedField(queryset=Categoria.objects.all(), many=True)
-  
+
     class Meta: 
         model = Curso 
         fields = ['id', 'titulo', 'precio', 'descripcion', 'duracion', 'nivel', 'lenguajes', 'imagenes', 'categorias']
