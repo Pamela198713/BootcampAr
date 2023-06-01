@@ -1,36 +1,39 @@
 <app-layout>
     <main>
         <section class="container-card-login">
-            <h1 class="login-title">Login</h1>
+            <h1 class="login-title">Iniciar sesión</h1>
+ 
+            <form>
+              <div class="mb-12">
+                <label for="InputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">No compartiremos su email.</div>
+              </div>
+              <div class="mb-12">
+                <label for="InputContraseña" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="InputContraseña">
+              </div>
+              <a class="a-login" href="">Olvidaste tu contraseña ?</a>
+              <div class="mb-12">
+              <button type="submit" class="btn-login">Iniciar sesión</button>
+            </div>
+            <div class="mb-12">
+                <button type="submit" class="btn-login">Registrarse</button>
+              </div>
 
-
-            <form class="login-form" action="">
-                <label for="">User</label>
-
-
-                <input class="form-control" type="email"id="" aria-describedby="emailHelp" placeholder="Enter email" required />
-
-
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-               
-                <label for="">Password</label>
-
-
-                <input class="form-control" type="password" id="" placeholder="Password" required />
-
-
-                <a class="a-login" href="">Olvidaste tu contraseña ?</a>
-
-
-                <button class="btn-login">Login</button>
-
-
-                <button class="btn-login">Registrate</button>
-            </form>
+        </form>
+ 
+ 
         </section>
-
+ 
+ 
+ 
+ 
     </main>
-
+ 
+ 
+ 
+ 
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,4 +41,4 @@
         <link rel="stylesheet" href="login.component.css">
         <title>Login</title>
     </head>
-</app-layout>
+  </app-layout>

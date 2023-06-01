@@ -1,6 +1,6 @@
 .container-login{ 
     padding: 2% 2%; 
-    border: 2px solid grey; 
+    border: 2px solid rgb(128, 128, 128); 
     border-radius: 15px; 
     width: 15%; 
     display: flex; 
@@ -25,7 +25,7 @@
 
 
 
-.login-form{ 
+.mb-12{ 
     display: flex; 
     flex-direction: column; 
 } 
@@ -40,8 +40,8 @@
 
 
 
-.login-form > label{ 
-    margin-top: 2%; 
+.mb-12 > label{ 
+    margin-top: 10%; 
 } 
 
 
@@ -56,15 +56,15 @@
 
 
 
-.login-form > input:hover{ 
-    border: 3px solid rgba(0, 89, 255, 0.807); 
+.mb-12 > input:hover{ 
+    border: 3px solid rgba(33, 101, 228, 0.807); 
 } 
 
 
 
-.login-form > input:focus{ 
+.mb-12> input:focus{ 
     border-color: rgba(0, 89, 255, 0.807); 
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(0, 89, 255, 0.807); 
+    box-shadow: 0 1px 1px rgba(229, 47, 23, 0.075)inset, 0 0 8px rgba(0, 89, 255, 0.807); 
     outline: 0 none; 
 } 
 
@@ -73,6 +73,7 @@
 .a-login{ 
     width: 52%;
     margin-bottom: 3%; 
+    margin-top: 10%; 
     color: white; 
     font-weight: bold; 
     text-decoration: none; 
@@ -130,8 +131,8 @@
     .container-card-login{ 
         border-radius: 15px; 
         margin: 15% auto; 
-        width: 80%; 
-        height: 50rem; 
+        width: 50%; 
+        height: 40rem; 
         display: flex; 
         flex-direction: column; 
         justify-content: center; 
