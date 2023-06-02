@@ -7,28 +7,28 @@ import { Curso } from "../shared/interfaces/Curso";
   providedIn: 'root'
 })
 export class ProductsService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:8000/api';
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Curso[]> {
-    return this.http.get<Curso[]>(`${this.apiUrl}/Curso`)
+    return this.http.get<Curso[]>(`${this.apiUrl}/product`)
   }
 
   getById(id: number): Observable<Curso> {
-    return this.http.get<Curso>(`${this.apiUrl}/Curso/${id}`);
+    return this.http.get<Curso>(`${this.apiUrl}/product/${id}`);
   }
 
   insert(data: Curso): Observable<Curso> {
-    return this.http.post<Curso>(`${this.apiUrl}/Curso`, data);
+    return this.http.post<Curso>(`${this.apiUrl}/product`, data);
   }
 
   update(id: number, data: Curso): Observable<Curso> {
-    return this.http.put<Curso>(`${this.apiUrl}/Curso/${id}`, data);
+    return this.http.put<Curso>(`${this.apiUrl}/product/${id}`, data);
   }
 
   delete(id: number): Observable<{}> {
-    return this.http.delete<{}>(`${this.apiUrl}/Curso/${id}`);
+    return this.http.delete<{}>(`${this.apiUrl}/product/${id}`);
   }
 
 }
