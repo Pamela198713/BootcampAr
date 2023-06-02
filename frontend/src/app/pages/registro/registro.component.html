@@ -1,25 +1,27 @@
 <app-layout>
 
 
-  <form>
+
+
+  <form [formGroup]="registroForm" class="form" action="">
     <div class="body-Registrarse">
       <section class="container-registro">
         <h1 class="title-registro">Registrarse</h1>
         <div class="mb-12">
           <label for="inputUsuario" class="form-label">Usuario</label>
-          <input type="usuario" class="form-control" id="inputUsuario" placeholder="Usuario">
+          <input type="usuario" class="form-control" id="inputUsuario" placeholder="Usuario" formControlName="usuarioname">
         </div>
         <div class="mb-12">
           <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
         </div>
         <div class="mb-12">
           <label for="inputContraseña" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña">
+          <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña" formControlName="password">
         </div>
         <div class="mb-12">
           <label for="inputContraseña" class="form-label">Confirmar Contraseña</label>
-          <input type="password" class="form-control" id="inputContraseña" placeholder="Confirmar Contraseña">
+          <input type="password" class="form-control" id="inputContraseña" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
         </div>
         <div class="mb-12">
           <button type="submit" class="btn btn-primary">Registrarse</button>
