@@ -30,7 +30,7 @@ export class RegistroComponent {
         const email = registroForm.value.email;
         const password = registroForm.value.password;
         const confirmPassword = registroForm.value.confirmPassword;
-        
+        console.log(usuarioname,email,password,confirmPassword)
 
         
     //     const usuario: Usuario = {
@@ -38,6 +38,7 @@ export class RegistroComponent {
     //       Email: email,
     //       Password: password,
     //      // ConfirmPassword: confirmpassword
+
       
       
     //     };
@@ -48,6 +49,7 @@ export class RegistroComponent {
 
         
     // })
+
     }
   
     

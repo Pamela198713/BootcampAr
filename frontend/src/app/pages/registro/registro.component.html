@@ -3,7 +3,7 @@
 
 
 
-  <form [formGroup]="registroForm" class="form" action="">
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit(registroForm)" class="form" action="">
     <div class="body-Registrarse">
       <section class="container-registro">
         <h1 class="title-registro">Registrarse</h1>
