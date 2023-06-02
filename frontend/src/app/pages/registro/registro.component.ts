@@ -17,7 +17,7 @@ export class RegistroComponent {
     private formBuilder:FormBuilder,
     private authService:AuthServiceService
     ){}
-   
+
       registroForm=this.formBuilder.group({
         usuarioname:['',[]],
         email:['',[]],
@@ -32,22 +32,24 @@ export class RegistroComponent {
         const confirmPassword = registroForm.value.confirmPassword;
         console.log(usuarioname,email,password,confirmPassword)
 
-        const usuario: Usuario = {
-          Nombre: usuarioname,
-          Email: email,
-          Password: password,
-         // ConfirmPassword: confirmpassword
+        
+    //     const usuario: Usuario = {
+    //       Nombre: usuarioname,
+    //       Email: email,
+    //       Password: password,
+    //      // ConfirmPassword: confirmpassword
+
       
       
-        };
+    //     };
   
-        this.authService.register(usuario).subscribe({
-          next:(respuesta) => {
-      }
+    //     this.authService.register(usuario).subscribe({
+    //       next:(respuesta) => {
+    //   }
 
         
-    })
-   
+    // })
+
     }
   
     
