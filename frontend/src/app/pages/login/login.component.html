@@ -1,46 +1,39 @@
 <app-layout>
-    <main>
-        <section class="container-card-login">
-            <h1 class="login-title">Iniciar sesión</h1>
- 
-            <form>
-              <div class="mb-12">
-                <label for="InputEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">No compartiremos su email.</div>
-              </div>
-              <div class="mb-12">
-                <label for="InputContraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="InputContraseña">
-              </div>
-              <a class="a-login" href="">Olvidaste tu contraseña ?</a>
-              <div class="mb-12">
-              <button type="submit" class="btn-login">Iniciar sesión</button>
-            </div>
-            <div class="mb-12">
-                <button type="submit" class="btn-login">Registrarse</button>
-              </div>
+  <main>
+    <section class="container-card-login">
+      <h1 class="login-title">Iniciar sesión</h1>
 
-        </form>
- 
- 
-        </section>
- 
- 
- 
- 
-    </main>
- 
- 
- 
- 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="login.component.css">
-        <title>Login</title>
-    </head>
-  </app-layout>
-
-   
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="mb-12">
+          <label for="InputEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="InputEmail"
+            formControlName="email"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">No compartiremos su email.</div>
+        </div>
+        <div class="mb-12">
+          <label for="InputContraseña" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="InputContraseña"
+            formControlName="password"
+          />
+        </div>
+        <a class="a-login" href="">Olvidaste tu contraseña ?</a>
+        <div class="mb-12">
+          <button type="submit" class="btn-login">Iniciar sesión</button>
+        </div>
+        <div class="mb-12">
+          <button class="btn-login">
+            <a href="../registro">Registrarse</a>
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+</app-layout>
