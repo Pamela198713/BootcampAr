@@ -17,56 +17,39 @@ export class RegistroComponent {
     private formBuilder:FormBuilder,
     private authService:AuthServiceService
     ){}
-   
+
       registroForm=this.formBuilder.group({
-        nombre:['',[]],
-        apellido:['',[]],
+        usuarioname:['',[]],
         email:['',[]],
         password:['',[]],
-        celular:['',[]],
-        direccion:['',[]],
-        pais:['',[]],
-        rol:['',[]]
+        confirmPassword:['',[]]
       });
 
       onSubmit(registroForm: FormGroup){
-        const nombre = registroForm.value.nombre;
-        const apellido = registroForm.value.apellido;
+        const usuarioname = registroForm.value.usuarioname;
         const email = registroForm.value.email;
         const password = registroForm.value.password;
-        const telefono = registroForm.value.telefono;
-        const direccion = registroForm.value.direccion;
-        const pais = registroForm.value.pais;
-        const id = registroForm.value.id;
-        const rol = registroForm.value.rol;
-        const foto = registroForm.value.foto;
-        const perfil = registroForm.value.perfil;
-        console.log(nombre, password);
+        const confirmPassword = registroForm.value.confirmPassword;
+        console.log(usuarioname,email,password,confirmPassword)
 
         
-  const usuario: Usuario = {
-    Nombre: nombre,
-    Apellido: apellido,
-    Email: email,
-    Password: password,
-    Telefono: telefono,
-    Direccion: direccion,
-    Pais: pais,
-    //atributos a debatir
-    id: id,
-    Rol: rol,
-    Foto: foto,
-    Perfil: perfil
+    //     const usuario: Usuario = {
+    //       Nombre: usuarioname,
+    //       Email: email,
+    //       Password: password,
+    //      // ConfirmPassword: confirmpassword
 
-
-  };
+      
+      
+    //     };
   
-        this.authService.register(usuario).subscribe({
-          next:(respuesta) => {
-      }
+    //     this.authService.register(usuario).subscribe({
+    //       next:(respuesta) => {
+    //   }
 
         
-    })
+    // })
+
     }
   
     
