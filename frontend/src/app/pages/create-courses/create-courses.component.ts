@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
 
 
 @Component({
@@ -24,8 +22,6 @@ export class CreateCoursesComponent {
     imagenes: ['']
   });
 
-
-
   onSubmit(cursoForm: FormGroup) {
      
       const titulo = cursoForm.value.titulo;
@@ -36,6 +32,6 @@ export class CreateCoursesComponent {
       const lenguaje = cursoForm.value.lenguaje;
       const imagenes = cursoForm.value.imagenes;
       console.log(titulo, descripcion, precio, duracion, nivel, lenguaje, imagenes);
-}
+  }
   
 }
