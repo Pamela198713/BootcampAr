@@ -10,19 +10,61 @@
         <div class="mb-12">
           <label for="inputUsuario" class="form-label">Usuario</label>
           <input type="usuario" class="form-control" id="inputUsuario" placeholder="Usuario" formControlName="usuarioname">
+          <div *ngIf="Usuarioname?.errors && Usuarioname?.touched">
+            <p *ngIf="Usuarioname?.hasError('required')" class="text-danger">
+              El nombre de usuario es requerido.
+            </p>
+            <p *ngIf="Usuarioname?.hasError('usuarioname')" class="text-danger">
+              El usuario debe ser válido.
+            </p>
+          </div>
+          <div *ngIf="Usuarioname?.valid">
+            <p class="text-success">Usuario válido</p>
+          </div>
         </div>
+
         <div class="mb-12">
           <label for="inputEmail" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
+        <div *ngIf="Email?.errors && Email?.touched">
+          <p *ngIf="Email?.hasError('required')" class="text-danger">
+            El email es requerido.
+          </p>
+          <p *ngIf="Email?.hasError('email')" class="text-danger">
+            El email debe ser válido.
+          </p>
         </div>
+        <div *ngIf="Email?.valid">
+          <p class="text-success">Email válido</p>
+        </div>
+        </div>
+
         <div class="mb-12">
           <label for="inputContraseña" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña" formControlName="password">
+          <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">
+              El password es requerido.
+            </p>
+            <p *ngIf="Password?.errors" class="text-danger">
+            El password debe ser de 8 o más caracteres.
+          </p>
+          </div>
         </div>
+
         <div class="mb-12">
           <label for="inputContraseña" class="form-label">Confirmar Contraseña</label>
           <input type="password" class="form-control" id="inputContraseña" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
+          <div *ngIf="ConfirmPassword?.errors && ConfirmPassword?.touched">
+            <p *ngIf="ConfirmPassword?.hasError('required')" class="text-danger">
+              La confirmación de la contraseña es requerida.
+            </p>
+            <p *ngIf="ConfirmPassword?.errors" class="text-danger">
+            La contraseña debe ser de 8 o más caracteres.
+          </p>
+          </div>
         </div>
+
         <div class="mb-12">
           <button type="submit" class="btn btn-primary">Registrarse</button>
         </div>

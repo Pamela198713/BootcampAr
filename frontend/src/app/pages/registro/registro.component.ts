@@ -2,6 +2,8 @@ import { Component} from '@angular/core';
 import { FormBuilder,FormGroup} from '@angular/forms';
 import { AuthServiceService } from 'src/app/auth/auth-service.service';
 import { Usuario } from 'src/app/shared/interfaces/Usuario';
+import { Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -18,12 +20,32 @@ export class RegistroComponent {
     private authService:AuthServiceService
     ){}
 
-      registroForm=this.formBuilder.group({
+    /*  registroForm=this.formBuilder.group({
         usuarioname:['',[]],
         email:['',[]],
         password:['',[]],
         confirmPassword:['',[]]
       });
+    */
+      registroForm : FormGroup = this.formBuilder.group({
+        usuarioname:['',[Validators.required]],
+        email: ['',[Validators.required, Validators.email]],
+        password: ['',[Validators.required, Validators.minLength(8)]],
+        confirmPassword: ['',[Validators.required, Validators.minLength(8)]]
+      })
+    
+      get Password(){
+        return this.registroForm.get("password")
+      }
+      get Email(){
+        return this.registroForm.get("email")
+      }
+      get Usuarioname(){
+        return this.registroForm.get("usuarioname")
+      }
+      get ConfirmPassword(){
+        return this.registroForm.get("confirmPassword")
+      }
 
       onSubmit(registroForm: FormGroup){
         const usuarioname = registroForm.value.usuarioname;
