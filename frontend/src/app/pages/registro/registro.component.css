@@ -10,8 +10,9 @@
 } */
 
 .container-registro {
+    background-color: rgba(0, 0, 0, 0.498);
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid rgba(128, 128, 128, 0.349);
     padding: 4%;
     margin-top: 20px;
 }
