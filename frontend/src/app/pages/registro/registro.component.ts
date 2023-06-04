@@ -13,7 +13,6 @@ import { Validators } from '@angular/forms';
 })
 export class RegistroComponent {
 
-
   
   constructor(
     private formBuilder:FormBuilder,
@@ -54,23 +53,18 @@ export class RegistroComponent {
         const confirmPassword = registroForm.value.confirmPassword;
         console.log(usuarioname,email,password,confirmPassword)
 
-        
-    //     const usuario: Usuario = {
-    //       Nombre: usuarioname,
-    //       Email: email,
-    //       Password: password,
-    //      // ConfirmPassword: confirmpassword
+        const usuario: any = {
+          Nombre: usuarioname,
+          Email: email,
+          Password: password
+        };
 
-      
-      
-    //     };
   
-    //     this.authService.register(usuario).subscribe({
-    //       next:(respuesta) => {
-    //   }
-
-        
-    // })
+        this.authService.register(usuario).subscribe({
+          next:(respuesta) => {
+            console.log(respuesta);
+        }
+      })
 
     }
   
