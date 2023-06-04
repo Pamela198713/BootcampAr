@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/auth/auth-service.service';
-import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -29,29 +28,30 @@ export class LoginComponent {
     get Password(){
       return this.loginForm.get("password")
     }
+
     get Email(){
       return this.loginForm.get("email")
     }
 
+
     onSubmit(loginForm: FormGroup) {
       const email = loginForm.value.email;
       const password = loginForm.value.password;
-      console.log(email, password);
       
 
       this.authService.login({email,password}).subscribe({
-        next:(respuesta) => {
-    
-          localStorage.setItem('token',(respuesta as any).access );
-          localStorage.setItem('refreshToken',(respuesta as any).refresh );
-          console.log(respuesta);
+        next:() => {
+          console.log('Login successful');
         },
         error:(err) => {
           console.log("error:", err)
         }  
-      })   
-  }
+      })
+
     }
+
+
+}
   
   
   
