@@ -22,6 +22,20 @@
     text-shadow: 2px 2px black;
 }
 
+.text-main a{
+    color: #F1F6F9;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+.text-main a:hover{
+    color: #316fb0;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
 .container-main-bot{
     display: flex;
     justify-content: space-around;
@@ -29,6 +43,7 @@
 }
 
 .card-main{
+    padding: 1%;
     margin: 5%;
     background-color:  rgba(0, 0, 0, 0.498);
     border-radius: 0px 30px;
