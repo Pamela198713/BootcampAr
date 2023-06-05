@@ -17,6 +17,30 @@ class CursoSerializer(serializers.ModelSerializer):
         return curso
     
 class UsuarioSerializer(serializers.ModelSerializer):
-    class Meta: 
-        model = Usuario 
-        fields = ['id', 'nombre', 'apellido', 'pais', 'rol', 'username', 'telefono', 'direccion', 'foto', 'perfil']
+    password = serializers.CharField(write_only=True, required=True)
+
+    class Meta:
+        model = Usuario
+        fields = '__all__'
+        read_only_fields = ['id']
+
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        instance = self.Meta.model(**validated_data)
+        instance.password = password
+        instance.save()
+        return instance
+    
+class UsuarioCreateSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True, required=True)
+
+    class Meta:
+        model = Usuario
+        fields = ['email', 'username', 'password']
+
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        instance = self.Meta.model(**validated_data)
+        instance.set_password(password)
+        instance.save()
+        return instance    

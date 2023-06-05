@@ -11,6 +11,7 @@ class Usuario(AbstractUser):
     apellido = models.CharField(max_length=50, blank=True)
     pais = models.CharField(max_length=50, blank=True)
     rol = models.CharField(max_length=20)
+    email = models.EmailField(unique=True)
     username = models.CharField(max_length=60, unique=True, default=get_random_string_default)
     telefono = models.CharField(max_length=15)
     direccion = models.CharField(max_length=100)
