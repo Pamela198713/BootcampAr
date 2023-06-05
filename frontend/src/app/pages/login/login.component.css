@@ -1,6 +1,5 @@
 .container-login {
     /* padding: 2% 2%;  */
-    border: 2px solid rgb(128, 128, 128);
     border-radius: 15px;
     /* width: 15%; */
     /* display: flex;
@@ -9,7 +8,8 @@
 }
 
 .container-card-login {
-    margin-top: 20px;
+    margin: 10% 0%;
+    padding: 5%;
     border-radius: 15px;
     /*margin: 10% auto;
     width: 25%;
@@ -33,6 +33,11 @@
     font-size: 3rem;
     text-align: center;
     /* margin-bottom: 10%; */
+}
+
+.title-inp{
+    font-size: 1.2rem;
+    margin: 1% 0%;
 }
 
 
@@ -72,6 +77,11 @@
 .a-login:hover {
     text-shadow: 2px 2px 2px black;
     color: rgba(235, 236, 239, 0.807);
+}
+
+.text-bnt{
+    color: black;
+    text-decoration: none;
 }
 
 

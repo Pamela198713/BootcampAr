@@ -18,7 +18,7 @@
 
 .container-nav{
     width: 50%;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
