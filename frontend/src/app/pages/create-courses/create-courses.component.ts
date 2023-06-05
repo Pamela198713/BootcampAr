@@ -19,7 +19,8 @@ export class CreateCoursesComponent {
     duracion: ['', Validators.required],
     nivel: ['', Validators.required],
     lenguaje: ['', Validators.required],
-    imagenes: ['']
+    imagenes: [''],
+    categoria: ['',Validators.required]
   });
 
   onSubmit(cursoForm: FormGroup) {
