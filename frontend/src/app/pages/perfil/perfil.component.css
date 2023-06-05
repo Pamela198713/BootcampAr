@@ -1,34 +1,54 @@
-.user-profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .user-photo {
-    flex: 1;
-    max-width: 200px;
-  }
-  
-  .user-photo img {
-    display: block;
-    width: 100%;
-    border-radius: 50%;
-  }
-  
-  .user-info {
-    flex: 2;
-    padding: 20px;
-  }
-  
-  .user-info h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .user-info p {
-    font-size: 16px;
-    margin-bottom: 5px;
+body {
+	font-family: Arial, sans-serif;
+  background: #12c2e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   }
+    
+  .list-group-item{
+  border-color: black;
+  border-width: 2px;
   }
 
- 
+header {
+	display: flex;
+	align-items: center;
+}
+
+img {
+	border-radius: 200%;
+	width: 300px;
+	height: 315px;
+	margin-right: 200px;
+}
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+i {
+	margin-right: 10px;
+}

@@ -1,0 +1,19 @@
+.curs-title{
+    text-align: center;
+    margin: 5% 0%;
+    font-size: 3rem;
+    color: white;
+    font-style: italic;
+}
+
+.per-card{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.498);
+    height: 25rem;
+    border-radius: 15px;
+}
+
+.bot-card-p{
+    padding: 2%;
+    margin: auto;
+}

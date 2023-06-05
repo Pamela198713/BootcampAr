@@ -1,14 +1,34 @@
 <app-layout>
-    <div class="user-profile">
-        <div class="user-photo">
-            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" width="493" height="300" alt="Foto de perfil">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mt-4">
+          <img
+            src="{{ usuario?.Foto }}"
+             cd class="card-img-top"
+            alt="Foto de perfil"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ usuario?.Nombre }},{{ usuario?.Apellido }}
+            </h5>
+            <p class="card-text">{{ usuario?.Rol }}</p>
+          </div>
         </div>
-        <div class="user-info">
-            <h1>Datos Personales</h1>
-            <p><strong>Nombre:</strong> Juan Pérez</p>
-            <p><strong>Edad:</strong> 28 años</p>
-            <p><strong>Correo electrónico:</strong> juan.perez@gmail.com</p>
-            <p><strong>Dirección:</strong> Av. Siempreviva 1234</p>
+      </div>
+      <div class="col-md-8">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Información Personal</h5>
+            <ul class="list-group">
+              <li class="list-group-item">{{ usuario?.Telefono }}</li>
+              <li class="list-group-item">{{ usuario?.Email }}</li>
+              <li class="list-group-item">{{ usuario?.Pais }}</li>
+              <li class="list-group-item">{{ usuario?.Direccion }}</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </app-layout>

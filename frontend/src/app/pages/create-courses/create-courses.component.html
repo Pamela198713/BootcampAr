@@ -1,33 +1,105 @@
 <app-layout>
-    <div class="body-createCourse">
-        <section class="container-createCourse">
-            <h1 class="title-createCourse">Create Course</h1>
-            <form action="">
-                <fieldset class="conatinaer-form">
-                    <label for="">Titulo: 
-                    </label>
-                    <input type="text" required>
-                    <label for="">Duracion: 
-                    </label>
-                    <input type="date" required>
-                    <label for="">Lenguaje: 
-                    </label>
-                    <input type="url" required>
-                    <label for="">Imagenes: 
-                    </label>
-                    <input type="text" required>
-                    <label for="">Nivel: 
-                    </label>
-                    <input type="number" max="5" min="1" required>
-                    <label for="">Precio: 
-                    </label>
-                    <input type="number" required>
-                    <label for="">Descripcion: 
-                    </label>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
-                </fieldset>
-                <button class="btn-form"> Create </button>
-            </form>
-        </section>
-    </div>
+  <div class="body-createCourse">
+    <section class="container-createCourse">
+      <h1 class="title-createCourse">Crear Curso</h1>
+      <form action="" [formGroup]="cursoForm" (ngSubmit)="onSubmit(cursoForm)">
+        <fieldset class="conatinaer-form">
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Titulo: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="titulo"
+              name="titulo"
+              placeholder="Ingrese el título"
+              formControlName="titulo"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="duracion" class="form-label">Duracion: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="duracion"
+              name="duracion"
+              placeholder="Ingrese la duración del curso"
+              formControlName="duracion"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lenguaje">Lenguaje:</label>
+            <select
+              class="form-select"
+              id="lenguaje"
+              name="lenguaje"
+              formControlName="lenguaje"
+              required
+            >
+              <option value="">Selecciona un lenguaje</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="javascript">JavaScript</option>
+              <option value="htmlcss">HTML/CSS</option>
+              <option value="Angular">Angular</option>
+              <option value="Django">Django</option>
+              <option value="basesdeDatos">mySQL</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="imagenes" class="form-label">Imágenes</label>
+            <input
+              type="file"
+              class="form-control"
+              id="imagenes"
+              name="imagenes"
+              accept="image/jpeg"
+              formControlName="imagenes"
+              multiple
+            />
+          </div>
+          <div class="mb-3">
+            <label for="nivel">Nivel:</label>
+            <select
+              class="form-select"
+              id="nivel"
+              name="nivel"
+              formControlName="nivel"
+              required
+            >
+              <option value="">Selecciona un nivel</option>
+              <option value="inicial">Inicial</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input
+              type="number"
+              class="form-control"
+              id="precio"
+              name="precio"
+              placeholder="Ingrese el precio"
+              formControlName="precio"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea
+              class="form-control"
+              id="descripcion"
+              name="descripcion"
+              placeholder="Ingrese la descripción del curso"
+              formControlName="descripcion"
+              required
+            ></textarea>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn-form">Crear Curso</button>
+      </form>
+    </section>
+  </div>
 </app-layout>

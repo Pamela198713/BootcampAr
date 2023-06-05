@@ -2,25 +2,24 @@
     padding: 1% 0%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     border-radius: 0% 0% 20% 20%;
     background-color: #394867;
+    margin-bottom: 5%;
 }
 
 
 .container-header-logo{
     display: flex;
     margin: 1%;
-    align-items: center;
 }
 
 .logo{
-    width: 30%;
+    width: 5rem;
 }
 
 .container-nav{
-    width: 40vw;
-
+    width: 50%;
+    justify-content: flex-end;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -53,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: auto;
+    margin: 2%;
 }
 
 .icon {
@@ -65,6 +64,12 @@
     cursor: pointer;
 }
 
+.iconReg {
+    width: 2rem;
+    height: 1.9rem;
+}
+
+
 @media screen and (min-width: 180px) and (max-width: 540px){
     .container-header{
         flex-direction: column;
@@ -74,21 +79,23 @@
     .container-header-logo{
         display: flex;
         justify-content: center;
-        margin: 5% 0%;
+        margin: 3% 0%;
     }
 
     .container-nav{
-        margin: 5% 0%;
+        margin: 3% 0%;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         width: 100%;
     }
-    .btn-nav{
+
+    .nav-but{
         text-align: center;
         width: 50%;
         margin: 1.5% 0%;
     }
+
     .container-login {
         padding: 2% 2%;
         border: 2px solid #9BA4B5;
