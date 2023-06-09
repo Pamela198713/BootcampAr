@@ -19,12 +19,24 @@
           <div class="mb-3">
             <label for="duracion" class="form-label">Duracion: </label>
             <input
-              type="text"
+              type="date"
               class="form-control"
               id="duracion"
               name="duracion"
               placeholder="Ingrese la duración del curso"
               formControlName="duracion"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="Categoria" class="form-label">Categoria: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="Categoria"
+              name="Categoria"
+              placeholder="Ingrese el título"
+              formControlName="categoria"
               required
             />
           </div>
@@ -47,6 +59,7 @@
               <option value="basesdeDatos">mySQL</option>
             </select>
           </div>
+
           <div class="mb-3">
             <label for="imagenes" class="form-label">Imágenes</label>
             <input
@@ -78,7 +91,7 @@
             <label for="precio" class="form-label">Precio</label>
             <input
               type="number"
-              class="form-control"
+              class="form-control price"
               id="precio"
               name="precio"
               placeholder="Ingrese el precio"

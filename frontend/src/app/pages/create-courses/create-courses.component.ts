@@ -19,7 +19,8 @@ export class CreateCoursesComponent {
     duracion: ['', Validators.required],
     nivel: ['', Validators.required],
     lenguaje: ['', Validators.required],
-    imagenes: ['']
+    imagenes: [''],
+    categoria: ['',Validators.required]
   });
 
   onSubmit(cursoForm: FormGroup) {
@@ -31,7 +32,8 @@ export class CreateCoursesComponent {
       const nivel = cursoForm.value.nivel;
       const lenguaje = cursoForm.value.lenguaje;
       const imagenes = cursoForm.value.imagenes;
-      console.log(titulo, descripcion, precio, duracion, nivel, lenguaje, imagenes);
+      const categoria = cursoForm.value.categoria;
+      console.log(titulo, descripcion, precio, duracion, nivel, lenguaje, imagenes, categoria);
   }
   
 }
