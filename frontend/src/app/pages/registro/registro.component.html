@@ -24,7 +24,7 @@
 
                             <div class="mb-2 col-md-7">
                                 <label for="inputEmail" class="text-white">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
+                                <input type="email" autocomplete="username" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
                                 <div *ngIf="Email?.errors && Email?.touched">
                                     <p *ngIf="Email?.hasError('required')" class="text-danger">
                                         El email es requerido.
@@ -40,7 +40,7 @@
 
                             <div class="mb-2 col-md-4">
                                 <label for="inputContraseña" class="text-white">Contraseña</label>
-                                <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña" formControlName="password">
+                                <input type="password" autocomplete="new-password" class="form-control" id="inputContrasena" placeholder="Contraseña" formControlName="password">
                                 <div *ngIf="Password?.errors && Password?.touched">
                                     <p *ngIf="Password?.hasError('required')" class="text-danger">
                                         El password es requerido.
@@ -53,7 +53,7 @@
 
                             <div class="mb-2 col-md-4">
                                 <label for="inputContraseña" class="text-white">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" id="inputContraseña" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
+                                <input type="password" autocomplete="new-password" class="form-control" id="inputContrasena2" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
                                 <div *ngIf="ConfirmPassword?.errors && ConfirmPassword?.touched">
                                     <p *ngIf="ConfirmPassword?.hasError('required')" class="text-danger">
                                         La confirmación de la contraseña es requerida.
