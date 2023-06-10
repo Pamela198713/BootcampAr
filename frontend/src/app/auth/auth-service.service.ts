@@ -37,8 +37,8 @@ export class AuthServiceService {
     );
   }
 
-  register(user: Usuario) : Observable<any>{
-    return this.http.post(`${this.url}auth/register`,user)
+  register(user: any) : Observable<any>{
+    return this.http.post(`${this.url}/auth/register`,user)
   }
 
   getRol(id: any) : Observable<any>{
