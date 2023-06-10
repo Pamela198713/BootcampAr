@@ -118,6 +118,7 @@ class Leccion(models.Model):
 
 
 class Orden(models.Model):
+    id = models.AutoField(primary_key=True)
     METODOS_PAGO_CHOICES = (
         ('efectivo', 'Efectivo'),
         ('merca', 'Mercadopago'),
@@ -147,6 +148,7 @@ class OrdenDetalle(models.Model):
 
 
 class Factura(models.Model):
+    id = models.AutoField(primary_key=True)
     fecha = models.DateTimeField()
     importe_total = models.DecimalField(max_digits=10, decimal_places=2)
     impuestos = models.DecimalField(max_digits=10, decimal_places=2)
