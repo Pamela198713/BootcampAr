@@ -127,6 +127,7 @@ class Orden(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     datos = models.TextField()
     estado = models.CharField(max_length=50)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
     metodos_pago = models.CharField(max_length=50, choices=METODOS_PAGO_CHOICES)
     def __str__(self):
         return self.estado

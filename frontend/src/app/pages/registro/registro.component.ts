@@ -54,9 +54,9 @@ export class RegistroComponent {
         console.log(usuarioname,email,password,confirmPassword)
 
         const usuario: any = {
-          Nombre: usuarioname,
-          Email: email,
-          Password: password
+          username: usuarioname,
+          email: email,
+          password1: password
         };
 
   

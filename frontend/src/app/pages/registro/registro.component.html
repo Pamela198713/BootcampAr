@@ -24,7 +24,7 @@
 
                             <div class="mb-2 col-md-7 cont-inp">
                                 <label for="inputEmail" class="text-white mb-2 title-inp">Email</label>
-                                <input type="email" class="form-control inp" id="inputEmail" placeholder="Email" formControlName="email">
+                                <input type="email" autocomplete="username" class="form-control inp" id="inputEmail" placeholder="Email" formControlName="email">
                                 <div *ngIf="Email?.errors && Email?.touched" class="mt-3">
                                     <p *ngIf="Email?.hasError('required')" class="text-danger">
                                         El email es requerido.
@@ -40,7 +40,7 @@
 
                             <div class="mb-2 col-md-4 cont-inp">
                                 <label for="inputContraseña" class="text-white mb-2 title-inp">Contraseña</label>
-                                <input type="password" class="form-control inp" id="inputContraseña" placeholder="Contraseña" formControlName="password">
+                                <input type="password" autocomplete="new-password" class="form-control inp" id="inputContraseña" placeholder="Contraseña" formControlName="password">
                                 <div *ngIf="Password?.errors && Password?.touched" class="mt-3">
                                     <p *ngIf="Password?.hasError('required')" class="text-danger">
                                         El password es requerido.
@@ -53,7 +53,7 @@
 
                             <div class="mb-2 col-md-4 cont-inp">
                                 <label for="inputConfimarContraseña" class="text-white mb-2 title-inp">Confirmar Contraseña</label>
-                                <input type="password" class="form-control inp" id="inputConfimarContraseña" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
+                                <input type="password" autocomplete="new-password" class="form-control inp" id="inputConfimarContraseña" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
                                 <div *ngIf="ConfirmPassword?.errors && ConfirmPassword?.touched" class="mt-3">
                                     <p *ngIf="ConfirmPassword?.hasError('required')" class="text-danger">
                                         La confirmación de la contraseña es requerida.
