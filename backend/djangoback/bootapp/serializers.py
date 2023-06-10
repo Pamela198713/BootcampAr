@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Curso, Categoria, CursoCategoria, Usuario
+from .models import Curso, Categoria, CursoCategoria, Usuario, Orden, OrdenDetalle, Factura
 
 class CursoSerializer(serializers.ModelSerializer):
     #, write_only=True
@@ -43,4 +43,24 @@ class UsuarioCreateSerializer(serializers.ModelSerializer):
         instance = self.Meta.model(**validated_data)
         instance.set_password(password)
         instance.save()
-        return instance    
+        return instance   
+     
+class OrdenDetalleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrdenDetalle
+        fields = '__all__'
+
+class FacturaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Factura
+        fields = '__all__'
+        read_only_fields = ['id']
+
+class OrdenSerializer(serializers.ModelSerializer):
+    detalles = OrdenDetalleSerializer(many=True, read_only=True)
+    factura = FacturaSerializer(read_only=True)
+
+    class Meta:
+        model = Orden
+        fields = '__all__'
+        read_only_fields = ['id']
