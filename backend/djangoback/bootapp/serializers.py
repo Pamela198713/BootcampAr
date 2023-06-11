@@ -1,5 +1,9 @@
 from rest_framework import serializers
 from .models import Curso, Categoria, CursoCategoria, Usuario, Orden, OrdenDetalle, Factura
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import get_user_model
+
+
 
 class CursoSerializer(serializers.ModelSerializer):
     #, write_only=True
@@ -64,3 +68,28 @@ class OrdenSerializer(serializers.ModelSerializer):
         model = Orden
         fields = '__all__'
         read_only_fields = ['id']
+
+User = get_user_model()
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        # Agrega cualquier campo personalizado aquí
+        token['username'] = user.username
+
+        return token
+
+    def validate(self, attrs):
+        credentials = {
+            'username': '',
+            'password': attrs.get("password")
+        }
+
+        user_obj = User.objects.filter(email=attrs.get("username")).first() or User.objects.filter(username=attrs.get("username")).first()
+        if user_obj:
+            credentials['username'] = user_obj.username
+
+        return super().validate(credentials)
+
