@@ -13,7 +13,7 @@
         <a class="nav-but" href="/cursos">Cursos</a>
 
         <!-- <a class="nav-but" href="/cursos">Registrate</a> -->
-<!-- 
+        <!-- 
         <a class="nav-but" href="/login">Login</a>
 
         <a class="nav-but" href="/createCourse">Crear Producto</a>
@@ -24,10 +24,13 @@
 
             <!-- <img class="icon" src="assets/img/home/img-barradenavegacion/noti.png" alt=""> -->
 
-            <a href="/registro"><img class="iconReg" src="../../../assets/img/icons8-registro-30.png" alt=""></a>
+            <a href="/registro"><img class="iconReg" src="../../../assets/img/icons8-registro-30.png" alt="Nuevo"></a>
 
-            <a href="/login"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt=""></a>
+            <a href="/login"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt="Perfil"></a>
 
+            <div *ngIf="isLoggedIn()">
+                <img class="icon2" src="../../../assets/img/home/icons8-salir-redondeado-32.png" alt="Salir" (click)="logout()">
+            </div>
         </div>
 
     </nav>

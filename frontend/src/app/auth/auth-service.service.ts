@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'; 
 import { Usuario } from '../shared/interfaces/Usuario';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -41,11 +41,15 @@ export class AuthServiceService {
     return this.http.post(`${this.url}/auth/register`,user)
   }
 
-  getRol(id: any) : Observable<any>{
-    return this.http.get(`${this.url}api/usuario/`,id)
+  getRol(id: any): Observable<string> {
+    return this.http.get<Usuario>(`${this.url}api/usuario/${id}`).pipe(
+        map(user => user.rol)
+    );
   }
 
   logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('refreshToken');
     this.loggedIn = false;
   }
 
