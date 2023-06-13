@@ -8,6 +8,8 @@
 
     <nav class="container-nav">
 
+        <a *ngIf="isLoggedIn()" class="nav-but" href="/dashboard">Dashboard</a>
+
         <a class="nav-but" href="/">Inicio</a>
 
         <a class="nav-but" href="/cursos">Cursos</a>
