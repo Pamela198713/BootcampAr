@@ -75,7 +75,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item" *ngIf="visitante === 1">
                             <button class="nav-link btn btn-link text-white nav-but" type="button" data-bs-toggle="collapse" data-bs-target="#mycurso" aria-expanded="false" aria-controls="mycurso">
                                 <i class="bi bi bi-book me-2 text-white"></i> Mis Cursos <i class="bi bi-caret-down-fill ms-2"></i>
                             </button>
@@ -87,7 +87,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" *ngIf="visitante === 1">
                             <button class="nav-link btn btn-link text-white nav-but" type="button" data-bs-toggle="collapse" data-bs-target="#mybuy" aria-expanded="false" aria-controls="mybuy">
                                 <i class="bi bi bi-tags me-2 text-white"></i> Mis compras <i class="bi bi-caret-down-fill ms-2"></i>
                             </button>
@@ -102,7 +102,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" *ngIf="visitante === 1">
                             <a class="nav-link text-white nav-but" href="#">
                                 <i class="bi bi-gear me-2 text-white"></i> Configuración
                             </a>
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="col-md-9 col-lg-12">
-                        <div class="row">
+                        <div class="row" *ngIf="visitante === 1">
                             <div class="col-md-4">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">
