@@ -35,10 +35,3 @@ export class DashboardComponent {
 }
 
 
-
-// if(userrol === 2){
-//   this.visitante = 2
-// }
-// else{
-//   this.visitante = 1
-// }
