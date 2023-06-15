@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarritoComponent } from './carrito/carrito.component';
+import { ListCourseComponent } from './list-course/list-course.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     CursosComponent,
     DashboardComponent,
     RegistroComponent,
-    CarritoComponent
+    CarritoComponent,
+    ListCourseComponent
   ],
   imports: [
     CommonModule,
