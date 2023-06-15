@@ -9,7 +9,7 @@ import { tap, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthServiceService {
-  private url = "http://127.0.0.1:8000"
+  private url = "http://localhost:8000"
   private loggedIn = false;
   private token = "";
   private refreshToken = "";
@@ -42,7 +42,7 @@ export class AuthServiceService {
   }
 
   getRol(id: any): Observable<string> {
-    return this.http.get<Usuario>(`${this.url}api/usuario/${id}`).pipe(
+    return this.http.get<Usuario>(`${this.url}/api/usuario/${id}`).pipe(
         map(user => user.rol)
     );
   }

@@ -24,7 +24,7 @@ urlpatterns = [
     path('api/orden_detalles', OrdenDetalleListCreate.as_view(), name='detail-orden'),
     path('api/factura', FacturaListCreate.as_view({'get': 'list', 'post': 'create'}), name='factura'),
     path('api/usuario', UsuarioViewSet.as_view({'get': 'list', 'post': 'create'}), name='usuario'),
-    path('api/usuario/<int:pk>', CursoViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='usuario-detail'),
+    path('api/usuario/<int:pk>', UsuarioViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='usuario-detail'),
     path('api/product', CursoViewSet.as_view({'get': 'list', 'post': 'create'}), name='product-list'),
     path('api/product/<int:pk>', CursoViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='product-detail'),
 ]
