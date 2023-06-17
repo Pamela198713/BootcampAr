@@ -1,18 +1,18 @@
 <app-layout>
-    <div class="container">
+    <div class="container body-detailsCourse">
         <div class="row mt-5">
-            <div class="col-md-6">
+            <div class="col-md-6 m-auto">
                 <img src="{{ curso.imagenes }}" alt="Product Image" class="img-fluid" />
             </div>
             <div class="col-md-6">
                 <h1 class="mb-4">{{ curso.titulo }}</h1>
                 <div class="col-md-10 pr-5">
-                    <p class="text-muted pr-5">
+                    <p class=" pr-5 desc-detailsCourse">
                         {{ curso.descripcion }}
                     </p>
                     <h4 class="mb-3">Precio: {{ curso.precio }}</h4>
                     <div>
-                        <button class="btn btn-primary">COMPRAR</button>
+                        <button class="btn btn-primary"><a class="txt-btn" href="/carrito">COMPRAR</a></button>
                     </div>
                 </div>
             </div>
