@@ -15,5 +15,10 @@ export class CarritoComponent {
     let carrito  = JSON.parse(carritoStorage);
     this.listaItemCarrito=carrito
   }
+
+  vaciarCarrito(){
+    localStorage.clear();
+    this.listaItemCarrito = [];
+  }
   }
   
