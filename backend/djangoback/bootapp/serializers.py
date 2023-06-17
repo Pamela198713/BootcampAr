@@ -32,22 +32,27 @@ class UsuarioSerializer(serializers.ModelSerializer):
         password = validated_data.pop('password')
         instance = self.Meta.model(**validated_data)
         instance.password = password
+        instance.rol = 1
         instance.save()
         return instance
     
 class UsuarioCreateSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username')  
     password = serializers.CharField(write_only=True, required=True)
 
     class Meta:
         model = Usuario
-        fields = ['email', 'username', 'password']
+        fields = ['username', 'password']
 
     def create(self, validated_data):
         password = validated_data.pop('password')
-        instance = self.Meta.model(**validated_data)
-        instance.set_password(password)
-        instance.save()
-        return instance   
+        username = validated_data.pop('user')['username']  
+
+        user = User.objects.create_user(username=username, password=password)
+        usuario = Usuario.objects.create(user=user, **validated_data)
+        usuario.save()
+
+        return usuario
      
 class OrdenDetalleSerializer(serializers.ModelSerializer):
     class Meta:
