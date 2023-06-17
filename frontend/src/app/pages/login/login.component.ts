@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/auth/auth-service.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,11 @@ import { AuthServiceService } from 'src/app/auth/auth-service.service';
 
 export class LoginComponent {
 
-  constructor (private dataService:DataService, private formBuilder: FormBuilder, private authService: AuthServiceService) {}
+  constructor (private toastr: ToastrService, 
+               private formBuilder: FormBuilder, 
+               private authService: AuthServiceService,
+               private router: Router
+              ) {}
   
   // loginForm= this.formBuilder.group({
   //  email: [''],
@@ -20,8 +25,8 @@ export class LoginComponent {
   //  });
     
     loginForm : FormGroup = this.formBuilder.group({
-      email: ['',[Validators.required, Validators.email]],
-      password: ['',[Validators.required, Validators.minLength(8)]]
+    email: ['',[Validators.required, Validators.email]],
+    password: ['',[Validators.required, Validators.minLength(8)]]
   
     })
   
@@ -35,16 +40,18 @@ export class LoginComponent {
 
 
     onSubmit(loginForm: FormGroup) {
-      const email = loginForm.value.email;
+      const username = loginForm.value.email;
       const password = loginForm.value.password;
       
 
-      this.authService.login({email,password}).subscribe({
+      this.authService.login({username,password}).subscribe({
         next:() => {
-          console.log('Login successful');
+          this.toastr.success('Usuario logeado exitosamente');
+          this.router.navigate(['/home']); 
         },
         error:(err) => {
-          console.log("error:", err)
+          this.toastr.error("error: " + err)
+          console.log(err);
         }  
       })
 

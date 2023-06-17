@@ -7,17 +7,16 @@
     margin-bottom: 5%;
 }
 
-
-.container-header-logo{
+.container-header-logo {
     display: flex;
     margin: 1%;
 }
 
-.logo{
+.logo {
     width: 5rem;
 }
 
-.container-nav{
+.container-nav {
     width: 50%;
     justify-content: flex-end;
     align-items: center;
@@ -44,7 +43,7 @@
 }
 
 .container-login {
-    padding: 2% 2%;
+    padding: 10px 10px;
     border: 2px solid #9BA4B5;
     border-radius: 15px;
     height: 3.5rem;
@@ -69,33 +68,36 @@
     height: 1.9rem;
 }
 
+.icon2 {
+    width: 2rem;
+    height: 2.1rem;
+}
 
-@media screen and (min-width: 180px) and (max-width: 540px){
-    .container-header{
+.icon2:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 180px) and (max-width: 540px) {
+    .container-header {
         flex-direction: column;
     }
-
-
-    .container-header-logo{
+    .container-header-logo {
         display: flex;
         justify-content: center;
         margin: 3% 0%;
     }
-
-    .container-nav{
+    .container-nav {
         margin: 3% 0%;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         width: 100%;
     }
-
-    .nav-but{
+    .nav-but {
         text-align: center;
         width: 50%;
         margin: 1.5% 0%;
     }
-
     .container-login {
         padding: 2% 2%;
         border: 2px solid #9BA4B5;
@@ -109,31 +111,28 @@
     }
 }
 
-@media screen and (min-width: 540px) and (max-width: 1280px){
-    .container-header{
+@media screen and (min-width: 540px) and (max-width: 1280px) {
+    .container-header {
         flex-direction: column;
     }
-
-
-    .container-header-logo{
+    .container-header-logo {
         display: flex;
         justify-content: center;
         margin: 5% 0%;
     }
-
-    .container-nav{
+    .container-nav {
         margin: 5% 0%;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         width: 100%;
     }
-    .nav-but{
+    .nav-but {
         text-align: center;
         width: 50%;
         margin: 1.5% 0%;
     }
-    .container-login{
+    .container-login {
         margin: 3% auto;
         width: 50%;
     }

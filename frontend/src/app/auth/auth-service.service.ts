@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'; 
 import { Usuario } from '../shared/interfaces/Usuario';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
-  private url = "http://127.0.0.1:8000"
+  private url = "http://localhost:8000"
   private loggedIn = false;
   private token = "";
   private refreshToken = "";
@@ -37,20 +37,28 @@ export class AuthServiceService {
     );
   }
 
-  register(user: Usuario) : Observable<any>{
-    return this.http.post(`${this.url}auth/register`,user)
+  register(user: any) : Observable<any>{
+    return this.http.post(`${this.url}/auth/register`,user)
   }
 
-  getRol(id: any) : Observable<any>{
-    return this.http.get(`${this.url}api/usuario/`,id)
+  getRol(id: any): Observable<string> {
+    return this.http.get<Usuario>(`${this.url}/api/usuario/${id}`).pipe(
+        map(user => user.rol)
+    );
   }
 
   logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('refreshToken');
     this.loggedIn = false;
   }
 
   isLoggedIn() {
     return this.loggedIn;
+  }
+
+  getToken() {
+    return this.token;
   }
 
   

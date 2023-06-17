@@ -1,33 +1,46 @@
 <header class="container-header">
 
     <figure class="container-header-logo">
-
-        <img class="logo" src="../../../assets/img/logo-bootcampar.ico" alt="">
-
+        <a href="/home"><img class="logo" src="../../../assets/img/logo-bootcampar.ico" alt=""></a>
     </figure>
 
     <nav class="container-nav">
 
+
         <a class="nav-but" href="/">Inicio</a>
 
-        <a class="nav-but" href="/cursos">Cursos</a>
+        <a *ngIf="isLoggedIn()" class="nav-but" href="/cursos">Cursos</a>
 
-        <!-- <a class="nav-but" href="/cursos">Registrate</a> -->
-<!-- 
-        <a class="nav-but" href="/login">Login</a>
+        <a *ngIf="isLoggedIn()" class="nav-but" href="/dashboard">Dashboard</a>
 
-        <a class="nav-but" href="/createCourse">Crear Producto</a>
-
-        <a class="nav-but" href="/product-details/1">Detalle Producto</a> -->
 
         <div class="container-login">
 
             <!-- <img class="icon" src="assets/img/home/img-barradenavegacion/noti.png" alt=""> -->
 
-            <a href="/registro"><img class="iconReg" src="../../../assets/img/icons8-registro-30.png" alt=""></a>
+            <div *ngIf="isLoggedIn() == false">
+                <a href="/registro"><img class="iconReg" src="../../../assets/img/icons8-registro-30.png" alt="Nuevo"></a>
+            </div>
 
-            <a href="/login"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt=""></a>
+            <div *ngIf="isLoggedIn()">
+                <a href="/registro" style="display: none;"><img class="iconReg" src="../../../assets/img/icons8-registro-30.png" alt="Nuevo"></a>
+            </div>
 
+            <!-- Crear una funcion que tome al usuario y lo redirecciones a su perfil -->
+
+            <div *ngIf="isLoggedIn() == false">
+                <a href="/login"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt="Perfil"></a>
+            </div>
+
+            <div *ngIf="isLoggedIn()">
+                <a href="/perfil/1"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt="Perfil"></a>
+            </div>
+
+            <!-- --------------------------------------------------------- -->
+
+            <div *ngIf="isLoggedIn()">
+                <img class="icon2" src="../../../assets/img/home/icons8-salir-redondeado-32.png" alt="Salir" (click)="logout()">
+            </div>
         </div>
 
     </nav>

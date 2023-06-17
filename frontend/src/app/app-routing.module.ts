@@ -9,18 +9,22 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { RutasProtegidasGuard } from './guards/rutas-protegidas.guard';
 import { CursosComponent } from './pages/cursos/cursos.component';
+import { NoAuthGuardGuard } from './guards/no-auth-guard.guard';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ListCourseComponent } from './pages/list-course/list-course.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo:'home'}, 
   { path: 'home', component: HomeComponent },
   { path: 'createCourse', component: CreateCoursesComponent, canActivate: [RutasProtegidasGuard]},
-  { path: 'login', component: LoginComponent },
-  { path: 'cursos', component: CursosComponent },
-  { path: 'register', component:RegistroComponent },
+  { path: 'login', component: LoginComponent, canActivate: [NoAuthGuardGuard] },
+  { path: 'cursos', component: CursosComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'perfil/:id', component: PerfilComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [RutasProtegidasGuard] },
-  { path:'registro', component: RegistroComponent},
+  { path:'registro', component: RegistroComponent, canActivate: [NoAuthGuardGuard]},
+  { path: 'carrito',component: CarritoComponent , canActivate: [RutasProtegidasGuard]},
+  { path: 'listCourse', component: ListCourseComponent, canActivate: [RutasProtegidasGuard] },
   { path: '**', redirectTo:'home' }, 
 ];  
 
