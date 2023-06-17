@@ -2,19 +2,21 @@
   <main>
     <div class="container">
       <div class="row justify-content-center">
-        <h2 class="curs-title">Cursos</h2>
+        <h2 class="main-title">Cursos</h2>
         <!-- Cartas -->
         <div class="row mb-5">
           <div class="col mb-4" *ngFor="let i of curso">
 
-            <div class="card" style="width: 18rem;">
-              <img src="{{i.imagenes}}" class="card-img-top" alt="...">
+            <div class="card per-card" style="width: 18rem;">
+              <img src="{{i.imagenes}}" class="card-img-top img-card" alt="...">
               <div class="card-body">
-                <h5 class="card-title">{{i.titulo}}</h5>
-                <p class="card-text">{{i.descripcion}}</p>
-                <div class="row">
+                <h5 class="curs-title">{{i.titulo}}</h5>
+                <div class="desc-card">
+                  <p class="card-text">{{i.descripcion}}</p>
+                </div>
+                <div class="row bot-card">
                   <a href="/product-details/{{i.id}}" class="btn btn-warning">Detalles</a>
-                  <button href="" class="btn btn-primary mt-3" (click)="agregarCarrito">Comprar</button>
+                  <button class="btn btn-primary mt-3" (click)="agregarCarrito"><a class="txt-btn" href="/carrito">Comprar</a></button>
                 </div>
               </div>
             </div>
