@@ -42,7 +42,6 @@ export class CreateCoursesComponent {
       console.log(titulo, descripcion, precio, duracion, nivel, lenguaje, imagenes, categoria);
 
        this.product = {
-        "id": 0,  
         "titulo": titulo,
         "descripcion": descripcion,
         "precio": precio,
