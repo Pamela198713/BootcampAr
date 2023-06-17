@@ -1,34 +1,30 @@
 <app-layout>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mt-4">
-          <img
-            src="{{ usuario?.Foto }}"
-             cd class="card-img-top"
-            alt="Foto de perfil"
-          />
-          <div class="card-body">
-            <h5 class="card-title">
-              {{ usuario?.Nombre }},{{ usuario?.Apellido }}
-            </h5>
-            <p class="card-text">{{ usuario?.Rol }}</p>
-          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mt-4">
+                    <img src="{{ usuario?.foto }}" cd class="card-img-top" alt="Foto de perfil" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {{ usuario?.nombre }},{{ usuario?.apellido }}
+                        </h5>
+                        <p class="card-text">{{ usuario?.rol }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Información Personal</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">{{ usuario?.telefono }}</li>
+                            <li class="list-group-item">{{ usuario?.email }}</li>
+                            <li class="list-group-item">{{ usuario?.pais }}</li>
+                            <li class="list-group-item">{{ usuario?.direccion }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-8">
-        <div class="card mt-4">
-          <div class="card-body">
-            <h5 class="card-title">Información Personal</h5>
-            <ul class="list-group">
-              <li class="list-group-item">{{ usuario?.Telefono }}</li>
-              <li class="list-group-item">{{ usuario?.Email }}</li>
-              <li class="list-group-item">{{ usuario?.Pais }}</li>
-              <li class="list-group-item">{{ usuario?.Direccion }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </app-layout>

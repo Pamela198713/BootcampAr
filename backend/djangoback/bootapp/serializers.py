@@ -1,5 +1,9 @@
 from rest_framework import serializers
-from .models import Curso, Categoria, CursoCategoria, Usuario
+from .models import Curso, Categoria, CursoCategoria, Usuario, Orden, OrdenDetalle, Factura
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import get_user_model
+
+
 
 class CursoSerializer(serializers.ModelSerializer):
     #, write_only=True
@@ -43,4 +47,49 @@ class UsuarioCreateSerializer(serializers.ModelSerializer):
         instance = self.Meta.model(**validated_data)
         instance.set_password(password)
         instance.save()
-        return instance    
+        return instance   
+     
+class OrdenDetalleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrdenDetalle
+        fields = '__all__'
+
+class FacturaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Factura
+        fields = '__all__'
+        read_only_fields = ['id']
+
+class OrdenSerializer(serializers.ModelSerializer):
+    detalles = OrdenDetalleSerializer(many=True, read_only=True)
+    factura = FacturaSerializer(read_only=True)
+
+    class Meta:
+        model = Orden
+        fields = '__all__'
+        read_only_fields = ['id']
+
+User = get_user_model()
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        # Agrega cualquier campo personalizado aquí
+        token['username'] = user.username
+
+        return token
+
+    def validate(self, attrs):
+        credentials = {
+            'username': '',
+            'password': attrs.get("password")
+        }
+
+        user_obj = User.objects.filter(email=attrs.get("username")).first() or User.objects.filter(username=attrs.get("username")).first()
+        if user_obj:
+            credentials['username'] = user_obj.username
+
+        return super().validate(credentials)
+
