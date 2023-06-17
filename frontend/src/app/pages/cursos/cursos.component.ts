@@ -1,21 +1,27 @@
-import { Component } from '@angular/core';
-import {DataService} from '../../services/data.service';
+import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/shared/interfaces/Curso';
 import { ItemCarrito } from 'src/app/shared/interfaces/ItemCarrito';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
-export class CursosComponent {
-  
-  constructor (private dataService: DataService) {}
-  
-  CreateCouse(){
-    
-          
+export class CursosComponent implements OnInit {
+  curso: any;
+
+  constructor (private productService: ProductsService) {}
+
+  ngOnInit(): void {
+    this.productService.getAll().subscribe({
+      next:(dato) => {
+        this.curso = dato
+        console.log(this.curso)
+      }
+    })
   }
+
   agregarCarrito(item : Curso){
     let iCarrito : ItemCarrito = {
       titulo: item.titulo,
