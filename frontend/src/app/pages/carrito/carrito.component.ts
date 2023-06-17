@@ -14,8 +14,16 @@ export class CarritoComponent {
 
   ngOnInit(): void {
     let carritoStorage = localStorage.getItem("carrito") as string;
-    let carrito = JSON.parse(carritoStorage);
-    this.listaItemCarrito = carrito
+
+    let carrito  = JSON.parse(carritoStorage);
+    this.listaItemCarrito=carrito
+  }
+
+  vaciarCarrito(){
+    localStorage.clear();
+    this.listaItemCarrito = [];
+  }
+
   }
 
   
