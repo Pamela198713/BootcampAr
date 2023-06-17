@@ -18,13 +18,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'createCourse', component: CreateCoursesComponent, canActivate: [RutasProtegidasGuard]},
   { path: 'login', component: LoginComponent, canActivate: [NoAuthGuardGuard] },
-  { path: 'cursos', component: CursosComponent },
+  { path: 'cursos', component: CursosComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'perfil/:id', component: PerfilComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [RutasProtegidasGuard] },
   { path:'registro', component: RegistroComponent, canActivate: [NoAuthGuardGuard]},
-  { path: 'carrito',component: CarritoComponent},
-  { path: 'listCourse', component: ListCourseComponent },
+  { path: 'carrito',component: CarritoComponent , canActivate: [RutasProtegidasGuard]},
+  { path: 'listCourse', component: ListCourseComponent, canActivate: [RutasProtegidasGuard] },
   { path: '**', redirectTo:'home' }, 
 ];  
 
