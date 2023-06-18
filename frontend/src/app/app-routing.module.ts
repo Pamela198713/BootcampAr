@@ -20,10 +20,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [NoAuthGuardGuard] },
   { path: 'cursos', component: CursosComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'perfil/:id', component: PerfilComponent, canActivate: [RutasProtegidasGuard] },
-  { path: 'product-details/:id', component: ProductDetailsComponent },
+  { path: 'product-details/:id', component: ProductDetailsComponent, canActivate: [RutasProtegidasGuard]  },
   { path: 'dashboard', component: DashboardComponent, canActivate: [RutasProtegidasGuard] },
   { path:'registro', component: RegistroComponent, canActivate: [NoAuthGuardGuard]},
-  { path: 'carrito',component: CarritoComponent , canActivate: [RutasProtegidasGuard]},
+  { path: 'carrito',component: CarritoComponent, canActivate: [RutasProtegidasGuard]},
   { path: 'listCourse', component: ListCourseComponent, canActivate: [RutasProtegidasGuard] },
   { path: '**', redirectTo:'home' }, 
 ];  
