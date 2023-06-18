@@ -3,24 +3,25 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card mt-4">
-                    <img src="{{ usuario?.foto }}" cd class="card-img-top" alt="Foto de perfil" />
+                    <img src="{{ usuario?.foto }}" class="card-img-top mt-3 mb-3 m-auto" alt="Foto de perfil" />
                     <div class="card-body">
-                        <h5 class="card-title">
-                            {{ usuario?.nombre }},{{ usuario?.apellido }}
+                        <h5 class="card-title text-center">
+                            {{ usuario?.nombre }}, {{ usuario?.apellido }}
                         </h5>
-                        <p class="card-text">{{ usuario?.rol }}</p>
+                        <p class="card-text text-center">{{ rol }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="card mt-4">
                     <div class="card-body">
-                        <h5 class="card-title">Información Personal</h5>
+                        <h1 class="card-title text-center mt-3 mb-3">Información Personal</h1>
                         <ul class="list-group">
-                            <li class="list-group-item">{{ usuario?.telefono }}</li>
-                            <li class="list-group-item">{{ usuario?.email }}</li>
-                            <li class="list-group-item">{{ usuario?.pais }}</li>
-                            <li class="list-group-item">{{ usuario?.direccion }}</li>
+                            <li class="list-group-item">Telefono: {{ usuario?.telefono }}</li>
+                            <li class="list-group-item">Email: {{ usuario?.email }}</li>
+                            <li class="list-group-item">Pais: {{ usuario?.pais }}</li>
+                            <li class="list-group-item">Direccion: {{ usuario?.direccion }}</li>
+                            <button class="btn btn-primary mt-5">Dashboard de {{ usuario?.nombre }}</button>
                         </ul>
                     </div>
                 </div>

@@ -17,6 +17,7 @@ export class CursosComponent implements OnInit {
     this.productService.getAll().subscribe({
       next:(dato) => {
         this.curso = dato
+        console.log(this.curso)
       }
     })
   }

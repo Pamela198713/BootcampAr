@@ -1,0 +1,40 @@
+<app-layout>
+    <div class="container">
+        <div class="row">
+            <h1>Usuarios</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col" colspan="2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let i of dato">
+                        <tr *ngIf="i.rol == 1">
+                            <td scope="row">{{i.id}}</td>
+                            <td>{{i.nombre}}</td>
+                            <td>{{i.apellido}}</td>
+                            <td>{{i.email}}</td>
+                            <td>{{i.telefono}}</td>
+                            <div>
+                                <td>
+                                    <button type="button" class="btn btn-warning">Editar</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger">Eliminar</button>
+                                </td>
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</app-layout>
