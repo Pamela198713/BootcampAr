@@ -47,7 +47,7 @@ export class LoginComponent {
       this.authService.login({username,password}).subscribe({
         next:() => {
           this.toastr.success('Usuario logeado exitosamente');
-          this.router.navigate(['/home']); 
+          this.router.navigate(['/dashboard']); 
         },
         error:(err) => {
           this.toastr.error("error: " + err.message)

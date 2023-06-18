@@ -1,5 +1,9 @@
 export interface ItemCarrito {
-    titulo:string | undefined;
-    descripcion: string | undefined;
-    precio:number | undefined;
+    id: number;
+    name: string;
+    title: string;
+    price: number;
+    image: string;
+    quantity: number;
+    description: string;
 }
