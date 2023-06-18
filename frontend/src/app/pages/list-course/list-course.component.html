@@ -18,7 +18,7 @@
                 <tbody>
                     <tr *ngFor="let curso of cursos">
                         <td>{{curso.id}}</td>
-                        <td><img [src]="curso.imagenes" [alt]="curso.titulo"></td>
+                        <td><img class="img-cursos img-fluid" [src]="curso.imagenes" [alt]="curso.titulo"></td>
                         <td>{{curso.titulo}}</td>
                         <td>{{curso.descripcion | slice:0:100}}...</td>
                         <td>{{curso.lenguajes}}</td>

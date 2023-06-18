@@ -32,33 +32,33 @@ export class DashboardComponent {
         );
       });
       
-     
+    }
 
     
 
 
-  getRole() {
-    this.logg = this.authService.getUserLoggedId()
+  // getRole() {
+  //   this.logg = this.authService.getUserLoggedId()
 
 
-    this.usuarioService.getById(this.logg).subscribe({
-      next:(data) => {
-        this.usuario = data
+  //   this.usuarioService.getById(this.logg).subscribe({
+  //     next:(data) => {
+  //       this.usuario = data
 
 
-        this.authService.getRol(this.usuario.id).subscribe(
-          (rol: string) => {
-            // console.log("El ID es: " + this.authService.getUserLoggedId());
-            this.visitante = rol
+  //       this.authService.getRol(this.usuario.id).subscribe(
+  //         (rol: string) => {
+  //           // console.log("El ID es: " + this.authService.getUserLoggedId());
+  //           this.visitante = rol
 
-          }
-        );
+  //         }
+  //       );
 
-      }
-    })
+  //     }
+  //   })
 
 
-  }
+  // }
   
 
 }
