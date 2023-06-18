@@ -14,6 +14,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ListCourseComponent } from './list-course/list-course.component';
+import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ListCourseComponent } from './list-course/list-course.component';
     DashboardComponent,
     RegistroComponent,
     CarritoComponent,
-    ListCourseComponent
+    ListCourseComponent,
+    ConfirmacionPagoComponent
   ],
   imports: [
     CommonModule,
