@@ -22,15 +22,17 @@ export class CursosComponent implements OnInit {
     })
   }
 
-  agregarCarrito(item : Curso){
-    // let iCarrito : ItemCarrito = {
-    //   titulo: item.titulo,
-    //   descripcion: item.descripcion,
-    //   precio: item.precio
-    // }
-    
-    let carrito : ItemCarrito[] = [];
-    // carrito.push(iCarrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-  }
 }
+
+
+// agregarCarrito(item : Curso){
+//   // let iCarrito : ItemCarrito = {
+//   //   titulo: item.titulo,
+//   //   descripcion: item.descripcion,
+//   //   precio: item.precio
+//   // }
+  
+//   let carrito : ItemCarrito[] = [];
+//   // carrito.push(iCarrito);
+//   localStorage.setItem("carrito", JSON.stringify(carrito))
+// }

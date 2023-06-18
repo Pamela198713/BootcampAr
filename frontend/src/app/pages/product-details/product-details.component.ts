@@ -11,6 +11,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
   curso: Curso = {} as Curso;
+
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService
@@ -24,6 +25,7 @@ export class ProductDetailsComponent implements OnInit {
       this.productService.getById(id).subscribe({
         next: (data) => {
           this.curso = data
+          console.log(this.curso)
         }
       });
     };
