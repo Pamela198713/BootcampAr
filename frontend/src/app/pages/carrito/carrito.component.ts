@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ItemCarrito } from '../../shared/interfaces/ItemCarrito';
 import { CarritoService } from '../../services/carrito.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { Curso } from 'src/app/shared/interfaces/Curso';
 import { tick } from '@angular/core/testing';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-carrito',
@@ -22,7 +23,9 @@ export class CarritoComponent {
   constructor(
     // private CarritoService: CarritoService
     private route: ActivatedRoute,
-    private productService: ProductsService
+    private productService: ProductsService,
+    private toastr: ToastrService,
+    private router: Router
     ) {}
 
  
@@ -38,6 +41,21 @@ export class CarritoComponent {
         }
       });
     };
+
+
+
+
+
+    // this.authService.login({username,password}).subscribe({
+    //     next:() => {
+    //       this.toastr.success('Usuario logeado exitosamente');
+    //       this.router.navigate(['/dashboard']); 
+    //     },
+    //     error:(err) => {
+    //       this.toastr.error("error: " + err.message)
+    //       console.log(err);
+    //     }  
+    //   })
 
    
   //   let algo: ItemCarrito[] = [
@@ -84,6 +102,15 @@ export class CarritoComponent {
   //   this.calculateTotalPrice();
   // }
 
+  }
+
+  atras(){
+    this.router.navigate(['/cursos']); 
+  }
+
+  comprado(){
+    this.toastr.success('Compra realizada con exito');
+    this.router.navigate(['/cursos']); 
   }
 }
   
