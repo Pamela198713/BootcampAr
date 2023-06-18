@@ -1,83 +1,54 @@
 <app-layout>
     <div class="container body-c">
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-center">
+            <div class="col-10">
+
 
                 <!-- Aqui se coloca, los detalles de los items comprados -->
 
-                <div class="row"> <!-- Colocar aqui en ngFor -->
-                    <div class="col bg-light m-1 rounded">
-                        <div class="row">
-                            <div class="col-1">
-                                <figure>
-                                    <img src="" alt="foto"> <!-- Aqui se coloca la img de la base de datos -->
-                                </figure>
+
+                <div class="row mb-4 bg-light rounded p-2 align-items-center" *ngFor="let item of items; let i = index">
+                    <div class="col-2">
+
+
+                        <img src="{{item.image}}" alt="{{item.name}}" class="img-fluid">
+
+
+                    </div>
+                    <div class="col-10 d-flex align-items-center justify-content-between">
+                        <div>
+                            <div>
+                                <h3>{{item.title}}</h3>
+                                <p>{{item.description}}</p>
                             </div>
-                            <div class="col-9">
-                                <div class="row">
-                                    <h3>Titulo</h3> <!-- Aqui se coloca la img de la base de datos -->
-                                </div>
-                                <div class="row">
-                                    <p>Descripcion</p> <!-- Aqui se coloca la img de la base de datos -->
-                                </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <span><b>Precio: {{item.price | currency}}</b> | </span>
+                                <label for="cantidad" class="mx-1">Cantidad:</label>
+                                <input type="number" name="cantidad" class="form-control mx-2 w-25" [value]="item.quantity" (change)="updateQuantity($event, item)" min="1">
+                                <button class="btn btn-danger btn-sm" (click)="removeItem(i)">Eliminar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Ejemplo -->
-
-                <div class="row"  > <!-- Colocar aqui en ngFor -->
-
-                    <div class="col bg-light m-1 rounded">
-                        <div class="row">
-                            <div class="col-1">
-                                <figure>
-                                    <img src="" alt="foto"> <!-- se coloca se coloca la img de la base de datos -->
-                                </figure>
-                            </div>
-                            <div class="col-9">
-                                <div class="row">
-                                    <h3>Titulo</h3> <!-- se coloca se coloca la img de la base de datos -->
-                                </div>
-                                <div class="row">
-                                    <p>Descripcion</p> <!-- se coloca se coloca la img de la base de datos -->
-                                </div>
-                            </div>
+                <!-- Fin de los productos -->
+                <!-- Aqui se coloca la suma de los items -->
+                <div class="row justify-content-end mb-3">
+                    <div class="col-auto">
+                        <div class="bg-light rounded p-2">
+                            <p class="mb-0">Total: {{totalPrice | currency}}</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- --------------------------------------------------------------------- -->
-            </div>
-            <!-- Aqui se coloca la suma de los items -->
-
-            <div class="col-1 bg-light m-1 rounded">  
-
-                <div class="row" >  <!-- Colocar aqui en ngFor -->
-
-                    <p>$ 100</p> <!-- Aqui, ira los precios -->
-                    <p>$ 100</p> <!-- Aqui, ira los precios -->
-                    <p>$ 100</p> <!-- Aqui, ira los precios -->
-                    <p>$ 100</p> <!-- Aqui, ira los precios -->
-
+                <div class="row justify-content-end align-items-center">
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-secondary">Atras</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-success">Comprar</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <p>Total $555</p> <!-- Aqui, se coloca la suma total -->
-                </div>
-            </div>
-            <!-- --------------------------------------------------------------------- -->
-        </div>
-        <div class="row m-1">
-            <div class="col-12">
-                <button type="button" class="btn btn-success">Comprar</button>
-            </div>
-        </div>
-        <div class="row m-1">
-            <div class="col-12">
-                <a href="/cursos">
-                <button type="button" class="btn btn-danger">Volver atras</button>
-            </a>
             </div>
         </div>
     </div>

@@ -26,7 +26,7 @@ export class DashboardComponent {
   getRole() {
     this.authService.getRol(5).subscribe(
       (rol: string) => {
-        console.log(rol);
+        console.log("El ID es: " + this.authService.getUserLoggedId());
         this.visitante = rol
         console.log(this.visitante)
 

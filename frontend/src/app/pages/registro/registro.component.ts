@@ -50,12 +50,7 @@ export class RegistroComponent {
         const password = registroForm.value.password;
         const confirmPassword = registroForm.value.confirmPassword;
 
-        const usuario: any = {
-          username: usuarioname,
-          password1: password,
-          password2: confirmPassword
-        };
-
+        const usuario: any = {"username":usuarioname,"password":password}; 
   
         this.authService.register(usuario).subscribe({
           next:(respuesta) => {
@@ -64,7 +59,7 @@ export class RegistroComponent {
         },
         error: (err) => {
           console.log(err);
-          this.toastr.error('Hubo un error al registrar el usuario. Error: '+ err);
+          this.toastr.error('Hubo un error al registrar el usuario. Error: '+ err.message);
         }
       })
 
