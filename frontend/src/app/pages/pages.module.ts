@@ -14,12 +14,21 @@ import { RegistroComponent } from './registro/registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ListCourseComponent } from './list-course/list-course.component';
-
+import { AppRoutingModule } from '../app-routing.module';
 import { ListUserComponent } from './list-user/list-user.component';
 import { MentoresComponent } from './mentores/mentores.component';
-
+import { RouterModule } from '@angular/router';
 import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago.component';
-
+import { CategoryComponent } from './category/category.component';
+import { CategoryEditComponent } from './category-edit/category-edit.component';
+import { CategoryCreateComponent } from './category-create/category-create.component';
+import { LeccionesCreateComponent } from './lecciones/create/create.component';
+import { UsuariosCreateComponent } from './usuario/create/create.component';
+import { UsuariosEditComponent } from './usuario/edit/edit.component';
+import { LeccionesEditComponent } from './lecciones/edit/edit.component';
+import { LeccionesComponent } from './lecciones/lecciones.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { CursoEditComponent } from './cursos/curso-edit/curso-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,15 +42,26 @@ import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago
     RegistroComponent,
     CarritoComponent,
     ListCourseComponent,
-
     ListUserComponent,
     MentoresComponent,
+    LeccionesEditComponent,
 
-    ConfirmacionPagoComponent
+    ConfirmacionPagoComponent,
+      CategoryComponent,
+      CategoryEditComponent,
+      CategoryCreateComponent,
+      LeccionesCreateComponent,
+      UsuariosCreateComponent,
+      UsuariosEditComponent,
+      LeccionesComponent,
+      UsuarioComponent,
+      CursoEditComponent
 
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
+    RouterModule,
     SharedModule,
     LayoutModule,
     HttpClientModule,

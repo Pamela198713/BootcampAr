@@ -7,34 +7,29 @@ import { AuthServiceService } from 'src/app/auth/auth-service.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent {
   visitante: any;
   estadisticas: any;
-
 
   constructor(
     private authService: AuthServiceService
   ) { }
 
   ngOnInit(): void {
-    if(this.visitante == null || this.visitante == undefined){
-      this.visitante = 1
-    }
-    this.getRole()
-  }
+      this.authService.getUserLoggedId().subscribe(id => {
+        this.visitante = this.authService.getRol(id).subscribe(
+          (rol: string) => {
+            this.visitante = rol
+          }
+        );
+      });
+      
+     
 
-  getRole() {
-    this.authService.getRol(1).subscribe(
-      (rol: string) => {
-        // console.log("El ID es: " + this.authService.getUserLoggedId());
-        this.visitante = rol
-        console.log(this.visitante)
-      }
-    );
+     
   }
   
-  
-
 
 }
 

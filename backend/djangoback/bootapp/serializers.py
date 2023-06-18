@@ -98,3 +98,8 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         return super().validate(credentials)
 
+class CategoriaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Categoria
+        fields = '__all__'
+

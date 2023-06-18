@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     private router: Router
   ) { }
   ngOnInit(): void {
-    console.log("El ID es: " + this.authService.getUserLoggedId());
+    // console.log("El ID es: " + this.authService.getUserLoggedId());
 
     this.perfil = this.authService.getUserLoggedId()
     
