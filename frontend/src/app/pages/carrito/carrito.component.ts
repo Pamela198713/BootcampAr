@@ -4,6 +4,7 @@ import { CarritoService } from '../../services/carrito.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { Curso } from 'src/app/shared/interfaces/Curso';
+import { tick } from '@angular/core/testing';
 
 @Component({
   selector: 'app-carrito',
@@ -26,7 +27,17 @@ export class CarritoComponent {
 
  
   ngOnInit(): void{
-
+    const idParam = this.route.snapshot.paramMap.get('id');
+    if (idParam) {
+      const id = parseInt(idParam, 10);
+      console.log(id)
+      this.productService.getById(id).subscribe({
+        next: (data) => {
+          this.curso = data
+          console.log(this.curso)
+        }
+      });
+    };
 
    
   //   let algo: ItemCarrito[] = [

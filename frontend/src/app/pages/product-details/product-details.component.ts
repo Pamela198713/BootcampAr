@@ -11,6 +11,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
   curso: Curso = {} as Curso;
+  
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService
