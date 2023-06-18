@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'confirmacion-pago', component: ConfirmacionPagoComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [RutasProtegidasGuard] },
   { path:'registro', component: RegistroComponent, canActivate: [NoAuthGuardGuard]},
-  { path: 'carrito',component: CarritoComponent, canActivate: [RutasProtegidasGuard]},
+  { path: 'carrito/:id',component: CarritoComponent, canActivate: [RutasProtegidasGuard]},
   { path: 'listCourse', component: ListCourseComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'listUser', component: ListUserComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'mentores', component: MentoresComponent },

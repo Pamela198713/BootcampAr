@@ -11,7 +11,7 @@
             </h4>
           </div>
           <ul class="nav flex-column ">
-            <li class="nav-item" *ngIf="visitante === 2">
+            <li class="nav-item" *ngIf="visitante === 3">
               <button
                 class="nav-link btn btn-link text-white nav-but"
                 type="button"
@@ -31,7 +31,7 @@
                       Todos</a
                     >
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" *ngIf="visitante == 3">
                     <a class="nav-link text-white nav-but" href="/createCourse"
                       ><i class="bi bi bi-plus me-2 text-white"></i> Agregar
                       Curso</a
@@ -236,7 +236,7 @@
               <div class="col-md-4">
                 <div class="card bg-primary text-white mb-4">
                   <div class="card-body">
-                    <h5 class="card-title">Ejerccios ralizados</h5>
+                    <h5 class="card-title">Ejercicios ralizados</h5>
                     <p class="card-text">50</p>
                   </div>
                 </div>

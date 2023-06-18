@@ -1,5 +1,5 @@
 <app-layout>
-    <div class="container">
+    <div class="container body-perfil">
         <div class="row">
             <div class="col-md-4">
                 <div class="card mt-4">
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card mt-4">
+                <div class="card mt-5">
                     <div class="card-body">
                         <h1 class="card-title text-center mt-3 mb-3">Información Personal</h1>
                         <ul class="list-group">
@@ -21,7 +21,7 @@
                             <li class="list-group-item">Email: {{ usuario?.email }}</li>
                             <li class="list-group-item">Pais: {{ usuario?.pais }}</li>
                             <li class="list-group-item">Direccion: {{ usuario?.direccion }}</li>
-                            <button class="btn btn-primary mt-5">Dashboard de {{ usuario?.nombre }}</button>
+                            <button class="btn btn-primary mt-4"><a class="txt-btn" href="/dashboard">Dashboard de {{ usuario?.nombre }}</a></button>
                         </ul>
                     </div>
                 </div>
