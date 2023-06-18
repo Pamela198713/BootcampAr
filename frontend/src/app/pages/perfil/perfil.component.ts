@@ -26,7 +26,7 @@ export class PerfilComponent implements OnInit {
   ngOnInit(): void {
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
-      const id = parseInt(idParam, 10) - 1;
+      const id = parseInt(idParam, 10);
       this.usuarioService.getById(id).subscribe({
         next: (data) => {
           this.usuario = data
