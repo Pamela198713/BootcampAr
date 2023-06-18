@@ -11,15 +11,16 @@ import { LayoutModule } from './layout/layout.module';
 import { JwtInterceptor } from './interceptor/jwt.interceptor';
 import { ErrorInterceptor } from './interceptor/error.interceptor';
 import { JwtModule } from '@auth0/angular-jwt';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     SharedModule, 
     LayoutModule,
     PagesModule,

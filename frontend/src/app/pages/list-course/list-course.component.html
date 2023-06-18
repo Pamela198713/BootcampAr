@@ -1,45 +1,36 @@
-<app-layout>
-  <div class="container">
-    <div class="row">
-      <h1>Cursos</h1>
-    </div>
-    <div class="row">
-      <div class="col">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Imagenes</th>
-              <th scope="col">Titulo</th>
-              <th scope="col">Descripcion</th>
-              <th scope="col">Lenguajes</th>
-              <th scope="col">Nivel</th>
-              <th scope="col">Precio</th>
-              <th scope="col" colspan="2">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!--
-                            <tr *ngFor="let i of dato">
-                            <td scope="row">{{i.id}}</td>
-                            <td>{{i.Nombre}}</td>
-                            <td>{{i.Apellido}}</td>
-                            <td>{{i.Email}}</td>
-                            <td>{{i.Rol}}</td>
-                            <td>Contraseña</td>
-                            <div>
-                                <td>
-                                    <button type="button" class="btn btn-warning">Editar</button>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-danger">Eliminar</button>
-                                </td>
-                            </div>
-                        </tr>
-                        -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</app-layout>
+<div class="body-listCourse">
+    <section class="container-listCourse">
+        <h1 class="title-listCourse">Lista de Productos</h1>
+        <div class="table-responsive">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th class="title" scope="col">Id</th>
+                        <th class="title" scope="col">Imágenes</th>
+                        <th class="title" scope="col">Título</th>
+                        <th class="title" scope="col">Descripción</th>
+                        <th class="title" scope="col">Lenguajes</th>
+                        <th class="title" scope="col">Nivel</th>
+                        <th class="title" scope="col">Precio</th>
+                        <th class="title" scope="col" colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let curso of cursos">
+                        <td>{{curso.id}}</td>
+                        <td><img [src]="curso.imagenes" [alt]="curso.titulo"></td>
+                        <td>{{curso.titulo}}</td>
+                        <td>{{curso.descripcion | slice:0:100}}...</td>
+                        <td>{{curso.lenguajes}}</td>
+                        <td>{{curso.nivel}}</td>
+                        <td>{{curso.precio}}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm me-2 mb-2" (click)="editarCurso(curso.id, $event)">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm" (click)="eliminarCurso(curso.id, $event)">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

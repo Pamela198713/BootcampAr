@@ -1,0 +1,34 @@
+<div class="body-listCourse">
+    <section class="container-listCourse">
+        <h1 class="title-listCourse">Lista de Categorias</h1>
+        <div class="table-responsive">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th class="title" scope="col">Id</th>
+                        <th class="title" scope="col">Nombre</th>
+                        <th class="title" scope="col">Descripción</th>
+                        <th class="title" scope="col">Imagen</th>
+                        <th class="title" scope="col">Fecha de Creación</th>
+                        <th class="title" scope="col">Fecha de Actualización</th>
+                        <th class="title" scope="col" colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let categoria of categorias">
+                        <td>{{ categoria.id }}</td>
+                        <td>{{ categoria.nombre }}</td>
+                        <td>{{ categoria.descripcion }}</td>
+                        <td>{{ categoria.imagen }}</td>
+                        <td>{{ categoria.create_date }}</td>
+                        <td>{{ categoria.update_date }}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm d-block me-2 mb-2" (click)="editarCateg(categoria.id, $event)">Editar</a>
+                            <a href="#" class="btn btn-danger d-block btn-sm" (click)="eliminarCateg(categoria.id, $event)">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

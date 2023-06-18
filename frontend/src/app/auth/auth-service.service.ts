@@ -64,10 +64,20 @@ export class AuthServiceService {
     return this.token;
   }
 
-  public getUserLoggedId(): string {
+  getForUser(userId: number): Observable<any> {
+    const Id = this.http.get<[Usuario]>(`${this.url}/api/usuarios/withuser/?user=${userId}`).pipe(
+      map(users => users.length > 0 ? users[0].id : null)
+    );
+    return Id;
+  }
+
+  public getUserLoggedId(): Observable<string> {
     const token = localStorage.getItem('token');
     const decodedToken = this.jwtHelper.decodeToken(token ?? '');
-    return decodedToken.user_id;
+    const response = this.getForUser(decodedToken.user_id)
+    return response.pipe(
+      map(id => id !== null ? String(id) : '')
+    );
   }
 
   

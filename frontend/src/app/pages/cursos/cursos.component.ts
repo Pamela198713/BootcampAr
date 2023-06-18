@@ -14,7 +14,7 @@ export class CursosComponent implements OnInit {
   constructor (private productService: ProductsService) {}
 
   ngOnInit(): void {
-    this.productService.getAll().subscribe({
+    this.productService.getAllCursos().subscribe({
       next:(dato) => {
         this.curso = dato
         console.log(this.curso)
