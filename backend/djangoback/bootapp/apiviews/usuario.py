@@ -11,6 +11,13 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             return UsuarioCreateSerializer
         return UsuarioSerializer
-
+ 
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
+
+class UsuarioRegister(viewsets.ModelViewSet):
+    permission_classes = [permissions.AllowAny]
+    queryset = Usuario.objects.all() 
+
+    def get_serializer_class(self):
+        return UsuarioCreateSerializer

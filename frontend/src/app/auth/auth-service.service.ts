@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'; 
 import { Usuario } from '../shared/interfaces/Usuario';
 import { tap, map } from 'rxjs/operators';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 
 @Injectable({
@@ -13,9 +14,11 @@ export class AuthServiceService {
   private loggedIn = false;
   private token = "";
   private refreshToken = "";
+  private jwtHelper: JwtHelperService;
 
   constructor(private http: HttpClient) {
    const storedToken = localStorage.getItem('token');
+   this.jwtHelper = new JwtHelperService();
    const storedRefreshToken = localStorage.getItem('refreshToken');
       if (storedToken && storedRefreshToken) {
         this.token = storedToken;
@@ -59,6 +62,12 @@ export class AuthServiceService {
 
   getToken() {
     return this.token;
+  }
+
+  public getUserLoggedId(): string {
+    const token = localStorage.getItem('token');
+    const decodedToken = this.jwtHelper.decodeToken(token ?? '');
+    return decodedToken.user_id;
   }
 
   
