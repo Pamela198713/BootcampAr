@@ -8,6 +8,7 @@
 
 
         <a class="nav-but" href="/">Inicio</a>
+        <a class="nav-but" href="/mentores">Mentores</a>
 
         <a *ngIf="isLoggedIn()" class="nav-but" href="/cursos">Cursos</a>
 
@@ -33,7 +34,7 @@
             </div>
 
             <div *ngIf="isLoggedIn()">
-                <a href="/perfil/1"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt="Perfil"></a>
+                <a href="/perfil/{{perfil}}"><img class="icon" src="assets/img/home/img-barradenavegacion/perfil.png" alt="Perfil"></a>
             </div>
 
             <!-- --------------------------------------------------------- -->

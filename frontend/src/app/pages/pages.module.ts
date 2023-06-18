@@ -15,6 +15,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ListCourseComponent } from './list-course/list-course.component';
 
+import { ListUserComponent } from './list-user/list-user.component';
+import { MentoresComponent } from './mentores/mentores.component';
+
+import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago.component';
+
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -26,7 +32,13 @@ import { ListCourseComponent } from './list-course/list-course.component';
     DashboardComponent,
     RegistroComponent,
     CarritoComponent,
-    ListCourseComponent
+    ListCourseComponent,
+
+    ListUserComponent,
+    MentoresComponent,
+
+    ConfirmacionPagoComponent
+
   ],
   imports: [
     CommonModule,
