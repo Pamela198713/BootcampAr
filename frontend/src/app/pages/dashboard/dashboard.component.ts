@@ -26,11 +26,9 @@ export class DashboardComponent {
   getRole() {
     this.authService.getRol(1).subscribe(
       (rol: string) => {
-        console.log("El ID es: " + this.authService.getUserLoggedId());
+        // console.log("El ID es: " + this.authService.getUserLoggedId());
         this.visitante = rol
         console.log(this.visitante)
-
-        
       }
     );
   }
