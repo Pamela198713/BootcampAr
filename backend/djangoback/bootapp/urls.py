@@ -5,7 +5,7 @@ from dj_rest_auth.views import LoginView, LogoutView
 from dj_rest_auth.registration.views import RegisterView
 from django.urls import path, include
 from .apiviews.product import CursoViewSet
-from .apiviews.usuario import UsuarioViewSet, CustomTokenObtainPairView
+from .apiviews.usuario import UsuarioViewSet, CustomTokenObtainPairView, UsuarioRegister
 from .apiviews.orden import OrdenListCreate, OrdenDetalleListCreate, FacturaListCreate
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -14,7 +14,7 @@ from rest_framework_simplejwt.views import (
 
 
 urlpatterns = [
-    path('auth/register', RegisterView.as_view(), name='account_register'),
+    path('auth/register', UsuarioRegister.as_view({'post': 'create'}), name='account_register'),
     # path('auth/login', LoginView.as_view(), name='account_login'),
     path('auth/logout', LogoutView.as_view(), name='account_logout'),
     path('api/token', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
