@@ -2,6 +2,10 @@
     background-color: #394867;
 }
 
+.body-dashboard{
+    height: 70vh;
+}
+
 .nav-but {
     text-align: start;
     width: 100%;

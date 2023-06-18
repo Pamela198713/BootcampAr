@@ -13,6 +13,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 
 export class PerfilComponent implements OnInit {
   usuario?: Usuario;
+  rol: any;
  
  
   constructor(
@@ -27,6 +28,12 @@ export class PerfilComponent implements OnInit {
     this.usuarioService.getById(id).subscribe({
       next:(data) => {
       this.usuario = data
+      if(this.usuario.rol == "1"){
+        this.rol = "Estudiante"
+      }
+      else{
+        this.rol = "Administrador"
+      }
       console.log(this.usuario);
      }
     });

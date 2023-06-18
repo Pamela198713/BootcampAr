@@ -1,16 +1,16 @@
 <app-layout>
   <!-- Main Content -->
-  <main class="container-fluid mt-3 px-3">
+  <main class="container-fluid mt-3 px-3 body-dashboard">
     <div class="row">
       <!-- Sidebar -->
       <div class="col-md-3 col-lg-2 d-md-block sidebar sidebar-back mb-3">
         <div class="position-sticky pt-3 pb-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active nav-but" href="dashboard">
-                <i class="bi bi-speedometer2 me-2 active"></i> Dashboard
-              </a>
-            </li>
+          <div class="row">
+            <h4 class="active nav-but" href="dashboard">
+              <i class="bi bi-speedometer2 me-2 active"></i> Dashboard
+            </h4>
+          </div>
+          <ul class="nav flex-column ">
             <li class="nav-item" *ngIf="visitante === 2">
               <button
                 class="nav-link btn btn-link text-white nav-but"
@@ -61,13 +61,13 @@
               <div class="collapse" id="categCollapse">
                 <ul class="nav flex-column ms-3">
                   <li class="nav-item">
-                    <a class="nav-link text-white nav-but" href="#"
+                    <a class="nav-link text-white nav-but" href="/listCourse"
                       ><i class="bi bi bi-list me-2 text-white"></i> Listar
                       Todas</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white nav-but" href="#"
+                    <a class="nav-link text-white nav-but" href="/createCourse"
                       ><i class="bi bi bi-plus me-2 text-white"></i> Agregar</a
                     >
                   </li>
@@ -94,7 +94,7 @@
               <div class="collapse" id="usersCollapse">
                 <ul class="nav flex-column ms-3">
                   <li class="nav-item">
-                    <a class="nav-link text-white nav-but" href="#"
+                    <a class="nav-link text-white nav-but" href="/listUser"
                       ><i class="bi bi bi-list me-2 text-white"></i> Listar
                       Todos</a
                     >
@@ -213,7 +213,7 @@
                 <div class="card bg-primary text-white mb-4">
                   <div class="card-body">
                     <h5 class="card-title">Total de Cursos realizados</h5>
-                    <p class="card-text">100</p>
+                    <p class="card-text">2</p>
                   </div>
                 </div>
               </div>
@@ -221,7 +221,7 @@
                 <div class="card bg-success text-white mb-4">
                   <div class="card-body">
                     <h5 class="card-title">Cursos en procesos</h5>
-                    <p class="card-text">50</p>
+                    <p class="card-text">3</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +229,43 @@
                 <div class="card bg-warning text-white mb-4">
                   <div class="card-body">
                     <h5 class="card-title">Cursos terminados</h5>
+                    <p class="card-text">2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card bg-primary text-white mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Ejerccios ralizados</h5>
                     <p class="card-text">50</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card bg-success text-white mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Calificacion mas alta obtenida</h5>
+                    <p class="card-text">80%</p>
+                    <p class="card-text">Tema: Programacion estrucutural</p>
+                    <p class="card-text">Lenguaje: Python</p>
+                    <p class="card-text">Curso: Python Inicial</p>
+                    <p class="card-text">Increible vas muy bien 💪</p>
+                    <h6>Acepta nuestro reto diario y potencia tu portafolio 😉</h6>
+                    <a href="">Desafio Python inicial - Calculadora</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card bg-danger text-white mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Calificacion mas Baja obtenida</h5>
+                    <p class="card-text">46%</p>
+                    <p class="card-text">Tema: Funciones</p>
+                    <p class="card-text">Lenguaje: Python</p>
+                    <p class="card-text">Curso: Python Inicial</p>
+                    <p class="card-text">No te rindas puedes mejorar 👍</p>
+                    <h6>Observa esta documentacion que te hara mejorar</h6>
+                    <a href="">Funciones Python - Nivel 1</a>
                   </div>
                 </div>
               </div>
