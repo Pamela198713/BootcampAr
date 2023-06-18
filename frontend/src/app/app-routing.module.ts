@@ -13,6 +13,7 @@ import { NoAuthGuardGuard } from './guards/no-auth-guard.guard';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ListCourseComponent } from './pages/list-course/list-course.component';
 import { ListUserComponent } from './pages/list-user/list-user.component';
+import { ConfirmacionPagoComponent } from './pages/confirmacion-pago/confirmacion-pago.component';
 import { MentoresComponent } from './pages/mentores/mentores.component';
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'cursos', component: CursosComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'perfil/:id', component: PerfilComponent, canActivate: [RutasProtegidasGuard] },
   { path: 'product-details/:id', component: ProductDetailsComponent },
+  { path: 'confirmacion-pago', component: ConfirmacionPagoComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [RutasProtegidasGuard] },
   { path:'registro', component: RegistroComponent, canActivate: [NoAuthGuardGuard]},
   { path: 'carrito',component: CarritoComponent , canActivate: [RutasProtegidasGuard]},
