@@ -1,26 +1,60 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { ItemCarrito } from '../shared/interfaces/ItemCarrito';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class CarritoService {
+
+    private cartItems: ItemCarrito[] = [];
  
-  private apiUrl = 'http://localhost:8000/api';
+    constructor() { }
+
+    getItems(): any[] {
+      this.cartItems = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') ?? '') : [];
+      return this.cartItems;
+    }
+
+    setItems(items: any[]) {
+      this.cartItems = items;
+      localStorage.setItem('cart', JSON.stringify(this.cartItems));
+    }
+
+    addItem(item: any) {
+      const existingItem = this.cartItems.find((i: any) => i.id === item.id);
+      
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        this.cartItems.push({... item, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(this.cartItems));
+    }
+
+    removeItem(item: any) {
+      const index = this.cartItems.findIndex((i: any) => i.id === item.id);
+
+      if (index !== -1) {
+        this.cartItems.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(this.cartItems));
+      }
+    }
+
+    clearCart() {
+      this.cartItems = [];
+      localStorage.removeItem('cart');
+    }
+
+    updateItemQuantity(item: any, quantity: number) {
+      const existingItem = this.cartItems.find((i: any) => i.id === item.id);
   
-
-  constructor(private http: HttpClient) { }
+      if (existingItem) {
+        existingItem.quantity = quantity;
+        localStorage.setItem('cart', JSON.stringify(this.cartItems));
+      }
+    }
   
-  obtenerCarrito(): Observable<any> {
-    return this.http.get(this.apiUrl);
   }
-
-  agregarAlCarrito(productId: number): Observable<any> {
-    return this.http.post(this.apiUrl, { productId });
-  }
-
-  eliminarDelCarrito(productId: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${productId}`);
-  }
-  }
+ 
