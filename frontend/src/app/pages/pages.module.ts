@@ -14,8 +14,12 @@ import { RegistroComponent } from './registro/registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ListCourseComponent } from './list-course/list-course.component';
+
 import { ListUserComponent } from './list-user/list-user.component';
 import { MentoresComponent } from './mentores/mentores.component';
+
+import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago.component';
+
 
 @NgModule({
   declarations: [
@@ -29,8 +33,12 @@ import { MentoresComponent } from './mentores/mentores.component';
     RegistroComponent,
     CarritoComponent,
     ListCourseComponent,
+
     ListUserComponent,
-    MentoresComponent
+    MentoresComponent,
+
+    ConfirmacionPagoComponent
+
   ],
   imports: [
     CommonModule,

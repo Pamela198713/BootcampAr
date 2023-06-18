@@ -23,7 +23,7 @@ export class CarritoComponent {
       total: 0
     }    
   ]
- 
+
  
   ngOnInit(): void{
     let carritoStorage = localStorage.getItem("carrito") as string;
@@ -85,9 +85,5 @@ export class CarritoComponent {
 
   }
   
-
-
-
-
 
 
