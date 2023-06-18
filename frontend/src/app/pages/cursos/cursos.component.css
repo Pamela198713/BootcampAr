@@ -1,7 +1,19 @@
+.main-title{
+    text-align: center;
+    margin: 5% 0%;
+    font-size: 5rem;
+    color: white;
+    font-style: italic;
+}
+
+.img-card{
+    height: 10rem;
+}
+
 .curs-title{
     text-align: center;
     margin: 5% 0%;
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: white;
     font-style: italic;
 }
@@ -9,11 +21,27 @@
 .per-card{
     color: white;
     background-color: rgba(0, 0, 0, 0.498);
-    height: 25rem;
     border-radius: 15px;
+    height: 35rem;
 }
 
-.bot-card-p{
-    padding: 2%;
+.desc-card{
+    margin-bottom: 10%;
+    padding: 5%;
+    height: 12rem;
+    overflow: hidden;
+}
+
+
+.bot-card{
+    display: flex;
     margin: auto;
 }
+
+.txt-btn{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+

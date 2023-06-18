@@ -1,0 +1,17 @@
+.body-detailsCourse{
+    background-color:  rgba(0, 0, 0, 0.498);
+    padding: 10%;
+    border-radius: 15px;
+    color: white;
+}
+
+.desc-detailsCourse{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.txt-btn{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}

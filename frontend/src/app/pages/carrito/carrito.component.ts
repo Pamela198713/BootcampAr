@@ -27,6 +27,7 @@ export class CarritoComponent {
  
   ngOnInit(): void{
     let carritoStorage = localStorage.getItem("carrito") as string;
+
     let carrito  = JSON.parse(carritoStorage);
     this.listaItemCarrito=carrito
     this.items= [
@@ -65,7 +66,6 @@ export class CarritoComponent {
     this.calculateTotalPrice();
   }
 
-
   updateQuantity(event: Event, item: any) {
     const target = event.target as HTMLInputElement;
     item.quantity = Number(target.value);
@@ -83,5 +83,6 @@ export class CarritoComponent {
   }
 
   }
-
   
+}
+
