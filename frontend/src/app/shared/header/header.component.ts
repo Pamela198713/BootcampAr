@@ -19,7 +19,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     // console.log("El ID es: " + this.authService.getUserLoggedId());
 
-    this.perfil = this.authService.getUserLoggedId()
+    // this.perfil = this.authService.getUserLoggedId()
+    // console.log(this.perfil)
+
+    this.authService.getUserLoggedId().subscribe({
+      next:(data) => {
+        this.perfil = data
+        console.log(this.perfil)
+      }
+    })
     
   }
 
