@@ -1,6 +1,6 @@
 from ..models import Usuario
 from rest_framework import viewsets, permissions, generics
-from ..serializers import UsuarioSerializer, UsuarioCreateSerializer, CustomTokenObtainPairSerializer
+from ..serializers import UsuarioSerializer, UsuarioCreatePerSerializer, UsuarioCreateSerializer, CustomTokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 class UsuarioViewSet(viewsets.ModelViewSet):
@@ -21,3 +21,8 @@ class UsuarioRegister(viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         return UsuarioCreateSerializer
+
+class UsuarioPerRegister(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioCreatePerSerializer

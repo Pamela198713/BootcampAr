@@ -10,4 +10,8 @@ export interface Usuario {
     direccion:  string;
     foto:       string;
     perfil:     string;
+    bio:        string;
+    fechaNacimiento: string;
+    genero:     string;
+    ciudad:     string;
 }

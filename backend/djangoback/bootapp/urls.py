@@ -7,7 +7,7 @@ from django.urls import path, include
 from .apiviews.buscar_usuario_user import BuscarUsuarioPorUserView
 from .apiviews.product import CursoViewSet, CursoPublicViewSet
 from .apiviews.category import CategoriaViewSet
-from .apiviews.usuario import UsuarioViewSet, CustomTokenObtainPairView, UsuarioRegister
+from .apiviews.usuario import UsuarioViewSet, CustomTokenObtainPairView, UsuarioRegister, UsuarioPerRegister
 from .apiviews.orden import OrdenListCreate, OrdenDetalleListCreate, FacturaListCreate
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -26,9 +26,10 @@ urlpatterns = [
     path('api/orden_detalles', OrdenDetalleListCreate.as_view(), name='detail-orden'),
     path('api/factura', FacturaListCreate.as_view({'get': 'list', 'post': 'create'}), name='factura'),
     path('api/usuario', UsuarioViewSet.as_view({'get': 'list', 'post': 'create'}), name='usuario'),
+    path('api/usuarioper', UsuarioPerRegister.as_view({'post': 'create'}), name='usuario'),
     path('api/usuario/<int:pk>', UsuarioViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='usuario-detail'),
     path('api/usuarios/withuser/', BuscarUsuarioPorUserView.as_view(), name='buscar-usuario-por-user'),
-    path('api/category', CategoriaViewSet.as_view({'get': 'list', 'post': 'create'}), name='category-list'),
+    path('api/category', CategoriaViewSet.as_view({'post': 'create'}), name='create-usuario-pers'),
     path('api/category/<int:pk>', CategoriaViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}), name='category-detail'),
     path('api/product', CursoViewSet.as_view({'get': 'list', 'post': 'create'}), name='product-list'),
     path('api/curso', CursoPublicViewSet.as_view({'get': 'list'}), name='curso-list'),
