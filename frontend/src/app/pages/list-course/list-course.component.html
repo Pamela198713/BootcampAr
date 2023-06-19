@@ -1,0 +1,36 @@
+<div class="body-listCourse">
+    <section class="container-listCourse">
+        <h1 class="title-listCourse">Lista de Productos</h1>
+        <div class="table-responsive">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th class="title" scope="col">Id</th>
+                        <th class="title" scope="col">Imágenes</th>
+                        <th class="title" scope="col">Título</th>
+                        <th class="title" scope="col">Descripción</th>
+                        <th class="title" scope="col">Lenguajes</th>
+                        <th class="title" scope="col">Nivel</th>
+                        <th class="title" scope="col">Precio</th>
+                        <th class="title" scope="col" colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let curso of cursos">
+                        <td>{{curso.id}}</td>
+                        <td><img class="img-cursos img-fluid" [src]="curso.imagenes" [alt]="curso.titulo"></td>
+                        <td>{{curso.titulo}}</td>
+                        <td>{{curso.descripcion | slice:0:100}}...</td>
+                        <td>{{curso.lenguajes}}</td>
+                        <td>{{curso.nivel}}</td>
+                        <td>{{curso.precio}}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm me-2 mb-2" (click)="editarCurso(curso.id, $event)">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm" (click)="eliminarCurso(curso.id, $event)">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

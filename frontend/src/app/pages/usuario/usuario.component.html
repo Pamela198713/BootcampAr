@@ -1,0 +1,38 @@
+<div class="body-listCourse">
+    <section class="container-listCourse">
+        <h1 class="title-listCourse">Lista de Usuarios</h1>
+        <div class="table-responsive">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th class="title" scope="col">Id</th>
+                        <th class="title" scope="col">Imágenes</th>
+                        <th class="title" scope="col">Nombre</th>
+                        <th class="title" scope="col">Apellido</th>
+                        <th class="title" scope="col">País</th>
+                        <th class="title" scope="col">Rol</th>
+                        <th class="title" scope="col">Email</th>
+                        <th class="title" scope="col">Teléfono</th>
+                        <th class="title" scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios">
+                        <td>{{ usuario.id }}</td>
+                        <td><img src="{{ usuario.foto }}" alt="Imagen"></td>
+                        <td>{{ usuario.nombre }}</td>
+                        <td>{{ usuario.apellido }}</td>
+                        <td>{{ usuario.pais }}</td>
+                        <td>{{ usuario.rol }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.telefono }}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm me-2" (click)="editarUsuario(usuario.id, $event)">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm" (click)="eliminarUsuario(usuario.id, $event)">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

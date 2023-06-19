@@ -2,20 +2,23 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'; 
 import { Usuario } from '../shared/interfaces/Usuario';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
-  private url = "http://127.0.0.1:8000"
+  private url = "http://localhost:8000"
   private loggedIn = false;
   private token = "";
   private refreshToken = "";
+  private jwtHelper: JwtHelperService;
 
   constructor(private http: HttpClient) {
    const storedToken = localStorage.getItem('token');
+   this.jwtHelper = new JwtHelperService();
    const storedRefreshToken = localStorage.getItem('refreshToken');
       if (storedToken && storedRefreshToken) {
         this.token = storedToken;
@@ -37,20 +40,44 @@ export class AuthServiceService {
     );
   }
 
-  register(user: Usuario) : Observable<any>{
-    return this.http.post(`${this.url}auth/register`,user)
+  register(user: any) : Observable<any>{
+    return this.http.post(`${this.url}/auth/register`,user)
   }
 
-  getRol(id: any) : Observable<any>{
-    return this.http.get(`${this.url}api/usuario/`,id)
+  getRol(id: any): Observable<string> {
+    return this.http.get<Usuario>(`${this.url}/api/usuario/${id}`).pipe(
+        map(user => user.rol)
+    );
   }
 
   logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('refreshToken');
     this.loggedIn = false;
   }
 
   isLoggedIn() {
     return this.loggedIn;
+  }
+
+  getToken() {
+    return this.token;
+  }
+
+  getForUser(userId: number): Observable<any> {
+    const Id = this.http.get<[Usuario]>(`${this.url}/api/usuarios/withuser/?user=${userId}`).pipe(
+      map(users => users.length > 0 ? users[0].id : null)
+    );
+    return Id;
+  }
+
+  public getUserLoggedId(): Observable<string> {
+    const token = localStorage.getItem('token');
+    const decodedToken = this.jwtHelper.decodeToken(token ?? '');
+    const response = this.getForUser(decodedToken.user_id)
+    return response.pipe(
+      map(id => id !== null ? String(id) : '')
+    );
   }
 
   

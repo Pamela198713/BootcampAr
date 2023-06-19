@@ -1,0 +1,34 @@
+<div class="body-cateCourse">
+    <section class="container-cateCourse">
+        <h1 class="title-cateCourse text-center mb-4">Crear Categoría</h1>
+        <fieldset class="conatinaer-form">
+            <form [formGroup]="categoriaForm" (ngSubmit)="submitForm()" class="needs-validation form-group" novalidate>
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" formControlName="nombre" class="form-control mt-3">
+                    <div *ngIf="categoriaForm.get('nombre')?.invalid && categoriaForm.get('nombre')?.touched" class="invalid-feedback">
+                        El nombre es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion" class="form-label">Descripción:</label>
+                    <textarea id="descripcion" formControlName="descripcion" class="form-control mt-3"></textarea>
+                    <div *ngIf="categoriaForm.get('descripcion')?.invalid && categoriaForm.get('descripcion')?.touched" class="invalid-feedback">
+                        La descripción es requerida.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagen" class="form-label">Imagen:</label>
+                    <input type="text" id="imagen" formControlName="imagen" class="form-control mt-3">
+                    <div *ngIf="categoriaForm.get('imagen')?.invalid && categoriaForm.get('imagen')?.touched" class="invalid-feedback">
+                        La imagen es requerida.
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="categoriaForm.invalid" class="btn-form mt-3">Guardar</button>
+            </form>
+        </fieldset>
+    </section>
+</div>

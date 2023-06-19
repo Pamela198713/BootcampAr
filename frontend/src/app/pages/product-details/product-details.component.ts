@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {DataService} from '../../services/data.service';
 import { Curso } from 'src/app/shared/interfaces/Curso';
-import { AuthServiceService } from 'src/app/auth/auth-service.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 
 @Component({
@@ -12,22 +11,23 @@ import { AuthServiceService } from 'src/app/auth/auth-service.service';
 })
 export class ProductDetailsComponent implements OnInit {
   curso: Curso = {} as Curso;
+
   constructor(
     private route: ActivatedRoute,
-    private dataService: DataService,
-    private autService: AuthServiceService
-  ) {}
-  
+    private productService: ProductsService
+  ) { }
+
   ngOnInit(): void {
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
       const id = parseInt(idParam, 10);
-      this.dataService.getById("Curso",id).subscribe({
-        next:(data) => {
+      console.log(id)
+      this.productService.getById(id).subscribe({
+        next: (data) => {
           this.curso = data
-          console.log(data);
+          console.log(this.curso)
         }
-    });
-  };
-}
+      });
+    };
+  }
 }

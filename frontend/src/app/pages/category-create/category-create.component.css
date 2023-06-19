@@ -1,0 +1,78 @@
+.body-cateCourse {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-cateCourse {
+    background-color: rgba(0, 0, 0, 0.498);
+    color: white;
+    /* margin-top: 3%; */
+    margin-bottom: 3%;
+    border-radius: 15px;
+    /* width: 40%; */
+}
+
+.title-cateCourse {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.conatinaer-form {
+    display: flex;
+    flex-direction: column;
+    /* margin: 3% auto; */
+    margin-left: 40px;
+    width: 40%;
+}
+
+.conatinaer-form label {
+    font-size: 1.2rem;
+    margin: 5% 0%;
+    font-weight: bold;
+}
+
+.conatinaer-form input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+
+.conatinaer-form input:hover {
+    border-bottom: 3px solid rgba(0, 89, 255, 0.807);
+}
+
+.conatinaer-form textarea {
+    padding-left: 1%;
+    border-radius: 15px;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+
+.conatinaer-form textarea:hover {
+    border: 3px solid rgba(0, 89, 255, 0.807);
+}
+
+.btn-form {
+    display: flex;
+    margin: 5% auto;
+    padding: 1% 2%;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 89, 255, 0.807);
+}
+
+.btn-form:hover {
+    transition: 1s;
+    color: black;
+    transform: scale(1.1, 1.1);
+}
+
+.price::after {
+    content: "$";
+}

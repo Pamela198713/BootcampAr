@@ -1,5 +1,9 @@
 from rest_framework import serializers
-from .models import Curso, Categoria, CursoCategoria, Usuario
+from .models import Curso, Categoria, CursoCategoria, Usuario, Orden, OrdenDetalle, Factura
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import get_user_model
+
+
 
 class CursoSerializer(serializers.ModelSerializer):
     #, write_only=True
@@ -28,19 +32,94 @@ class UsuarioSerializer(serializers.ModelSerializer):
         password = validated_data.pop('password')
         instance = self.Meta.model(**validated_data)
         instance.password = password
+        instance.rol = 1
         instance.save()
         return instance
     
 class UsuarioCreateSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username')  
     password = serializers.CharField(write_only=True, required=True)
 
     class Meta:
         model = Usuario
-        fields = ['email', 'username', 'password']
+        fields = ['username', 'password']
 
     def create(self, validated_data):
         password = validated_data.pop('password')
-        instance = self.Meta.model(**validated_data)
-        instance.set_password(password)
-        instance.save()
-        return instance    
+        username = validated_data.pop('user')['username']  
+
+        user = User.objects.create_user(username=username, password=password)
+        usuario = Usuario.objects.create(user=user, **validated_data)
+        usuario.save()
+
+        return usuario
+
+class UsuarioCreatePerSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username')
+    password = serializers.CharField(write_only=True, required=True)
+    # Resto de los campos del modelo Usuario
+
+    class Meta:
+        model = Usuario
+        fields = ['username', 'password', 'nombre', 'apellido', 'pais', 'rol', 'email', 'telefono', 'direccion', 'foto', 'bio', 'fecha_nacimiento', 'genero', 'ciudad']
+
+    def create(self, validated_data):
+        username = validated_data.pop('user')['username']
+        password = validated_data.pop('password')
+
+        user = User.objects.create_user(username=username, password=password)
+        usuario = Usuario.objects.create(user=user, **validated_data)  # Agrega los campos restantes de validated_data al crear el usuario
+        usuario.save()
+
+        return usuario
+
+
+class OrdenDetalleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrdenDetalle
+        fields = '__all__'
+
+class FacturaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Factura
+        fields = '__all__'
+        read_only_fields = ['id']
+
+class OrdenSerializer(serializers.ModelSerializer):
+    detalles = OrdenDetalleSerializer(many=True, read_only=True)
+    factura = FacturaSerializer(read_only=True)
+
+    class Meta:
+        model = Orden
+        fields = '__all__'
+        read_only_fields = ['id']
+
+User = get_user_model()
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        # Agrega cualquier campo personalizado aquí
+        token['username'] = user.username
+
+        return token
+
+    def validate(self, attrs):
+        credentials = {
+            'username': '',
+            'password': attrs.get("password")
+        }
+
+        user_obj = User.objects.filter(email=attrs.get("username")).first() or User.objects.filter(username=attrs.get("username")).first()
+        if user_obj:
+            credentials['username'] = user_obj.username
+
+        return super().validate(credentials)
+
+class CategoriaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Categoria
+        fields = '__all__'
+

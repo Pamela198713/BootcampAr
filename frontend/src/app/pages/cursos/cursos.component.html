@@ -2,122 +2,47 @@
   <main>
     <div class="container">
       <div class="row justify-content-center">
-        <h2 class="curs-title">Cursos de introduccion</h2>
-        <div class="col-auto">
-          <div class="card per-card" style="width: 18rem">
-            <img
-              src="/frontend/src/assets/img/img-cardcursos/frontend.png"
-              class="tiger"
-            />
-            <div class="card-body">
-              <h5 class="card-title mt-3 text-center">Frontend</h5>
-              <p class="card-text">
-                En este curso abordaremos los items fundamentales del desarrollo
-                web en donde veremos HTML, CSS para crear nuestras primeras
-                estructuras webs y luego lo combinaremos con JavaScript para
-                darle dinamismo a nuestros proyecto
-              </p>
-              <div class="row bot-card-p">
-                <a href="/product-details/1" class="btn btn-warning">Detalles</a>
-                <a href="#" class="btn btn-primary mt-3">Comprar</a>
+        <h2 class="main-title">Cursos</h2>
+        <!-- Cartas -->
+        <div class="row mb-5">
+          <div class="col mb-4" *ngFor="let i of curso">
+
+            <div class="card per-card" style="width: 18rem;">
+              <img src="{{i.imagenes}}" class="card-img-top img-card" alt="...">
+              <div class="card-body">
+                <h5 class="curs-title">{{i.titulo}}</h5>
+                <div class="desc-card">
+                  <p class="card-text">{{i.descripcion}}</p>
+                </div>
+                <div class="row bot-card">
+                  <a href="/product-details/{{i.id}}" class="btn btn-warning">Detalles</a>
+                  <button class="btn btn-primary mt-3" ><a class="txt-btn" href="carrito/{{i.id}}">Comprar</a></button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        
-        <div class="col-auto">
-          <div class="card per-card" style="width: 18rem">
-            <img
-              src="/frontend/src/assets/img/img-cardcursos/backend.png"
-              class="tiger"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Backend</h5>
-              <p class="card-text">
-                En este curso daremos los primeros pasos en el Backend
-                utilizando python y Django, con estas herramientas creamos un
-                pequeño CRUD que podra complementar lo visto durante la cursada
-                del frontend o a un proyecto ya desarrollado
-              </p>
-              <div class="row bot-card-p">
-                <a href="/product-details/3" class="btn btn-warning">Detalles</a>
-                <a href="#" class="btn btn-primary mt-3">Comprar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-auto">
-          <div class="card per-card" style="width: 18rem">
-            <img
-              src="/frontend/src/assets/img/img-cardcursos/base de datos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Base de datos</h5>
-              <p class="card-text">
-                En este cursos aboradremos las bases fundamentales en la
-                creacion de base de datos su implementaciones en el desarrollo
-                web, las buenas practicas y la implementacion de diagramas
-                utilizando como herramienta las base de datos relaciones
-              </p>
-              <div class="row bot-card-p">
-                <a href="/product-details/4" class="btn btn-warning">Detalles</a>
-                <a href="#" class="btn btn-primary mt-3">Comprar</a>
-              </div>
-            </div>
+            
+
           </div>
         </div>
       </div>
 
-      <div class="row justify-content-center">
-        <h2 class="curs-title">Cursos de Avanzados</h2>
-        <div class="col-auto">
-          <div class="card per-card" style="width: 18rem">
-            <img
-              src="/frontend/src/assets/img/img-cardcursos/angular.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Angular</h5>
-              <p class="card-text">
-                En este curso abordaremos un de los framewoks mas demandados del
-                sector IT y lo haremos con un curso practicos el cual te
-                brindara un proyecto el cual podras presentar en tu portafolio
-                profesional
-              </p>
-              <div class="row bot-card-p">
-                <a href="/product-details/5" class="btn btn-warning">Detalles</a>
-                <a href="#" class="btn btn-primary mt-3">Comprar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-auto">
-          <div class="card per-card" style="width: 18rem">
-            <img
-              src="/frontend/src/assets/img/img-cardcursos/backend.png"
-              class="tiger"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Django</h5>
-              <p class="card-text">
-                En este curso daremos los primeros pasos en el Backend
-                utilizando python y Django, con estas herramientas creamos un
-                pequeño CRUD que podra complementar lo visto durante la cursada
-                del frontend o a un proyecto ya desarrollado
-              </p>
-              <div class="row bot-card-p">
-                <a href="/product-details/2" class="btn btn-warning">Detalles</a>
-                <a href="#" class="btn btn-primary mt-3">Comprar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </main>
 </app-layout>
+
+
+<!-- <div class="card per-card">
+  <img
+    src="{{i.imagenes}}"
+    class="tiger"
+  />
+  <div class="card-body">
+    <h5 class="card-title mt-3 text-center">{{i.titulo}}</h5>
+    <p class="card-text">{{i.descripcion}}</p>
+    <div class="row">
+      <a href="/product-details/{{i.id}}" class="btn btn-warning">Detalles</a>
+      <a href="/carrito" class="btn btn-primary mt-3" (click)="agregarCarrito">Comprar</a>
+    </div>
+  </div>
+</div> -->

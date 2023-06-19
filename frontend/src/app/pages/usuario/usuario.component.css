@@ -1,0 +1,24 @@
+.body-listCourse {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-listCourse {
+    background-color: rgba(0, 0, 0, 0.498);
+    color: white;
+    /* margin-top: 3%; */
+    margin-bottom: 3%;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+.title-listCourse {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    margin: 5% 0%;
+}

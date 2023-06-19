@@ -52,3 +52,24 @@ a:hover {
 i {
 	margin-right: 10px;
 }
+
+.card{
+	background-color:  rgba(0, 0, 0, 0.498);
+	color: white;
+	border-radius: 15px;
+}
+
+.list-group-item{
+	border: none;
+	border-bottom: 1px solid grey;
+	background-color: rgba(240, 248, 255, 0);
+	color: white;
+}
+
+.body-perfil{
+	height: 72vh;
+}
+
+.txt-btn{
+	color: white;
+}
