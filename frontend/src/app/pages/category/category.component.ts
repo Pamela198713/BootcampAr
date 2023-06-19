@@ -30,7 +30,7 @@ export class CategoryComponent implements OnInit {
     this.router.navigate([`/dashboard/category/${id}`]); 
   }
   
-  eliminarCateg(id: number, event: Event): void {
+  eliminarCateg(id: number, event: Event): void { 
     event.preventDefault();
     const confirmacion = confirm('¿Estás seguro de eliminar este curso?');
     if (confirmacion) {

@@ -1,1 +1,105 @@
-<p>edit works!</p>
+<div class="body-listCourse">
+    <section class="container-listCourse">
+        <h1 class="title-createCourse text-center mb-4">Editar Usuario</h1>
+        <fieldset class="conatinaer-form">
+            <form [formGroup]="usuarioForm" (ngSubmit)="submitForm()" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" formControlName="nombre" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('nombre')?.invalid && usuarioForm.get('nombre')?.touched" class="invalid-feedback">
+                        El nombre es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" id="apellido" formControlName="apellido" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('apellido')?.invalid && usuarioForm.get('apellido')?.touched" class="invalid-feedback">
+                        El apellido es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pais" class="form-label">País:</label>
+                    <input type="text" id="pais" formControlName="pais" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('pais')?.invalid && usuarioForm.get('pais')?.touched" class="invalid-feedback">
+                        El país es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rol" class="form-label">Rol:</label>
+                    <input type="text" id="rol" formControlName="rol" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('rol')?.invalid && usuarioForm.get('rol')?.touched" class="invalid-feedback">
+                        El rol es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" formControlName="email" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('email')?.invalid && usuarioForm.get('email')?.touched" class="invalid-feedback">
+                        El email es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="text" id="telefono" formControlName="telefono" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('telefono')?.invalid && usuarioForm.get('telefono')?.touched" class="invalid-feedback">
+                        El teléfono es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion" class="form-label">Dirección:</label>
+                    <input type="text" id="direccion" formControlName="direccion" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('direccion')?.invalid && usuarioForm.get('direccion')?.touched" class="invalid-feedback">
+                        La dirección es requerida.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="foto" class="form-label">Foto:</label>
+                    <input type="text" id="foto" formControlName="foto" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('foto')?.invalid && usuarioForm.get('foto')?.touched" class="invalid-feedback">
+                        La foto es requerida.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio" class="form-label">Bio:</label>
+                    <textarea id="bio" formControlName="bio" class="form-control mt-3"></textarea>
+                    <div *ngIf="usuarioForm.get('bio')?.invalid && usuarioForm.get('bio')?.touched" class="invalid-feedback">
+                        La bio es requerida.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" formControlName="fechaNacimiento" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('fechaNacimiento')?.invalid && usuarioForm.get('fechaNacimiento')?.touched" class="invalid-feedback">
+                        La fecha de nacimiento es requerida.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero" class="form-label">Género:</label>
+                    <input type="text" id="genero" formControlName="genero" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('genero')?.invalid && usuarioForm.get('genero')?.touched" class="invalid-feedback">
+                        El género es requerido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ciudad" class="form-label">Ciudad:</label>
+                    <input type="text" id="ciudad" formControlName="ciudad" class="form-control mt-3">
+                    <div *ngIf="usuarioForm.get('ciudad')?.invalid && usuarioForm.get('ciudad')?.touched" class="invalid-feedback">
+                        La ciudad es requerida.
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="usuarioForm.invalid" class="btn-form mt-3">Guardar</button>
+            </form>
+        </fieldset>
+    </section>
+</div>

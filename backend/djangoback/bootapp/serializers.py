@@ -53,7 +53,27 @@ class UsuarioCreateSerializer(serializers.ModelSerializer):
         usuario.save()
 
         return usuario
-     
+
+class UsuarioCreatePerSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username')
+    password = serializers.CharField(write_only=True, required=True)
+    # Resto de los campos del modelo Usuario
+
+    class Meta:
+        model = Usuario
+        fields = ['username', 'password', 'nombre', 'apellido', 'pais', 'rol', 'email', 'telefono', 'direccion', 'foto', 'bio', 'fecha_nacimiento', 'genero', 'ciudad']
+
+    def create(self, validated_data):
+        username = validated_data.pop('user')['username']
+        password = validated_data.pop('password')
+
+        user = User.objects.create_user(username=username, password=password)
+        usuario = Usuario.objects.create(user=user, **validated_data)  # Agrega los campos restantes de validated_data al crear el usuario
+        usuario.save()
+
+        return usuario
+
+
 class OrdenDetalleSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrdenDetalle
