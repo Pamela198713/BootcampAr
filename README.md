@@ -25,12 +25,11 @@ Siga estos pasos para configurar y ejecutar el proyecto en su entorno local:
 4. Ejecutar la aplicación: Una vez que se hayan instalado las dependencias y configurado las variables de entorno, puede ejecutar la aplicación utilizando el comando `ng serve`. Esto iniciará la aplicación en un servidor de desarrollo y podrá acceder a ella en su navegador web en la dirección `http://localhost:4200/`.
 
 ## Contribución
-Lidio
-Laura
-Leonardo
-Lucia
-Yuliana
-Matias
-Pamela
+Lidio Guedez
+Laura Laslo Verón
+Leonardo Vivas
+Lucia Leonetti
+Yuliana Capdevila
+Pamela Pilotti
 
-## Problemas (Issues)
+Link del video explicativo: https://drive.google.com/drive/folders/1bBi41upPArnvPGPeXWQdT2xUdESo6YLq?usp=drive_link 
